@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap');
+
+
+$main-color:rgb(27, 31, 35);
+$secondary-color: rgb(33, 136, 255);
+
+
+
+html  {
+    height: 100%;
+    max-width: 100%;
+ }
+ 
+ body {
+     font-family: 'Montserrat', sans-serif;
+     display: flex;
+     flex-direction: column; 
+     min-height: 100%;
+     max-width: 100%;
+ }
+
+/*------------------------------------ Navigation styles */
+
+.navbar-custom{
+    // background-color: rgba(27, 31, 35, 0.5);
+    // background: linear-gradient(121.39deg, #011627 16.87%, #394955 102.41%);
+    position: fixed;
+    width: 100%;
+    z-index: 12;
+}
+
+#nav , ul ,li  {
+    font-size: 14px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#navbar a {
+    position: relative;
+   
+}
+
+
+#navbar a::before {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background-color: sandybrown;
+    position: absolute;
+    transition: all ease-in-out 200ms;
+    
+}
+
+#navbar a:hover::before{
+    width: 90%;
+    margin-top: 10px;
+}
+
+.active-navbar { background: linear-gradient(121.39deg, #011627 16.87%, #394955 102.41%);}
+
+.btn--main {
+    color: rgb(33, 136, 255);
+    border-color:  rgb(33, 136, 255);
+}
+
+.logo {
+    background-image: url("../assets/images/codedev-logo.svg"); 
+    height: 50px;
+    width: 300px;
+    background-repeat: no-repeat;
+}
+
+
+@media (min-width: 768px) { 
+    #navbar li {  
+        border-left: 1px solid rgb(206, 201, 201); 
+        line-height: 1px;
+        
+    }
+}
+
+@media (max-width: 768px) { 
+    #navbar a:hover::before{  
+        margin-top: 20px;
+        
+    }
+}
+
+/* -----------------------------------------------Main Image */
+
+#main-bg {
+    // background-color: $main-color;
+    background: linear-gradient(121.39deg, #011627 16.87%, #394955 102.41%);
+    color: white;
+    padding: 20px 20px;
+    height: 70vh;
+    margin-bottom: 10px;
+    
+}
+
+#main-bg p {
+    color: white;
+}
+
+
+@media (max-width: 768px) { 
+    #main-bg{  
+        text-align: center;
+        
+    }
+}
+
+#main-bg hr {
+    max-width: 60%;
+    text-align: left;
+    margin-left: 0;
+}
+
+.main-bg--text {
+    text-decoration: underline;
+    
+}
+
+
+/*# ----------------------------sourceMappingURL=style.css.map */
+
+
+
+
+
+
+
+/*------------------------------------Button Styles */
+
+
+.btn-email {
+   margin-left: 10px;
+   border: 2px solid white;
+   color: white;
+   background-color: rgb(28, 32, 92);
+}
+
+@media (max-width: 700px) {  
+    .btn-email {
+        margin: 10PX 0;
+       
+   
+   }
+}
+
+/* --------------------------------Social Button Styles */
+
+
+.social-links li  {
+    padding-top: 5px;
+    font-size: 2.5em;
+}
+
+
+/* ------------------------------------ Card styles */
+
+
+#main-container {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+
+
+/* ------------------------------------ Card styles */
+.card  { 
+    color: #1174c5;
+    background: #fff;
+    padding: 2px;
+    border: 3px solid;
+}
+
+.card-border {
+    border: 10px solid;
+    border-image-slice: 1;
+    border-width: 3px;
+  
+}
+
+.circle {
+    width: 100%;
+    height: 200px;
+    background: linear-gradient(to top, #3acfd5 0%, #3a4ed5 100%);
+    border-radius: 100%;
+    position: relative;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.circle::before {
+    border-radius: 100%;
+    content: '';
+    background-image: linear-gradient(to bottom, #3acfd5 0%, #3a4ed5 100%);
+    padding: 10px;
+    width: 100%;
+    height:100%;
+    top: -10px;
+    left: -10px;
+    position:absolute;
+    z-index:-1;
+}
+
+@media (min-width: 768px) {
+.card-body {
+    min-height: 350px;
+    min-width: 100%;
+ }
+}
+
+.card p  {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #394955;
+}
+
+.card h2 {
+    margin-top: 0;
+}
+
+hr {
+    background-color: white;
+}
+
+
+.card li {
+    padding: 0.2em 0 ;
+    color: #394955;
+}
+
+.icon {
+    font-size: 1.5em;
+    color:  rgb(33, 136, 255);
+}
+
+
+.card-2 a {
+    position: relative;
+    color: #394955;
+    text-decoration: none;
+}
+
+
+.card-2 a::before {
+    content: '';
+    height: 3px;
+    width: 0%;
+    background-color: rgb(11, 176, 241);
+    position: absolute;
+    transition: all ease-in-out 200ms;
+    line-height: 2px;
+    
+}
+
+.card-2 a:hover::before{
+    width: 100%;
+    margin-top: 30px;
+}
+
+
+/*---------------------------------footer styles */
+
+
+footer {
+    margin-top: auto;
+    padding-top: 20px;
+    width: 100%;
+    // background-color: rgb(23, 19, 71);
+    background: linear-gradient(121.39deg, #011627 16.87%, #394955 102.41%);
+}
+
+.footer-col {
+    color: rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.footer-p {
+    border-bottom: 2px solid white;
+    padding: 5px;
+    text-align: center;
+    color:white
+}
+
+.footer-h5 {
+    text-align: center;
+}
+
+
+/*---------------------------------Type Writter Animation */
+
+
+// .type-writter ,h2 {
+// border-right: solid 3px rgba(13, 15, 13, 0.75);
+// white-space: nowrap;
+// overflow: hidden;    
+// font-family: 'Source Code Pro', monospace;  
+// font-size: 28px;
+// color: $main-color;
+// }
+
+// /* Animation */
+// .type-writter ,h2 {
+// animation: animated-text 4s steps(29,end) 1s 1 normal both,
+//          animated-cursor 600ms steps(29,end) infinite;
+// }
+
+// /* text animation */
+
+// @keyframes animated-text{
+// from{width: 0;}
+// to{width: 100%;}
+// }
+
+// /* cursor animations */
+
+// @keyframes animated-cursor{
+// from{border-right-color: $main-color;}
+// to{border-right-color: transparent;}
+// }
+
+// Css for page Getting Started //
+
+.getting-started, h1 {
+    color: rgb(75, 77, 93);
+    font-weight: 700;
+    font-size: 1.4em;
+    line-height: 1.2em;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+
+.image-laptop {
+    max-width: 100%;
+    max-height: auto;
+}
+
+.text-emile-credit {
+    color: rgb(11, 176, 241);
+    text-align: right;
+}
+
+.col--emile-credit {
+    margin-top: 1em;
+}
+
+
+article ,p{
+    margin-top: 20px;
+    font-family: 'Poppins', sans-serif;
+   font-weight: 400;
+   font-size: 1.1em;
+   line-height: 1.7em;
+   color: rgb(75, 77, 93);
+   text-align: left;
+
+}
+
+.artilce ,h2 {
+    margin-top: 40px;
+}
+
+article a {
+font-weight: 700;
+text-decoration: underline;
+}
+

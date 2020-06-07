@@ -1,0 +1,256 @@
+/* table of contents
+
+  1. global styles
+
+  2.typography
+
+  2. Navigation styles
+
+  3. navigation styles Mobile
+
+  4. componants
+
+  5 Media quiers
+     
+    1. Navigation
+    2.
+    3.
+    4.
+    5.
+
+ */
+/* =============
+   global styles
+   ============= */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+body,
+html {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  height: 100%;
+  padding: 0;
+}
+
+/* =============
+   typograpgy
+   ============= */
+h1 {
+  font-weight: normal;
+}
+
+/* =================
+   Navigation styles
+   ================= */
+nav {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px  1fr;
+      grid-template-columns: 1fr 10px  1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  max-width: 100%;
+  min-height: 50px;
+  margin: 20px 0 20px 20px;
+}
+
+.nav-menu {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.nav-menu-item, a {
+  display: inline;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.0em;
+  letter-spacing: 0.1em;
+  margin-right: 20px;
+}
+
+.site-logo {
+  position: relative;
+  margin-left: 20px;
+  background-image: url("../assets/images/codedev-logo.svg");
+  min-height: 40px;
+  min-width: 120px;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+@media (min-width: 992px) {
+  .navmenu, a {
+    position: relative;
+  }
+  .navmenu, a::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    top: 20px;
+    left: 0;
+    background-color: #e52e71;
+    visibility: hidden;
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+  }
+  .navmenu, a:hover::before {
+    visibility: visible;
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+  }
+  .active a {
+    color: #2188ff;
+  }
+}
+
+/* ========================
+   Navigation styles Mobile
+   ======================== */
+/*-------------------------------- Banner --------------------------------*/
+.container-banner {
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  color: white;
+  padding: 20px 20px;
+  min-height: 35vh;
+  padding-top: 50px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  border-radius: 25px;
+}
+
+.banner h1 {
+  margin-left: 20px;
+  font-size: 3.5em;
+}
+
+.banner-text-h1 {
+  text-decoration: underline;
+}
+
+.banner p {
+  margin-left: 20px;
+  font-size: 1.5em;
+  color: white;
+}
+
+.banner hr {
+  color: white;
+  margin-left: 20px;
+  margin-top: -15px;
+  width: 50%;
+}
+
+.button {
+  background-color: transparent;
+  padding: 10px 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  -webkit-transition-duration: 0.4s;
+          transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-align: center;
+}
+
+.button1 {
+  color: #2188ff;
+  border: 1.5px solid #2188ff;
+  text-align: center;
+}
+
+.button1:hover {
+  border: 1.5px solid #c91258;
+  color: white;
+  text-align: center;
+}
+
+/*-------------------------------- cards --------------------------------*/
+.container-cards {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  gap: 40px 50px;
+  padding: 50px;
+  background-color: #288ee2;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  border-radius: 25px 0 0 0;
+  margin-left: 20px;
+}
+
+.card {
+  background-color: #288ee2;
+  -webkit-box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+          box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  color: white;
+  text-align: center;
+}
+
+.card:hover {
+  -webkit-transform: translate(0px, -10px);
+          transform: translate(0px, -10px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.card h3:hover {
+  color: #09cff1;
+}
+
+.card h3 {
+  font-size: 1.3em;
+  font-weight: 500;
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding-bottom: 10px;
+  min-width: 80%;
+}
+
+.card p {
+  font-size: 1.2em;
+}
+
+.card ul {
+  list-style: none;
+}
+
+.card-icons {
+  float: right;
+  margin-right: 40px;
+  font-size: 1.2em;
+}
+
+/* =============
+   componants
+   ============= */
+/*-------------------------------- card media quires --------------------------------*/
+/*--------------------------------  card media quires --------------------------------*/
+/*-------------------------------- code source for gradient text --------------------------------*/
+/*-------------------------------- cards source gradient text --------------------------------*/
+/* =============
+   Media quiries
+   ============= */
+/* =============
+   navigation
+============= */
+@media (max-width: 992px) {
+  .nav-menu a {
+    display: none;
+  }
+}
+
+.fa-robot {
+  color: #2188ff;
+  font-size: 1.2em;
+}
+/*# sourceMappingURL=style.css.map */

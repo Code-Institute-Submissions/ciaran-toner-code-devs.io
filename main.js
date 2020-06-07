@@ -7,3 +7,19 @@ $(function() {
         }
     });
 });
+
+(function(){
+    var burger = document.querySelector('.burger-container'),
+        header = document.querySelector('.header');
+    
+    burger.onclick = function() {
+        header.classList.toggle('menu-opened');
+    }
+}());
+
+$('.nav-menu-item').click(function() {
+
+    $('a').removeClass('active');
+    $(this).addClass('active');
+  });
+  

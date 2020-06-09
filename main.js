@@ -23,3 +23,6 @@ $('.nav-menu-item').click(function() {
     $(this).addClass('active');
   });
   
+
+  var typeWritterh1 = document.getElementById('typeWritter');
+typeWritterh1.addEventListener('AnimationEnd',function( event ) { typeWritterh1.style.display = 'none'; }, false);

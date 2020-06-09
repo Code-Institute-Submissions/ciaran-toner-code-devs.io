@@ -23,13 +23,14 @@
    global styles
    ============= */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 body,
 html {
   font-family: 'Montserrat', sans-serif;
   margin: 0 auto;
-  height: 100%;
   padding: 0;
+  height: 100%;
 }
 
 /* =============
@@ -46,8 +47,8 @@ nav {
   position: relative;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 10px  1fr;
-      grid-template-columns: 1fr 10px  1fr;
+  -ms-grid-columns: 1fr auto;
+      grid-template-columns: 1fr auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -62,7 +63,8 @@ nav {
       justify-self: end;
 }
 
-.nav-menu-item, a {
+.nav-menu-item,
+a {
   display: inline;
   color: #fff;
   text-decoration: none;
@@ -83,10 +85,12 @@ nav {
 }
 
 @media (min-width: 992px) {
-  .navmenu, a {
+  .navmenu,
+  a {
     position: relative;
   }
-  .navmenu, a::before {
+  .navmenu,
+  a::before {
     content: "";
     position: absolute;
     width: 100%;
@@ -100,7 +104,8 @@ nav {
     -webkit-transition: all 0.3s ease-in-out 0s;
     transition: all 0.3s ease-in-out 0s;
   }
-  .navmenu, a:hover::before {
+  .navmenu,
+  a:hover::before {
     visibility: visible;
     -webkit-transform: scaleX(1);
             transform: scaleX(1);
@@ -216,8 +221,9 @@ nav {
   min-width: 80%;
 }
 
-.card p {
-  font-size: 1.2em;
+.card-1,
+p {
+  font-size: 1.5em;
 }
 
 .card ul {
@@ -227,16 +233,76 @@ nav {
 .card-icons {
   float: right;
   margin-right: 40px;
+  font-size: 1em;
+}
+
+/* =============
+   footer
+   ============= */
+footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+  row-gap: 15px;
+  background-image: linear-gradient(315deg, #0d324d 74%, #7f5a83 0%);
+  margin-top: 25px;
+  padding: 0;
+  place-items: center;
+}
+
+.footer-h1 {
+  font-family: 'Satisfy', cursive;
+  background: linear-gradient(40deg, #2e8ac7, #00ff95 80%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-form {
+  padding: 0;
+}
+
+label {
+  display: block;
+  color: white;
+  margin: 0 0 4px;
+}
+
+input {
+  border: #000;
+  padding: 5px;
   font-size: 1.2em;
+}
+
+.subcribe-button {
+  background: linear-gradient(40deg, #2e8ac7, #00ff95 80%);
+  color: #06076e;
+  margin-top: 0;
+}
+
+#email {
+  text-transform: lowercase;
+}
+
+.social-icons,
+li {
+  display: inline;
+  padding: 0;
+}
+
+.social-icons {
+  font-size: 1.5em;
+  pointer-events: none;
 }
 
 /* =============
    componants
    ============= */
-/*-------------------------------- card media quires --------------------------------*/
 /*--------------------------------  card media quires --------------------------------*/
 /*-------------------------------- code source for gradient text --------------------------------*/
-/*-------------------------------- cards source gradient text --------------------------------*/
 /* =============
    Media quiries
    ============= */

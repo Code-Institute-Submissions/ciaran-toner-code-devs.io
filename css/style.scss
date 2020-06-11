@@ -35,7 +35,8 @@ html {
   // font-family: 'Quicksand', sans-serif;
   margin: 0 auto;
   padding: 0;
-  height: 100%;
+  min-height: 100%;
+  min-width: 360px;
 }
 
 
@@ -43,8 +44,16 @@ html {
    typograpgy
    ============= */
 
-h1 {
+h1,
+h2,
+h3,
+p {
   font-weight: normal;
+  color: #33475b;
+}
+
+p {
+  color: #33475b;
 }
 
 
@@ -52,19 +61,19 @@ h1 {
    Navigation styles
    ================= */
 
-// header {
-//   display: grid;
-//   grid-template-columns: auto;
-// }
+header {
+  display: grid;
+  grid-template-columns: auto;
+}
 
-// .window{
-//   position: fixed;
-//   display: grid;
-//   grid-template-columns: auto;
-//   justify-items: center;
-//   max-width: 100%;
-//   height: 0;
-// }
+header-container {
+  position: fixed;
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center;
+  max-width: 100%;
+  height: 0;
+}
 
 nav {
   position: relative;
@@ -144,256 +153,235 @@ a {
    Navigation styles Mobile
    ======================== */
 
+//  credit for navbar mathieulavoie-lamer.com
+//  https://codepen.io/theaftermath87/pens/popular
 
-// @media(max-width: 600px) {
-
-//   $cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
-//   $mukta: 'Ek Mukta', sans-serif;
-//   ;
-
-//   $menuItems: 4;
-
-//   body {
-//     margin: 0;
-//     line-height: 1.4;
-//     // background: #E1E1E1;
-//   }
+@import url(https://fonts.googleapis.com/css?family=Ek+Mukta:200);
 
 
+$cubic: cubic-bezier(0.4, 0.01, 0.165, 0.99);
+$mukta: 'Ek Mukta',
+sans-serif;
+;
 
-//   .window {
-//     display: block;
-//     margin: auto 0;
-//     box-shadow: 0 0 65px 15px rgba(#000, 0.2);
-//     overflow: hidden;
-//     border-radius: 3px;
-//     background: #F1F1F1;
+$menuItems: 7;
 
+body {
+  margin: 0;
+  line-height: 1.4;
+  background: #E1E1E1;
+}
 
-//     .header {
-//       position: absolute;
-//       display: block;
-//       top: 0;
-//       left: 0;
-//       height: 50px;
-//       width: 100%;
-//       background: transparent;
-//       overflow: hidden;
-//       transition: all 0.5s ease-out, background 1s ease-out;
-//       transition-delay: 0.2s;
-//       z-index: 1;
+header-container {
+  position: relative;
+  display: block;
+  width: 360px;
+  height: 567px;
+  margin: 100px auto 0;
+  box-shadow: 0 0 65px 15px rgba(#000, 0.2);
+  overflow: hidden;
+  border-radius: 3px;
+  background: #F1F1F1;
 
-//       .site-logo {
-//         position: fixed;
-//         display: block;
-//         background-image: url("../assets/images/codedev-logo.svg");
-//         height: 50px;
-//         width: 150px;
-//         background-repeat: no-repeat;
-//         z-index: 0;
-//         top: 10PX;
-//         right: 30%;
-//       }
+  .header {
+    position: absolute;
+    display: block;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    background: rgba(#000, 0.8);
+    overflow: hidden;
+    transition: all 0.5s ease-out, background 1s ease-out;
+    transition-delay: 0.2s;
+    z-index: 1;
 
-//       .burger-container {
-//         position: relative;
-//         display: inline-block;
-//         height: 50px;
-//         width: 50px;
-//         cursor: pointer;
-//         transform: rotate(0deg);
-//         transition: all 0.3s $cubic;
-//         user-select: none;
-//         -webkit-tap-highlight-color: transparent;
+    .burger-container {
+      position: relative;
+      display: inline-block;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      transform: rotate(0deg);
+      transition: all 0.3s $cubic;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
 
-//         #burger {
-//           width: 18px;
-//           height: 8px;
-//           position: relative;
-//           display: block;
-//           margin: -4px auto 0;
-//           top: 50%;
+      #burger {
+        width: 18px;
+        height: 8px;
+        position: relative;
+        display: block;
+        margin: -4px auto 0;
+        top: 50%;
 
-//           .bar {
-//             width: 100%;
-//             height: 1px;
-//             display: block;
-//             position: relative;
-//             background: #FFF;
-//             transition: all 0.3s $cubic;
-//             transition-delay: 0s;
+        .bar {
+          width: 100%;
+          height: 1px;
+          display: block;
+          position: relative;
+          background: #FFF;
+          transition: all 0.3s $cubic;
+          transition-delay: 0s;
 
-//             &.topBar {
-//               transform: translateY(0px) rotate(0deg);
-//             }
+          &.topBar {
+            transform: translateY(0px) rotate(0deg);
+          }
 
-//             &.btmBar {
-//               transform: translateY(6px) rotate(0deg);
-//             }
-//           }
-//         }
-//       }
+          &.btmBar {
+            transform: translateY(6px) rotate(0deg);
+          }
+        }
+      }
+    }
 
-//       .icon {
-//         display: inline-block;
-//         position: absolute;
-//         height: 100%;
-//         line-height: 50px;
-//         width: 50px;
-//         height: 50px;
-//         text-align: center;
-//         color: #FFF;
-//         font-size: 22px;
-//         left: 50%;
-//         transform: translateX(-50%);
+    .icon {
+      display: inline-block;
+      position: absolute;
+      height: 100%;
+      line-height: 50px;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      color: #FFF;
+      font-size: 22px;
+      left: 50%;
+      transform: translateX(-50%);
 
-//         &.icon-bag {
-//           right: 0;
-//           top: 0;
-//           left: auto;
-//           transform: translateX(0px);
-//           transition: transform 0.5s $cubic;
-//           transition-delay: 0.65s;
-//         }
-//       }
+      &.icon-bag {
+        right: 0;
+        top: 0;
+        left: auto;
+        transform: translateX(0px);
+        transition: transform 0.5s $cubic;
+        transition-delay: 0.65s;
+      }
+    }
 
-//       ul.menu {
-//         position: relative;
-//         display: block;
-//         padding: 0px 48px 0;
-//         list-style: none;
+    ul.menu {
+      position: relative;
+      display: block;
+      padding: 0px 48px 0;
+      list-style: none;
 
-//         li.menu-item {
-//           border-bottom: 1px solid #333;
-//           margin-top: 5px;
-//           transform: scale(1.15) translateY(-30px);
-//           opacity: 0;
-//           transition: transform 0.5s $cubic, opacity 0.6s $cubic;
+      li.menu-item {
+        border-bottom: 1px solid #333;
+        margin-top: 5px;
+        transform: scale(1.15) translateY(-30px);
+        opacity: 0;
+        transition: transform 0.5s $cubic, opacity 0.6s $cubic;
 
-//           @for $i from 1 through $menuItems {
-//             &:nth-child(#{$i}) {
-//               transition-delay: #{0.56 - ($i * 0.07)}s;
-//             }
-//           }
+        @for $i from 1 through $menuItems {
+          &:nth-child(#{$i}) {
+            transition-delay: #{0.56 - ($i * 0.07)}s;
+          }
+        }
 
-//           a {
-//             display: block;
-//             position: relative;
-//             color: #FFF;
-//             font-family: $mukta;
-//             font-weight: 100;
-//             text-decoration: none;
-//             font-size: 22px;
-//             line-height: 2.35;
-//             font-weight: 200;
-//             width: 100%;
-//           }
-//         }
-//       }
+        a {
+          display: block;
+          position: relative;
+          color: #FFF;
+          font-family: $mukta;
+          font-weight: 100;
+          text-decoration: none;
+          font-size: 22px;
+          line-height: 2.35;
+          font-weight: 200;
+          width: 100%;
+        }
+      }
+    }
 
-//       &.menu-opened {
-//         height: 100vh;
-//         background: linear-gradient(to bottom, #000428, #004e92);
-//         transition: all 0.3s ease-in, background 0.5s ease-in;
-//         transition-delay: 0.25s;
+    &.menu-opened {
+      height: 100%;
+      background-color: #000;
+      transition: all 0.3s ease-in, background 0.5s ease-in;
+      transition-delay: 0.25s;
 
-//         .burger-container {
-//           transform: rotate(90deg);
+      .burger-container {
+        transform: rotate(90deg);
 
-//           #burger {
-//             .bar {
-//               transition: all 0.4s $cubic;
-//               transition-delay: 0.2s;
+        #burger {
+          .bar {
+            transition: all 0.4s $cubic;
+            transition-delay: 0.2s;
 
-//               &.topBar {
-//                 transform: translateY(4px) rotate(45deg);
-//               }
+            &.topBar {
+              transform: translateY(4px) rotate(45deg);
+            }
 
-//               &.btmBar {
-//                 transform: translateY(3px) rotate(-45deg);
-//               }
-//             }
-//           }
-//         }
+            &.btmBar {
+              transform: translateY(3px) rotate(-45deg);
+            }
+          }
+        }
+      }
 
-//         ul.menu {
-//           li.menu-item {
-//             transform: scale(1) translateY(0px);
-//             opacity: 1;
+      ul.menu {
+        li.menu-item {
+          transform: scale(1) translateY(0px);
+          opacity: 1;
 
-//             @for $i from 1 through $menuItems {
-//               &:nth-child(#{$i}) {
-//                 transition-delay: #{0.07 * $i+0.2}s;
-//               }
-//             }
-//           }
-//         }
-// .menu li {
-//   position: relative;
-// }
+          @for $i from 1 through $menuItems {
+            &:nth-child(#{$i}) {
+              transition-delay: #{0.07 * $i+0.2}s;
+            }
+          }
+        }
+      }
 
-// .menu li::before  { 
-//   content: "";
-//   position: absolute;
-//   width: 100%;
-//   height: 12px;
-//   bottom: 100%;
-//   left: 0;
-//   background-color: #e52e71;
-//   visibility: hidden;
-//   transform: scaleX(0);
-//   transition: all 0.3s ease-in-out 0s;
-//  margin-top: 20px;
-// }
+      .icon {
+        &.icon-bag {
+          transform: translateX(75px);
+          transition-delay: 0.3s;
+        }
+      }
+    }
+  }
 
-// .menu li:hover::before {
-//   visibility: visible;
-//   transform: scaleX(1);
-// }
+  .content {
+    font-family: $mukta;
+    padding: 67px 4% 0;
+    text-align: justify;
+    overflow: scroll;
+    max-height: 100%;
 
-//     .icon {
-//       &.icon-bag {
-//         transform: translateX(75px);
-//         transition-delay: 0.3s;
-//       }
-//     }
-//   }
-// }
+    &::-webkit-scrollbar {
+      display: none;
+    }
 
-// .content {
-//   font-family: $mukta;
-//   padding: 67px 4% 0;
-//   text-align: justify;
-//   overflow: scroll;
-//   max-height: 100%;
+    h2 {
+      margin-bottom: 0px;
+      letter-spacing: 1px;
+    }
 
-//   &::-webkit-scrollbar {
-//     display: none;
-//   }
+    img {
+      width: 95%;
+      position: relative;
+      display: block;
+      margin: 75px auto 75px;
 
-//   h2 {
-//     margin-bottom: 0px;
-//     letter-spacing: 1px;
-//   }
+      &:nth-of-type(2) {
+        margin: 75px auto;
+      }
+    }
+  }
 
-//       img {
-//         width: 95%;
-//         position: relative;
-//         display: block;
-//         margin: 75px auto 75px;
+  @media(max-width: 600px) {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    border-radius: 0px;
 
-//         &:nth-of-type(2) {
-//           margin: 75px auto;
-//         }
-//       }
-//     }
-
-//   }
-
-// }
+    .header {
+      position: fixed;
+    }
+  }
+}
 
 
-// navbar obile menu
+
+// navbar mobile menu
 
 
 
@@ -413,7 +401,7 @@ a {
 
 .banner h1 {
   margin-left: 20px;
-  font-size: 3.5em;
+  font-size: 3.0rem;
 }
 
 .banner-text-h1 {
@@ -480,10 +468,10 @@ a {
 .container-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 40px 50px;
   padding: 50px;
   background-color: #288ee2;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   border-radius: 25px 0 0 0;
   margin-left: 20px;
 }
@@ -513,39 +501,133 @@ a {
   border-bottom: 2px solid white;
   display: inline-block;
   padding-bottom: 10px;
-  min-width: 80%;
+  min-width: 90%;
 }
 
 
-.card-1,
-p {
+.card p {
   font-size: 1.5em;
 
 }
 
 .card ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+
 }
 
 .card-icons {
   float: right;
-  margin-right: 40px;
+  margin-right: 20px;
   font-size: 1em;
 }
 
+
 /* =============
-   footer
+   getting started page
    ============= */
+
+
+
+.article-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows:400px auto;
+  gap: 40px 50px;
+  padding: 0 50px 0 50px ;
+  background-color:rgba(rgb(112, 110, 110), 0.2);
+  border-radius: 25px 0 0 0;
+  margin-left: 20px;
+  // max-width: 100%;
+  place-content: center;
+}
+@media (max-width: 600px) {
+.article-container {
+  display: grid;
+  grid-template-columns:  1fr;
+  grid-template-rows:  1fr 1fr;
+  margin: 0 auto;
+  
+.article-image {
+  grid-row: 2;
+  grid-column: 1/ span 3;
+
+  // place-self: ceenter;
+}
+
+}
+
+.artilce-heading {
+  grid-row: 1;
+  grid-column: 1/ span 2;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0;
+ 
+}
+
+
+.article-text {
+  min-width: 100%;
+}
+
+}
+
+.article-container a:hover {
+  pointer-events: none;
+}
+
+.article-container a {
+  text-decoration: underline ;
+  margin: 0;
+  color: #0d324d;
+  text-transform: none;
+}
+
+
+
+
+
+.article-image {
+  background-image: url("../assets/images/emile-perron-xrVDYZRGdw4-unsplash.jpg");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  grid-column: 2/ span 2;
+  
+
+}
+
+
+
+.article-text{
+  grid-column: 1/ span 3;
+  text-align: left;
+  // margin: 0 20px 0 20px;
+  font-size: 1.2rem;
+  place-self: center;
+  width: 60%;
+  
+}
+
+
+
+/* ========================== 
+   footer
+   ========================== */
 
 footer {
   display: grid;
-  grid-template-columns:  1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
   row-gap: 15px;
-  background-image: linear-gradient(315deg,  #0d324d 74%, #7f5a83 0%,);
+  background-image: linear-gradient(315deg, #0d324d 74%, #7f5a83 0%, );
   margin-top: 25px;
   padding: 0;
   place-items: center;
+  text-align: center;
 }
 
 
@@ -594,7 +676,14 @@ li {
   pointer-events: none;
 }
 
+.footer-item-4 p {
+  font-size: 1.2em;
+  background: linear-gradient(40deg, #2e8ac7, #00ff95 80%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 
+}
 
 
 /* =============
@@ -606,39 +695,141 @@ li {
 // source:https://css-tricks.com/snippets/css/typewriter-effect/
 
 // credit: https://css-tricks.com/author/geoffgraham/
+
+
+//  #typeWritter {
+//   overflow: hidden; /* Ensures the content is not revealed until the animation */
+//   border-right: .15em solid orange; /* The typwriter cursor */
+//   white-space: nowrap; /* Keeps the content on a single line */
+//   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+//   letter-spacing: .15em; /* Adjust as needed */
+//   animation: 
+//     typing 3.5s steps(40, end),
+//     blink-caret .75s step-end 5s;
+//     white-space: nowrap; 
+// }
+
+// /* The typing effect */
+// @keyframes typing {
+//   from { width: 0 }
+//   to { width: 100% }
+// }
+
+// /* The typewriter cursor effect */
+// @keyframes blink-caret {
+//   from, to { border-color: transparent }
+//   50% { border-color: orange; }
+// }
+
+
+
+
+
+
+
+/* =============
+   Media quiries
+   ============= */
+
+/*-------------- container banner-------------- */
+
+@media only screen and (max-width: 800px) {
+  .container-banner {
+    margin: 10px 0px 20px 00px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-banner h1 {
+    line-height: 1.2;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-banner hr {
+    width: 100%;
+    margin: 0 auto;
+
+  }
+}
+
+/*-------------- cards -------------- */
+
+@media (max-width: 576px) {
+  .container-cards {
+    margin: 0;
+    border-radius: 20px;
+    place-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-icons {
+    margin-right: 20px;
+  }
+}
+
+/*-------------- footer form -------------- */
+
+@media (max-width: 600px) {
+  .footer-form {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .subcribe-button {
+    margin: 10px 0 0 130px;
+    text-align: center;
+  }
+}
+
+/*-------------- getting started -------------- */
+
+@media (max-width: 800px) {
+  .article-container {
+    display: grid;
+    grid-template-columns:  1fr;
+    grid-template-rows:  1fr 1fr;
+    margin: 0 auto;
+    
+  .article-image {
+    grid-row: 2;
+    grid-column: 1/ span 3;
+  
+    // place-self: ceenter;
+  }
+  
+  }
+  
+  .artilce-heading {
+    grid-row: 1;
+    grid-column: 1/ span 3;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
    
-
-  //  #typeWritter {
-  //   overflow: hidden; /* Ensures the content is not revealed until the animation */
-  //   border-right: .15em solid orange; /* The typwriter cursor */
-  //   white-space: nowrap; /* Keeps the content on a single line */
-  //   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  //   letter-spacing: .15em; /* Adjust as needed */
-  //   animation: 
-  //     typing 3.5s steps(40, end),
-  //     blink-caret .75s step-end 5s;
-  //     white-space: nowrap; 
-  // }
+  }
   
-  // /* The typing effect */
-  // @keyframes typing {
-  //   from { width: 0 }
-  //   to { width: 100% }
-  // }
   
-  // /* The typewriter cursor effect */
-  // @keyframes blink-caret {
-  //   from, to { border-color: transparent }
-  //   50% { border-color: orange; }
-  // }
+  .article-text {
+    min-width: 100%;
+  }
+  
+  }
 
+// @media (min-width: 576px) { ... }
 
-/*--------------------------------  card media quires --------------------------------*/
 
 
 /*-------------------------------- code source for gradient text --------------------------------*/
 
 //  https://cssgradient.io/blog/css-gradient-text/
+
+/*-------------------------------- cards source gradient text --------------------------------*/
 
 
 

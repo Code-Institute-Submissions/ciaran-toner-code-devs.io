@@ -8,6 +8,8 @@ $(function() {
     });
 });
 
+
+
 (function(){
     var burger = document.querySelector('.burger-container'),
         header = document.querySelector('.header');
@@ -16,13 +18,7 @@ $(function() {
         header.classList.toggle('menu-opened');
     }
 }());
-
-$('.nav-menu-item').click(function() {
-
-    $('a').removeClass('active');
-    $(this).addClass('active');
-  });
   
-
-  var typeWritterh1 = document.getElementById('typeWritter');
-typeWritterh1.addEventListener('AnimationEnd',function( event ) { typeWritterh1.style.display = 'none'; }, false);
+// typewriiter
+//   var typeWritterh1 = document.getElementById('typeWritter');
+// typeWritterh1.addEventListener('AnimationEnd',function( event ) { typeWritterh1.style.display = 'none'; }, false);

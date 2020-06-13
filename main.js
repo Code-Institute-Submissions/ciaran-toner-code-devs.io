@@ -1,23 +1,23 @@
-$(function() {
-    $(window).on("scroll", function() {
-        if($(window).scrollTop() > 200) {
-            $(".navbar-custom").addClass("active-navbar");
-        } else {
-           $(".navbar-custom").removeClass("active-navbar");
-        }
-    });
+const menuicon = document.querySelector(".menuicon");
+const navMenu = document.querySelector(".nav-menu");
+const links = document.querySelectorAll(".nav-menu-item li");
+
+menuicon.addEventListener("click", () => {
+    navMenu.classList.toggle("open");
 });
 
 
+// $(function() {
+//     $(window).on("scroll", function() {
+//         if($(window).scrollTop() > 200) {
+//             $(".navbar-custom").addClass("active-navbar");
+//         } else {
+//            $(".navbar-custom").removeClass("active-navbar");
+//         }
+//     });
+// });
 
-(function(){
-    var burger = document.querySelector('.burger-container'),
-        header = document.querySelector('.header');
-    
-    burger.onclick = function() {
-        header.classList.toggle('menu-opened');
-    }
-}());
+
   
 // typewriiter
 //   var typeWritterh1 = document.getElementById('typeWritter');

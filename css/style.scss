@@ -28,6 +28,7 @@ html {
   // font-family: 'Quicksand', sans-serif;
   margin: 0 auto;
   padding: 0;
+  min-width: 375px;
 }
 
 
@@ -244,7 +245,7 @@ a {
 .container-cards {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px 50px;
   padding: 50px;
   background-color: #288ee2;
@@ -757,3 +758,16 @@ div.social-icons-nav  {
     display: none;
   }
 }
+
+
+@media (max-width: 576px) { 
+  .container-cards {
+  margin: 0;
+   }
+  }
+
+  @media (max-width: 576px) { 
+    .container-banner {
+    margin: 0 10px 20px 10px;
+     }
+    }

@@ -25,6 +25,7 @@ html {
   font-family: 'Montserrat', sans-serif;
   margin: 0 auto;
   padding: 0;
+  min-width: 375px;
 }
 
 /* =============
@@ -202,8 +203,8 @@ a {
   display: grid;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px 50px;
   padding: 50px;
   background-color: #288ee2;
@@ -608,6 +609,18 @@ div.social-icons-nav {
 @media (min-width: 870px) {
   div.social-icons-nav {
     display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-cards {
+    margin: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-banner {
+    margin: 0 10px 20px 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

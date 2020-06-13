@@ -213,7 +213,7 @@ a {
 }
 
 .card {
-  max-width: 500px;
+  max-width: 400px;
   background-color: #0d324d;
   -webkit-box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
           box-shadow: 12px 12px 16px 0 rgba(0, 0, 0, 0.25), -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
@@ -573,13 +573,13 @@ li {
     display: grid;
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
+    margin: 0 0 20px 0;
   }
 }
 
 @media (max-width: 870px) {
-  .card {
-    place-self: center;
-    min-width: 400px;
+  .container-cards {
+    padding: 50px 20px 50px 20px;
   }
 }
 

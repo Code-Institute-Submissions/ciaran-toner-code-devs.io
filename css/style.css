@@ -583,8 +583,8 @@ li {
 }
 
 @media (max-width: 870px) {
-  .social-icons-nav, li {
-    font-size: 1.5em;
+  .social-icons-nav, fa {
+    font-size: 2em;
     border-bottom: 0;
     background: -webkit-gradient(linear, left top, right top, from(#fff), color-stop(70%, #fff));
     background: linear-gradient(90deg, #fff, #fff 70%);
@@ -603,5 +603,11 @@ div.social-icons-nav {
       -ms-flex-pack: center;
           justify-content: center;
   margin-top: 150px;
+}
+
+@media (min-width: 870px) {
+  div.social-icons-nav {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */

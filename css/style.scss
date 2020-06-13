@@ -735,8 +735,8 @@ li {
 }
 
 @media (max-width: 870px) {
-  .social-icons-nav, li {
-  font-size: 1.5em;
+  .social-icons-nav ,fa  {
+  font-size: 2em;
   border-bottom: 0;
   background: linear-gradient(90deg, #fff, #fff 70%);
     background-clip: border-box;
@@ -750,4 +750,10 @@ div.social-icons-nav  {
   display: flex;
   justify-content: center;
   margin-top: 150px;
+}
+
+@media (min-width: 870px) {
+  div.social-icons-nav {
+    display: none;
+  }
 }

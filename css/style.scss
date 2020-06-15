@@ -404,6 +404,21 @@ a {
 }
 
 
+@media (max-width: 550px) {
+
+  .article-container{
+    padding: 0 10px 0 10px;
+  }
+  }
+
+  @media (max-width: 550px) {
+
+    .article{
+      margin-left: 0;
+    }
+    }
+  
+
 /* ========================== 
    footer
    ========================== */

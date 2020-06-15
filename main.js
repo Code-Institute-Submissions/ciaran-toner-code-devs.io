@@ -10,9 +10,9 @@ menuicon.addEventListener("click", () => {
 $(function() {
     $(window).on("scroll", function() {
         if($(window).scrollTop() > 200) {
-            $(".navbar-custom").addClass("active-navbar");
+            $("nav").addClass("active-navbar");
         } else {
-           $(".navbar-custom").removeClass("active-navbar");
+           $("nav").removeClass("active-navbar");
         }
     });
 });

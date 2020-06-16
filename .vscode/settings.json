@@ -10,7 +10,7 @@
     "titleBar.activeForeground": "#FBFCFE",
     "tab.activeForeground": "#00ffff",
     "tab.activeBorder": "#00ffff",
-    "tab.hoverForeground": "#f10ad3", //tab on hover
+    // "tab.hoverForeground": "#f10ad3", //tab on hover
     "icon.foreground": "#ff0000"
   },
   "workbench.colorTheme": "Monokai Ocean",
@@ -31,39 +31,7 @@
     
     "editor.fontSize": 13,
     "terminal.integrated.fontWeightBold": "normal",
-    "editor.fontFamily": "jetBrains mono",
-    "editor.tokenColorCustomizations": {
-      "textMateRules": [
-        {
-          "scope": [
-            //following will be in italic (jetbrains mono)
-            "comment",
-            "entity.name.type.class", //class names
-            "keyword", //import, export, return…
-            "constant", //String, Number, Boolean…, this, super
-            "storage.modifier", //static keyword
-            "storage.type.class.js", //class keyword
-          ],
-          "settings": {
-            "fontStyle": "italic"
-          }
-        },
-        {
-          "scope": [
-            //following will be excluded from italics (VSCode has some defaults for italics)
-            "invalid",
-            "keyword.operator",
-            "constant.numeric.css",
-            "keyword.other.unit.px.css",
-            "constant.numeric.decimal.js",
-            "constant.numeric.json"
-          ],
-          "settings": {
-            "fontStyle": ""
-          }
-        }
-      ]
-    },
+    "editor.fontFamily": "jetBrains mono"  
 
 }
 

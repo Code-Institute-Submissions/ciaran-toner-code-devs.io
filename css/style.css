@@ -244,13 +244,15 @@ nav li {
 
 .card p {
   font-size: 1.5em;
-  text-transform: none;
   color: white;
 }
 
 .card ul {
   list-style: none;
   padding: 0;
+}
+
+.card a {
   text-decoration: none;
 }
 
@@ -259,6 +261,13 @@ nav li {
   margin-right: 20px;
   font-size: 1em;
   border-radius: 25px 0;
+}
+
+.card p:hover {
+  color: #3ed3e7;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 
 /* ====================
@@ -335,7 +344,7 @@ nav li {
 }
 
 .article-text {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .article-container a:hover {
@@ -373,7 +382,7 @@ footer {
       grid-template-columns: 1fr;
   -ms-grid-rows: auto auto auto;
       grid-template-rows: auto auto auto;
-  row-gap: 15px;
+  row-gap: 10px;
   background-image: linear-gradient(315deg, #0d324d 74%, #7f5a83 0%);
   margin-top: 25px;
   padding: 0;
@@ -384,7 +393,8 @@ footer {
 .footer-h1 {
   font-family: 'Satisfy', cursive;
   background: -webkit-linear-gradient(40deg, #2e8ac7, #00ff95 80%);
-  background-clip: text;
+  background-clip: border-box;
+  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
@@ -419,7 +429,7 @@ input {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 10px 15px 0 15px;
+  padding: 0px 15px 0 15px;
   list-style: none;
   font-size: 1.5em;
 }
@@ -430,6 +440,7 @@ input {
   background-clip: border-box;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-top: 0;
 }
 
 /* =============

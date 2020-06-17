@@ -16,6 +16,7 @@
 /* =============
    global styles
    ============= */
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
@@ -29,9 +30,12 @@
 body,
 html {
   font-family: 'Montserrat', sans-serif;
-  // font-family: 'Quicksand', sans-serif;
   margin: 0 auto;
   padding: 0;
+}
+
+:any-link {
+  text-decoration: none;
 }
 
 
@@ -46,8 +50,12 @@ p {
   font-weight: normal;
 }
 
+p {
+  font-size: 1.4rem;
+}
 
-/* =================
+
+/* =====================
       Navigation Desktop
       ================= */
 
@@ -69,7 +77,6 @@ nav {
 
 nav a {
   color: #fff;
-  text-decoration: none;
   text-transform: uppercase;
   font-size: 1.0em;
   letter-spacing: 0.1em;
@@ -94,7 +101,6 @@ nav li {
   margin: 0;
 }
 
-
 @media (min-width: 992px) {
 
   nav li {
@@ -114,21 +120,20 @@ nav li {
     transition: all 0.3s ease-in-out 0s;
   }
 
- nav li:hover::before {
+  nav li:hover::before {
     visibility: visible;
     transform: scaleX(1);
   }
 
   .active a {
-    // color: #e52e71;
     color: rgb(0, 247, 255)
   }
 
 }
 
-//    /* ========================
-//       Navigation styles Mobile
-//       ======================== */
+/* ========================
+       Navigation styles Mobile
+ ======================== */
 
 
 
@@ -140,15 +145,12 @@ nav li {
   margin-right: 20px;
   font-size: 2em;
   color: white;
-  //   transform: rotate(90deg);
-  //   transition: transform 0.5s;
 }
 
 .nav-icon:hover {
   color: #5ed9ff
 }
 
-//w3 schools button effect
 
 .nav-icon:active {
   font-size: 2.2em;
@@ -157,6 +159,11 @@ nav li {
   transform: translateY(4px);
 }
 
+div.social-icons-nav {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
 
 /* ========================
    Home page banner
@@ -196,32 +203,9 @@ nav li {
   min-width: 40vw;
 }
 
-.button {
-  background-color: transparent;
-  padding: 10px 20px;
-  margin: 20px 0 0 20px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border-radius: 5px;
-  font-size: 1.2em;
-  text-align: center;
-}
-
-.button1 {
-  color: #2188ff;
-  border: 1.5px solid #2188ff;
-}
-
-.button1:hover {
-  border: 1.5px solid rgb(201, 18, 88);
-  color: white;
-}
-
 /* ========================
-   Home page
+   Home page cards
    ======================== */
-
-
 
 .container-cards {
   display: grid;
@@ -248,11 +232,11 @@ nav li {
 .card:hover {
   transform: translate(0px, -10px);
   transition: 0.3s;
-}
 
-
-.card h3:hover {
-  color: rgb(9, 207, 241);
+  h3 {
+    color: rgb(9, 207, 241);
+    ;
+  }
 }
 
 .card h3 {
@@ -269,28 +253,35 @@ nav li {
   color: white;
 }
 
-.card ul  {
+.card ul {
   list-style: none;
   padding: 0;
 }
 
-.card a {
-  text-decoration: none;
-}
+// .card a {
+//   text-decoration: none;
+// }
 
 .card-icons {
   float: right;
   margin-right: 20px;
   font-size: 1em;
-  border-radius: 25px 0 ;
+  border-radius: 25px 0;
 }
 
- .card p:hover {
+.card p:hover {
   color: #3ed3e7;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
 }
 
+.card-3 p {
+  padding-left: 30px;
+}
+
+.card-4 p {
+  padding-left: 40px;
+}
 
 /* ====================
    getting started page
@@ -304,51 +295,46 @@ nav li {
 
 .article-container {
   display: grid;
-  grid-template-columns:  400px auto ;  
+  grid-template-columns: 400px auto;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-template-rows:  auto auto;
+  grid-template-rows: auto auto;
   gap: 40px 50px;
   padding: 0 50px 0 50px;
   max-width: 1600px;
 }
 
-.article-container h1, h2 {
+.article-container h1,
+h2 {
   color: #1b688f;
 }
 
-// .article-image {
-// grid-template-columns: 600px;}
+.article-text h2 {
+  padding-top: 20px;
+  margin: 0;
+}
 
-
-
-.img-laptop{
+.img-laptop {
   height: auto;
   width: 90%;
   margin-top: 18.5px;
   min-width: 70%;
 }
 
-// .article-image {
-//   width:100%;
-// }
-
-
-
 @media (min-width: 1200px) {
   .article-container {
-    grid-template-columns: 600px  auto  ;
-    grid-template-rows:   auto;
+    grid-template-columns: 600px auto;
+    grid-template-rows: auto;
   }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 971px) {
 
-.article-text {
-  grid-column: 1 / span 2;
-  text-align: left;
-  place-self: center;
-  width: 60%;
-}
+  .article-text {
+    grid-column: 1 / span 2;
+    text-align: left;
+    place-self: center;
+    width: 60%;
+  }
 }
 
 .blog-container {
@@ -356,7 +342,7 @@ nav li {
   font-size: 1.3rem;
 }
 
-.blog-container p{
+.blog-container p {
   margin-bottom: 2px;
 }
 
@@ -365,7 +351,7 @@ nav li {
   position: relative;
   width: 100px;
   height: auto;
-  border-radius: 50% ;
+  border-radius: 50%;
   border: 2px solid #0d324d;
   padding: 5px;
   z-index: -1;
@@ -375,44 +361,34 @@ nav li {
   font-size: 1.2rem;
 }
 
-
-.article-container a:hover {
-  pointer-events: none;
-}
-
-.article-container a {
-  text-decoration: underline;
-  margin: 0;
-  color: #0d324d;
-  text-transform: none;
+.article a {
+  color: #1b688f;
+  font-weight: bold;
 }
 
 
 @media (max-width: 400px) {
 
-  .article-container{
-    // padding: 0 10px 0 10px;
-   grid-template-columns: 300px;
-   justify-items: center;
-  //  padding: 0;
+  .article-container {
+    grid-template-columns: 300px;
+    justify-items: center;
   }
-  }
+}
 
 
-  @media (max-width: 400px) {
-    .article {
-      // padding-left: 30px; 
-      margin: 0 auto;
-    }
+@media (max-width: 400px) {
+  .article {
+    margin: 0 auto;
   }
+}
 
-  
+
 
 /* ========================== 
    footer
    ========================== */
 
-footer { 
+footer {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto auto;
@@ -459,8 +435,7 @@ input {
   text-transform: lowercase;
 }
 
-.social-icons 
- {
+.social-icons {
   color: white;
   display: flex;
   padding: 0px 15px 0 15px;
@@ -479,44 +454,49 @@ input {
 }
 
 
+/* ========================== 
+   learn code page
+   ========================== */
+
+   .learn-code-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 150px;
+    
+   }
+
+   .codepen {
+    width: 80%;
+    height: 600px;
+   }
+
 /* =============
    componants
    ============= */
 
-// Typewritter effect
+/*-------------- button banner home page-------------- */
 
-// source:https://css-tricks.com/snippets/css/typewriter-effect/
+.button {
+  background-color: transparent;
+  padding: 10px 20px;
+  margin: 20px 0 0 20px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1.2em;
+  text-align: center;
+}
 
-// credit: https://css-tricks.com/author/geoffgraham/
+.button1 {
+  color: #2188ff;
+  border: 1.5px solid #2188ff;
+}
 
-
-//  #typeWritter {
-//   overflow: hidden; /* Ensures the content is not revealed until the animation */
-//   border-right: .15em solid orange; /* The typwriter cursor */
-//   white-space: nowrap; /* Keeps the content on a single line */
-//   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-//   letter-spacing: .15em; /* Adjust as needed */
-//   animation: 
-//     typing 3.5s steps(40, end),
-//     blink-caret .75s step-end 5s;
-//     white-space: nowrap; 
-// }
-
-// /* The typing effect */
-// @keyframes typing {
-//   from { width: 0 }
-//   to { width: 100% }
-// }
-
-// /* The typewriter cursor effect */
-// @keyframes blink-caret {
-//   from, to { border-color: transparent }
-//   50% { border-color: orange; }
-// }
-
-
-
-
+.button1:hover {
+  border: 1.5px solid rgb(201, 18, 88);
+  color: white;
+}
 
 /* =============
    Media quiries
@@ -526,12 +506,6 @@ input {
 
 
 
-// @media (max-width: 576px) {
-//   .container-banner h1 {
-//     line-height: 1.2;
-//     margin: 0 auto;
-//   }
-// }
 
 
 /*-------------- cards -------------- */
@@ -555,39 +529,6 @@ input {
 
 /*-------------- getting started -------------- */
 
-// @media (max-width: 800px) {
-//   .article-container {
-//     display: grid;
-//     grid-template-columns: 1fr;
-//     grid-template-rows: 1fr 1fr;
-//     margin: 0 auto;
-
-//     .article-image {
-//       grid-row: 2;
-//       grid-column: 1/ span 3;
-
-//       // place-self: ceenter;
-//     }
-
-//   }
-
-//   .artilce-heading {
-//     grid-row: 1;
-//     grid-column: 1/ span 3;
-//     text-align: center;
-//     margin: 0 auto;
-//     padding: 0;
-
-//   }
-
-
-//   .article-text {
-//     min-width: 100%;
-//   }
-
-// }
-
-// @media (min-width: 576px) { ... }
 
 
 
@@ -620,16 +561,7 @@ input {
    ============= */
 
 
-/* =============
-   navigation
-============= */
-
-
-@media (min-width: 961px) {
-  .menuicon {
-    display: none;
-  }
-}
+/* =============   navigation  ============= */
 
 
 
@@ -710,32 +642,26 @@ input {
   }
 }
 
-@media (max-width: 870px) {
-  .container-cards {
-    padding: 50px 20px 50px 20px;
-  }
-}
 
-
-@media (max-width: 960px) { 
-  .social-icons-nav   {
-  font-size: 1.7em;
-  border-bottom: 0;
-  background: linear-gradient(90deg, #fff, #fff 70%);
+@media (max-width: 960px) {
+  .social-icons-nav {
+    font-size: 1.7em;
+    border-bottom: 0;
+    background: linear-gradient(90deg, #fff, #fff 70%);
     background-clip: border-box;
-background-clip: text;
--webkit-background-clip: text;
--webkit-text-fill-color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media (min-width: 961px) {
+  .menuicon {
+    display: none;
   }
 }
 
 
-
-div.social-icons-nav  {
-  display: flex;
-  justify-content: space-evenly;
-  list-style: none;
-}
 
 @media (min-width: 961px) {
   div.social-icons-nav {
@@ -743,14 +669,36 @@ div.social-icons-nav  {
   }
 }
 
-@media (max-width: 576px) { 
-  .container-cards {
-  margin: 0;
-   }
-  }
+// --------------------------------- card media quiries
 
-  @media (max-width: 576px) { 
-    .container-banner {
+@media (max-width: 870px) {
+  .container-cards {
+    padding: 50px 20px 50px 20px;
+  }
+}
+
+
+@media (max-width: 710px) {
+  .container-cards {
+    margin: 0;
+  }
+}
+
+@media (max-width: 689px) {
+  .container-cards {
+    place-items: center;
+    padding: 50px 0 50px 0;
+  }
+}
+
+@media (max-width: 689px) {
+  .card {
+    min-width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-banner {
     margin: 0 10px 20px 10px;
-     }
-    }
+  }
+}

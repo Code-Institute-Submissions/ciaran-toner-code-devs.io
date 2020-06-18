@@ -38,7 +38,6 @@ html {
   text-decoration: none;
 }
 
-
 /* =============
       typograpgy
       ============= */
@@ -328,7 +327,6 @@ h2 {
 }
 
 @media (min-width: 971px) {
-
   .article-text {
     grid-column: 1 / span 2;
     text-align: left;
@@ -458,18 +456,63 @@ input {
    learn code page
    ========================== */
 
-   .learn-code-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 150px;
+   .codepen-container {
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: auto auto 600px;
+    margin: 50px 100px;
     
    }
 
-   .codepen {
-    width: 80%;
-    height: 600px;
+   .codepen-container h1  {
+    border: 5px solid rgb(0, 66, 128);
+    color: indigo;
+    border-radius:10px ;
+    padding: 10px;
+    text-align: center;
    }
+
+
+   .codepen-container p  {
+    border: 5px solid rgb(0, 66, 128);
+    color: indigo;
+    border-radius:10px ;
+    padding: 10px;
+    text-align: center;
+   }
+
+  //  .html p {
+  //   border: 5px solid rgb(0, 66, 128);
+  //   color: indigo;
+  //   border-radius:10px ;
+  //   padding: 10px;
+  //   text-align: center;
+  //  }
+
+   .html-png {
+     display: block;
+     width: 80%;
+     height: auto;
+     margin: 0 auto;
+   }
+
+   .css-png {
+    display: block;
+    width: 77%;
+    height: auto;
+    margin: 0 auto;
+   }
+
+   .html-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: auto;
+    gap: 30px 20px ;
+    padding-bottom:50px;
+   }
+
+  
 
 /* =============
    componants
@@ -574,7 +617,7 @@ input {
 
 @media (max-width: 960px) {
   .nav-menu {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     min-width: 100%;
@@ -588,7 +631,6 @@ input {
     transition: all 1s ease-in-out;
     pointer-events: none;
     background-color: rgb(1, 42, 70);
-
   }
 }
 
@@ -662,7 +704,6 @@ input {
 }
 
 
-
 @media (min-width: 961px) {
   div.social-icons-nav {
     display: none;
@@ -702,3 +743,15 @@ input {
     margin: 0 10px 20px 10px;
   }
 }
+
+@media (max-width: 576px) {
+.codepen-container {
+  margin: 20px 10px;
+ }
+}
+
+// @media (max-width: 576px) {
+//   .html-container {
+//     gap: 0px
+//    }
+//   }

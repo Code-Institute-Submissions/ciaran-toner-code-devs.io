@@ -456,22 +456,57 @@ input {
 /* ========================== 
    learn code page
    ========================== */
-.learn-code-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 150px;
+.codepen-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto auto 600px;
+      grid-template-rows: auto auto 600px;
+  margin: 50px 100px;
 }
 
-.codepen {
+.codepen-container h1 {
+  border: 5px solid #004280;
+  color: indigo;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.codepen-container p {
+  border: 5px solid #004280;
+  color: indigo;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.html-png {
+  display: block;
   width: 80%;
-  height: 600px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.css-png {
+  display: block;
+  width: 77%;
+  height: auto;
+  margin: 0 auto;
+}
+
+.html-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 30px 20px;
+  padding-bottom: 50px;
 }
 
 /* =============
@@ -535,7 +570,7 @@ input {
 
 @media (max-width: 960px) {
   .nav-menu {
-    position: fixed;
+    position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -663,6 +698,12 @@ input {
 @media (max-width: 576px) {
   .container-banner {
     margin: 0 10px 20px 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .codepen-container {
+    margin: 20px 10px;
   }
 }
 /*# sourceMappingURL=style.css.map */

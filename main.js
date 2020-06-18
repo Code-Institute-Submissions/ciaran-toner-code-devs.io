@@ -7,15 +7,15 @@ menuicon.addEventListener("click", () => {
 });
 
 
-$(function() {
-    $(window).on("scroll", function() {
-        if($(window).scrollTop() > 200) {
-            $("nav").addClass("active-navbar");
-        } else {
-           $("nav").removeClass("active-navbar");
-        }
-    });
-});
+// $(function() {
+//     $(window).on("scroll", function() {
+//         if($(window).scrollTop() > 200) {
+//             $("nav").addClass("active-navbar");
+//         } else {
+//            $("nav").removeClass("active-navbar");
+//         }
+//     });
+// });
 
 
   

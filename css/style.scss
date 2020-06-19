@@ -295,7 +295,7 @@ div.social-icons-nav {
 .article-container {
   display: grid;
   grid-template-columns: 400px auto;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: auto auto;
   gap: 40px 50px;
   padding: 0 50px 0 50px;
@@ -356,7 +356,9 @@ h2 {
 }
 
 .article-text {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: #555454;
 }
 
 .article a {
@@ -368,8 +370,9 @@ h2 {
 @media (max-width: 400px) {
 
   .article-container {
-    grid-template-columns: 300px;
-    justify-items: center;
+    grid-template-columns: 350px;
+    justify-content: center;
+    padding: 0 10px;
   }
 }
 
@@ -456,63 +459,64 @@ input {
    learn code page
    ========================== */
 
-   .codepen-container {
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: auto auto 600px;
-    margin: 50px 100px;
-    
-   }
+.codepen-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto 600px;
+  margin: 50px 100px;
 
-   .codepen-container h1  {
-    border: 5px solid rgb(0, 66, 128);
-    color: indigo;
-    border-radius:10px ;
-    padding: 10px;
-    text-align: center;
-   }
+}
+
+.codepen-text h1,
+.html-container p {
+  border: 5px solid rgb(0, 66, 128);
+  color: indigo;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
 
 
-   .codepen-container p  {
-    border: 5px solid rgb(0, 66, 128);
-    color: indigo;
-    border-radius:10px ;
-    padding: 10px;
-    text-align: center;
-   }
+//  .codepen-container p  {
+//   border: 5px solid rgb(0, 66, 128);
+//   color: indigo;
+//   border-radius:10px ;
+//   padding: 10px;
+//   text-align: center;
+//  }
 
-  //  .html p {
-  //   border: 5px solid rgb(0, 66, 128);
-  //   color: indigo;
-  //   border-radius:10px ;
-  //   padding: 10px;
-  //   text-align: center;
-  //  }
+//  .html p {
+//   border: 5px solid rgb(0, 66, 128);
+//   color: indigo;
+//   border-radius:10px ;
+//   padding: 10px;
+//   text-align: center;
+//  }
 
-   .html-png {
-     display: block;
-     width: 80%;
-     height: auto;
-     margin: 0 auto;
-   }
+.html-png {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin: 0 auto;
+}
 
-   .css-png {
-    display: block;
-    width: 77%;
-    height: auto;
-    margin: 0 auto;
-   }
+.css-png {
+  display: block;
+  width: 77%;
+  height: auto;
+  margin: 0 auto;
+}
 
-   .html-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-template-rows: auto;
-    gap: 30px 20px ;
-    padding-bottom:50px;
-   }
+.html-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-rows: auto;
+  gap: 30px 20px;
+  padding-bottom: 50px;
+}
 
-  
+
 
 /* =============
    componants
@@ -521,9 +525,10 @@ input {
 /*-------------- button banner home page-------------- */
 
 .button {
+  display: inline-block;
   background-color: transparent;
   padding: 10px 20px;
-  margin: 20px 0 0 20px;
+  margin-left: 20px;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 5px;
@@ -745,9 +750,9 @@ input {
 }
 
 @media (max-width: 576px) {
-.codepen-container {
-  margin: 20px 10px;
- }
+  .codepen-container {
+    margin: 20px 10px;
+  }
 }
 
 // @media (max-width: 576px) {

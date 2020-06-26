@@ -32,10 +32,17 @@ html {
   font-family: 'Montserrat', sans-serif;
   margin: 0 auto;
   padding: 0;
+  box-sizing: border-box;
 }
 
 :any-link {
   text-decoration: none;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
 }
 
 /* =============
@@ -90,7 +97,6 @@ nav li {
   font-family: 'Ubuntu Mono', monospace;
   font-size: 1.4rem;
   text-transform: none;
-  // pointer-events: none;
   margin-left: 20px;
   color: rgb(0, 247, 255);
   z-index: 1;
@@ -464,50 +470,41 @@ input {
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 600px;
   margin: 50px 100px;
-
+  text-align: center;
 }
 
-.codepen-text h1,
-.html-container p {
+.codepen-header {
+  padding-bottom: 20px;
+}
+
+.codepen-header h1 {
+  display: inline-block;
+  margin: 0 auto;
+  border-bottom: 5px solid #004280;
+  padding-bottom: 5px;
+  color: indigo;
+}
+
+.codepen-text p {
+  display: inline-block;
   border: 5px solid rgb(0, 66, 128);
   color: indigo;
   border-radius: 10px;
   padding: 10px;
-  text-align: center;
+  margin: 20px auto;
 }
 
-
-//  .codepen-container p  {
-//   border: 5px solid rgb(0, 66, 128);
-//   color: indigo;
-//   border-radius:10px ;
-//   padding: 10px;
-//   text-align: center;
-//  }
-
-//  .html p {
-//   border: 5px solid rgb(0, 66, 128);
-//   color: indigo;
-//   border-radius:10px ;
-//   padding: 10px;
-//   text-align: center;
-//  }
-
 .html-png {
-  display: block;
   width: 80%;
   height: auto;
-  margin: 0 auto;
 }
 
 .css-png {
-  display: block;
   width: 77%;
   height: auto;
-  margin: 0 auto;
 }
 
-.html-container {
+.codepen-text {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -516,7 +513,258 @@ input {
   padding-bottom: 50px;
 }
 
+/* ========================== 
+   About us page
+   ========================== */
 
+.time-line-container {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  background-color: #0d324d;
+  padding: 25px;
+  gap: 10px;
+}
+
+.time-line-container::before {
+  content: "";
+  height: 10px;
+  background: #ffffff;
+  grid-column: 1 / span 5;
+  grid-row: 2;
+  border-radius: 10px;
+}
+
+.time-line-text {
+  border: 2px solid #26a0a0;
+  color: white;
+  border-radius: 10px 10px;
+  padding: 0 10px 0 10px;
+  min-height: 130px;
+}
+
+.time-line-text p {
+  color: white;
+  margin: 0 0 5px 0;
+}
+
+.time-line-text h2 {
+  display: inline-block;
+  border-bottom: 3px solid white;
+  padding-bottom: 5px;
+  color: cyan;
+}
+
+.time-card-2 {
+  padding-top: 15px;
+  grid-row: 2;
+  grid-column: 2;
+}
+
+.time-card-3 {
+  grid-row: 1;
+  grid-column: 3;
+}
+
+.time-card-4 {
+  padding-top: 15px;
+  grid-row: 2;
+  grid-column: 4;
+}
+
+
+.time-card-5 {
+  grid-row: 1;
+  grid-column: 5;
+}
+
+@media (max-width: 1600px) {
+  .time-line-container {
+    display: none;
+  }
+}
+
+.profile-container {
+  display: grid;
+  background-color: #87848429;
+  // justify-content: center;
+  margin-top: 50px;
+  padding: 30px;
+  overflow: auto;
+}
+
+.profile-cards {
+  display: flex;
+}
+
+.scroll-touch {
+  -webkit-overflow-scrolling: touch;
+}
+
+//profile card css source --> Chris Coyer https://css-tricks.com/video-screencasts/171-movable-stacked-card-row-in-css/
+
+.profile-card {
+  background-color: rgb(17, 77, 112);
+  box-shadow: 3px 3px 12px 2px rgba(black, 0.75);
+  padding: 2rem;
+  border-radius: 2rem;
+  transition: 0.2s;
+  min-height: 300px;
+  min-width: 265px;
+  z-index: 1;
+}
+
+.profile-card:not(:first-child) {
+  margin-left: -4rem;
+}
+
+.profile-card:hover {
+  transform: translateY(-1rem)
+}
+
+.profile-card:hover~.profile-card {
+  // (~) targets cards adjacent to cards selected
+  transform: translateX(4rem);
+}
+
+.profile-container p {
+ color: cyan;
+}
+
+.time {
+  position: relative;
+}
+
+.time::before  {
+  content: "";
+position: absolute;
+width: 30%;
+height: 5px;
+top: 40px;
+left: 30%;
+background-color: #fff7fa;
+}
+
+.profile-cards h2 {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.profile-title {
+  padding: 5px 0;
+  border: 1px solid white;
+  border-radius: 2rem;
+  text-align: center;
+}
+
+.profile-card-main {
+  background-color: rgb(15, 71, 104);
+  box-shadow: 3px 3px 12px 2px rgba(black, 0.75);
+  padding: 2rem;
+  border-radius: 2rem;
+  min-height: 350px;
+  min-width: 265px;
+  margin-right: 100px;
+  text-align: center;
+}
+
+.profile-card-img {
+  height: 75px;
+  border-radius: 50%;
+  border: 5px solid grey;
+}
+
+.books-img {
+  height: 20%;
+  width: 100%;
+}
+
+.p-range {
+  text-align: end;
+  margin: 0;
+  font-size: 1.0rem;
+  padding-right: 5px;
+}
+
+.progress-bar {
+  position: relative;
+  width: 100%;
+  height: 15px;
+  border-radius: 10px;
+  background-color: #0d324d;
+}
+
+.html-bar,
+.css-bar,
+.javascript-bar,
+.ux-design-bar {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  bottom: 0%;
+  border-radius: 10px;
+  background: linear-gradient(40deg, #2e8ac7, #00ff95 80%);
+  transition: 1.0s ease-in-out;
+}
+
+.profile-card:hover .html-bar {
+  width: 80%;
+}
+
+.profile-card:hover .css-bar {
+  width: 60%;
+}
+
+.profile-card:hover .javascript-bar {
+  width: 30%;
+}
+
+.profile-card:hover .ux-design-bar {
+  width: 70%;
+}
+
+// .profile-card .html-bar:hover {
+//   width: 70%;
+//   transition: 0.3s ease-out;
+// }
+
+/* ========================== 
+   About us page
+   ========================== */
+
+.about-us-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto ;
+  gap: 50px;
+}
+
+.about-us-banner {
+  background-color: #0d324d;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  justify-items: center;
+}
+
+.about-us-banner-text {
+  padding: 30px 10px 20px 10px;
+  color: white;
+  max-width: 600px;
+  text-align: center;
+}
+
+.about-us-banner-text h1 {
+  font-size: 3.0em;
+  border: 2px solid #26a0a0;
+  border-radius: 10px;
+}
+
+.about-us-banner-text p {
+  line-height: 1.4em;
+  font-size: 1.7em;
+}
 
 /* =============
    componants
@@ -611,8 +859,6 @@ input {
 
 /* =============   navigation  ============= */
 
-
-
 @media (max-width: 960px) {
   .nav-menu {
     display: none;
@@ -636,6 +882,7 @@ input {
     transition: all 1s ease-in-out;
     pointer-events: none;
     background-color: rgb(1, 42, 70);
+    padding-left: 0;
   }
 }
 
@@ -708,7 +955,6 @@ input {
   }
 }
 
-
 @media (min-width: 961px) {
   div.social-icons-nav {
     display: none;
@@ -754,9 +1000,3 @@ input {
     margin: 20px 10px;
   }
 }
-
-// @media (max-width: 576px) {
-//   .html-container {
-//     gap: 0px
-//    }
-//   }

@@ -99,7 +99,7 @@ nav li {
   text-transform: none;
   margin-left: 20px;
   color: rgb(0, 247, 255);
-  z-index: 1;
+  z-index: 2;
 }
 
 .site-logo h1 {
@@ -150,6 +150,7 @@ nav li {
   margin-right: 20px;
   font-size: 2em;
   color: white;
+  z-index: 2;
 }
 
 .nav-icon:hover {
@@ -724,11 +725,6 @@ background-color: #fff7fa;
   width: 70%;
 }
 
-// .profile-card .html-bar:hover {
-//   width: 70%;
-//   transition: 0.3s ease-out;
-// }
-
 /* ========================== 
    About us page
    ========================== */
@@ -883,6 +879,7 @@ background-color: #fff7fa;
     pointer-events: none;
     background-color: rgb(1, 42, 70);
     padding-left: 0;
+    z-index: 2;  // Cards on about us page have z-index of 1
   }
 }
 

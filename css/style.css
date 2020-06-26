@@ -105,7 +105,7 @@ nav li {
   text-transform: none;
   margin-left: 20px;
   color: #00f7ff;
-  z-index: 1;
+  z-index: 2;
 }
 
 .site-logo h1 {
@@ -149,6 +149,7 @@ nav li {
   margin-right: 20px;
   font-size: 2em;
   color: white;
+  z-index: 2;
 }
 
 .nav-icon:hover {
@@ -879,6 +880,7 @@ input {
     pointer-events: none;
     background-color: #012a46;
     padding-left: 0;
+    z-index: 2;
   }
 }
 

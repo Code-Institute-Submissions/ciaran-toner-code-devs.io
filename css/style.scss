@@ -1,10 +1,12 @@
 /* table of contents
   1. global styles
-  2.typography
-  2. Navigation styles
+  2. typography
+  2. navigation styles
   3. navigation styles Mobile
+  4. home page banner
+     home page cards
   4. componants
-  5 Media quiers
+  5  media quiers
      
     1. Navigation
     2.
@@ -17,22 +19,15 @@
    global styles
    ============= */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Ubuntu+Mono&display=swap');
-
-
-// *, *::before, *::after {
-//   box-sizing: border-box;
-// }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap'); // Main body text
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap'); // Footer
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Ubuntu+Mono&display=swap'); // Logo
 
 body,
 html {
   font-family: 'Montserrat', sans-serif;
   margin: 0 auto;
   padding: 0;
-  box-sizing: border-box;
 }
 
 :any-link {
@@ -43,6 +38,10 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
+}
+
+* ul li {
+  list-style: none;
 }
 
 /* =============
@@ -57,12 +56,12 @@ p {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 
 /* =====================
-      Navigation Desktop
+      navigation desktop
       ================= */
 
 nav {
@@ -88,10 +87,6 @@ nav a {
   letter-spacing: 0.1em;
 }
 
-nav li {
-  list-style: none;
-}
-
 .site-logo {
   position: relative;
   font-family: 'Ubuntu Mono', monospace;
@@ -99,7 +94,8 @@ nav li {
   text-transform: none;
   margin-left: 20px;
   color: rgb(0, 247, 255);
-  z-index: 2;
+  z-index: 3;
+  margin-left: 20px;
 }
 
 .site-logo h1 {
@@ -108,6 +104,7 @@ nav li {
 
 @media (min-width: 992px) {
 
+  // This is for underline transition effect
   nav li {
     position: relative;
   }
@@ -133,16 +130,11 @@ nav li {
   .active a {
     color: rgb(0, 247, 255)
   }
-
 }
 
 /* ========================
-       Navigation styles Mobile
+       navigation styles mobile
  ======================== */
-
-
-
-// // navbar mobile menu
 
 .nav-icon {
   position: relative;
@@ -157,7 +149,6 @@ nav li {
   color: #5ed9ff
 }
 
-
 .nav-icon:active {
   font-size: 2.2em;
   color: #8e3e7d;
@@ -167,14 +158,12 @@ nav li {
 
 div.social-icons-nav {
   display: flex;
-  justify-content: space-evenly;
-  list-style: none;
+  justify-content: center;
 }
 
 /* ========================
-   Home page banner
+   home page banner
    ======================== */
-
 
 .container-banner {
   background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
@@ -210,7 +199,7 @@ div.social-icons-nav {
 }
 
 /* ========================
-   Home page cards
+   home page cards
    ======================== */
 
 .container-cards {
@@ -222,6 +211,7 @@ div.social-icons-nav {
   background-color: #288ee2;
   border-radius: 25px 0 0 0;
   margin-left: 20px;
+  margin-bottom: 20px;
 }
 
 .card {
@@ -260,13 +250,8 @@ div.social-icons-nav {
 }
 
 .card ul {
-  list-style: none;
   padding: 0;
 }
-
-// .card a {
-//   text-decoration: none;
-// }
 
 .card-icons {
   float: right;
@@ -351,7 +336,6 @@ h2 {
   margin-bottom: 2px;
 }
 
-
 .blog-img {
   position: relative;
   width: 100px;
@@ -373,16 +357,13 @@ h2 {
   font-weight: bold;
 }
 
-
 @media (max-width: 400px) {
-
   .article-container {
     grid-template-columns: 350px;
     justify-content: center;
     padding: 0 10px;
   }
 }
-
 
 @media (max-width: 400px) {
   .article {
@@ -402,7 +383,7 @@ footer {
   grid-template-rows: auto auto auto;
   row-gap: 10px;
   background-image: linear-gradient(315deg, #0d324d 74%, #7f5a83 0%, );
-  margin-top: 25px;
+  // margin-top: 25px;
   padding: 0;
   text-align: center;
   place-items: center; //effects color of text
@@ -433,7 +414,7 @@ input {
   font-size: 1.2em;
 }
 
-.subcribe-button {
+.subscribe-button {
   background: linear-gradient(40deg, #2e8ac7, #00ff95 80%);
   color: rgb(6, 7, 110);
   margin-top: 0;
@@ -447,7 +428,6 @@ input {
   color: white;
   display: flex;
   padding: 0px 15px 0 15px;
-  list-style: none;
   font-size: 1.5em;
 }
 
@@ -470,20 +450,24 @@ input {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto auto 600px;
-  margin: 50px 100px;
   text-align: center;
+  background-color: lightgray;
+  padding: 10px;
 }
 
 .codepen-header {
-  padding-bottom: 20px;
+  place-self: center;
+  margin: 50px 0 20px 0;
+  min-width: 50%;
 }
 
 .codepen-header h1 {
-  display: inline-block;
   margin: 0 auto;
-  border-bottom: 5px solid #004280;
-  padding-bottom: 5px;
-  color: indigo;
+  padding: 10px;
+  border: 2px solid #e52e71;
+  border-radius: 10px;
+  background-color: #0d324d;
+  color: white;
 }
 
 .codepen-text p {
@@ -510,8 +494,7 @@ input {
   grid-template-columns: repeat(2, 1fr);
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: auto;
-  gap: 30px 20px;
-  padding-bottom: 50px;
+  gap: 15px;
 }
 
 /* ========================== 
@@ -522,10 +505,12 @@ input {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(5, 1fr);
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   background-color: #0d324d;
   padding: 25px;
   gap: 10px;
+  margin: 0 30px 20px 30px;
+  border-radius: 10px;
 }
 
 .time-line-container::before {
@@ -589,14 +574,13 @@ input {
 .profile-container {
   display: grid;
   background-color: #87848429;
-  // justify-content: center;
-  margin-top: 50px;
-  padding: 30px;
+  padding: 50px 30px;
   overflow: auto;
 }
 
 .profile-cards {
   display: flex;
+  flex-direction: row;
 }
 
 .scroll-touch {
@@ -608,11 +592,10 @@ input {
 .profile-card {
   background-color: rgb(17, 77, 112);
   box-shadow: 3px 3px 12px 2px rgba(black, 0.75);
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 2rem;
   transition: 0.2s;
-  min-height: 300px;
-  min-width: 265px;
+  min-width: 240px;
   z-index: 1;
 }
 
@@ -630,21 +613,22 @@ input {
 }
 
 .profile-container p {
- color: cyan;
+  color: #ebebeb;
+  font-size: 1.2rem;
 }
 
 .time {
   position: relative;
 }
 
-.time::before  {
+.time::before {
   content: "";
-position: absolute;
-width: 30%;
-height: 5px;
-top: 40px;
-left: 30%;
-background-color: #fff7fa;
+  position: absolute;
+  width: 20%;
+  height: 5px;
+  top: 35px;
+  left: 2%;
+  background-color: aqua;
 }
 
 .profile-cards h2 {
@@ -660,28 +644,29 @@ background-color: #fff7fa;
 }
 
 .profile-card-main {
-  background-color: rgb(15, 71, 104);
+  background-color: #0d324d;
   box-shadow: 3px 3px 12px 2px rgba(black, 0.75);
   padding: 2rem;
   border-radius: 2rem;
   min-height: 350px;
-  min-width: 265px;
+  min-width: 240px;
+  max-width: 240px;
   margin-right: 100px;
   text-align: center;
 }
 
 .profile-card-img {
-  height: 75px;
-  border-radius: 50%;
-  border: 5px solid grey;
+  height: 100px;
+  border: 3px solid #19c4c4;
+  border-radius: 30px 10px;
+  padding: 4px;
 }
 
-.books-img {
-  height: 20%;
-  width: 100%;
+.profile-card-main p {
+  margin-top: 5px;
 }
 
-.p-range {
+#p-range {
   text-align: end;
   margin: 0;
   font-size: 1.0rem;
@@ -705,24 +690,48 @@ background-color: #fff7fa;
   width: 0%;
   bottom: 0%;
   border-radius: 10px;
-  background: linear-gradient(40deg, #2e8ac7, #00ff95 80%);
+  background: linear-gradient(40deg, #2e8ac7, #00e7ff 80%);
   transition: 1.0s ease-in-out;
 }
 
-.profile-card:hover .html-bar {
-  width: 80%;
+.profile-card:hover {
+  & .html-bar {
+    width: 80%;
+  }
+
+  & .css-bar {
+    width: 60%;
+  }
+
+  & .javascript-bar {
+    width: 30%;
+  }
+
+  & .ux-design-bar {
+    width: 70%;
+  }
 }
 
-.profile-card:hover .css-bar {
-  width: 60%;
+.skills {
+  color: #19c4c4;
+  text-align: left;
+  margin-top: 50px;
 }
 
-.profile-card:hover .javascript-bar {
-  width: 30%;
+.skills h3 {
+  text-transform: uppercase;
+  margin-bottom: 0;
 }
 
-.profile-card:hover .ux-design-bar {
-  width: 70%;
+.skills ul li {
+  display: inline-block;
+  padding: 3px;
+  border: 1px solid gainsboro;
+  margin: 3px;
+}
+
+.skills ul {
+  padding: 0;
 }
 
 /* ========================== 
@@ -732,8 +741,8 @@ background-color: #fff7fa;
 .about-us-container {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: auto ;
-  gap: 50px;
+  grid-template-rows: auto;
+  gap: 20px;
 }
 
 .about-us-banner {
@@ -813,7 +822,7 @@ background-color: #fff7fa;
 }
 
 @media (max-width: 576px) {
-  .subcribe-button {
+  .subscribe-button {
     margin: 10px 0 0 130px;
     text-align: center;
   }
@@ -868,7 +877,7 @@ background-color: #fff7fa;
     display: flex;
     flex-direction: column;
     min-width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     top: 0px;
     right: 0;
     margin: 0 auto;
@@ -879,7 +888,7 @@ background-color: #fff7fa;
     pointer-events: none;
     background-color: rgb(1, 42, 70);
     padding-left: 0;
-    z-index: 2;  // Cards on about us page have z-index of 1
+    z-index: 2; // Cards on about us page have z-index of 1
   }
 }
 
@@ -992,8 +1001,8 @@ background-color: #fff7fa;
   }
 }
 
-@media (max-width: 576px) {
-  .codepen-container {
-    margin: 20px 10px;
-  }
-}
+// @media (max-width: 576px) { // delete code after testing mobile
+//   .codepen-container {
+//     margin: 20px 10px;
+//   }
+// }

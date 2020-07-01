@@ -135,25 +135,29 @@ nav a {
 /* ========================
        navigation styles mobile
  ======================== */
-
-.nav-icon {
-  position: relative;
-  float: right;
+.mobile-menu {
+  justify-self: end;
   margin-right: 20px;
-  font-size: 2em;
-  color: white;
-  z-index: 2;
+  z-index: 3;
 }
 
-.nav-icon:hover {
-  color: #5ed9ff
+.bar {
+  width: 30px;
+  height: 3px;
+  margin: 5px 0;
+  background-color: #00f7ff;
+  transition: 0.5s;
 }
 
-.nav-icon:active {
-  font-size: 2.2em;
-  color: #8e3e7d;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+.change .bar--1 {
+  transform: rotate(-45deg) translate(-10px, 6px);
+}
+.change .bar--2 {
+  opacity: 0;
+}
+
+.change .bar--3 {
+  transform: rotate(45deg) translate(-3px, -3px)
 }
 
 div.social-icons-nav {
@@ -417,7 +421,7 @@ input {
 .subscribe-button {
   background: linear-gradient(40deg, #2e8ac7, #00ff95 80%);
   color: rgb(6, 7, 110);
-  margin-top: 0;
+  margin-left: 10px;
 }
 
 #email {
@@ -764,6 +768,7 @@ input {
   font-size: 3.0em;
   border: 2px solid #26a0a0;
   border-radius: 10px;
+  padding: 10px;
 }
 
 .about-us-banner-text p {
@@ -821,10 +826,9 @@ input {
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 385px) {
   .subscribe-button {
-    margin: 10px 0 0 130px;
-    text-align: center;
+    margin-top: 10px
   }
 }
 
@@ -866,28 +870,19 @@ input {
 
 @media (max-width: 960px) {
   .nav-menu {
-    display: none;
-  }
-}
-
-
-@media (max-width: 960px) {
-  .nav-menu {
     position: absolute;
-    display: flex;
-    flex-direction: column;
+    display: block;
     min-width: 100%;
     min-height: 100vh;
     top: 0px;
-    right: 0;
     margin: 0 auto;
-    padding-top: 50px;
+    padding-top: 100px;
+    padding-left: 0;
     clip-path: circle(10px at 0% -10%);
     -webkit-clip-path: circle(10px at 0% -10%);
     transition: all 1s ease-in-out;
     pointer-events: none;
     background-color: rgb(1, 42, 70);
-    padding-left: 0;
     z-index: 2; // Cards on about us page have z-index of 1
   }
 }
@@ -895,9 +890,10 @@ input {
 @media (max-width: 960px) {
 
   .nav-menu-item {
-    padding: 0 0 10px 10px;
     font-size: 1.5rem;
     border-bottom: 1.5px solid white;
+    padding: 20px 0 10px 0px;
+    margin-left: 20px;
   }
 }
 
@@ -927,6 +923,16 @@ input {
 }
 
 @media (max-width: 960px) {
+  ul.nav-menu-item.open::before {
+   content: "";
+   border-top: 2px solid white;
+   top: 0;
+   position: relative;
+   z-index: 2;
+  }
+}
+
+@media (max-width: 960px) {
   .site-logo {
     grid-column: 2;
     place-self: center;
@@ -939,6 +945,7 @@ input {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 0 0 20px 0;
+    gap: 15px;
   }
 }
 
@@ -955,8 +962,14 @@ input {
   }
 }
 
+@media (max-width: 960px) {
+  .social-icons-nav li {
+    padding: 20px ;
+  }
+}
+
 @media (min-width: 961px) {
-  .menuicon {
+  .mobile-menu {
     display: none;
   }
 }
@@ -1000,9 +1013,3 @@ input {
     margin: 0 10px 20px 10px;
   }
 }
-
-// @media (max-width: 576px) { // delete code after testing mobile
-//   .codepen-container {
-//     margin: 20px 10px;
-//   }
-// }

@@ -1,9 +1,13 @@
 // src for javascript mobile menu Dev ed https://www.youtube.com/watch?v=H4MkGzoACpQ&t=1181s
 
-const menuicon = document.querySelector(".menuicon");
+const mobileMenu = document.querySelector(".mobile-menu");
 const navMenu = document.querySelector(".nav-menu");
 const links = document.querySelectorAll(".nav-menu-item li");
 
-menuicon.addEventListener("click", () => {
+mobileMenu.addEventListener("click", () => {
     navMenu.classList.toggle("open");
 });
+
+function mobileMenuOpen(x) {
+    x.classList.toggle("change");
+  }

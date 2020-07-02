@@ -8,6 +8,8 @@ mobileMenu.addEventListener("click", () => {
     navMenu.classList.toggle("open");
 });
 
+//Mobile menu src https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_menu_icon_js
+
 function mobileMenuOpen(x) {
     x.classList.toggle("change");
   }

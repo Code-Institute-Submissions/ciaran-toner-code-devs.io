@@ -21,7 +21,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap'); // Main body text
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap'); // Footer
-@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&family=Ubuntu+Mono&display=swap'); // Logo
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap');
 
 body,
 html {
@@ -88,18 +88,13 @@ nav a {
 }
 
 .site-logo {
+  background: url("../assets/images/code-dev-logo.svg") no-repeat;
+  height: 30px;
+  width: auto;
+  min-width: 170px;
   position: relative;
-  font-family: 'Ubuntu Mono', monospace;
-  font-size: 1.4rem;
-  text-transform: none;
   margin-left: 20px;
-  color: rgb(0, 247, 255);
   z-index: 3;
-  margin-left: 20px;
-}
-
-.site-logo h1 {
-  margin: 0;
 }
 
 @media (min-width: 992px) {
@@ -135,6 +130,7 @@ nav a {
 /* ========================
        navigation styles mobile
  ======================== */
+
 .mobile-menu {
   justify-self: end;
   margin-right: 20px;
@@ -150,8 +146,9 @@ nav a {
 }
 
 .change .bar--1 {
-  transform: rotate(-45deg) translate(-10px, 6px);
+  transform: rotate(-45deg) translate(-9px, 8px);
 }
+
 .change .bar--2 {
   opacity: 0;
 }
@@ -563,13 +560,12 @@ input {
   grid-column: 4;
 }
 
-
 .time-card-5 {
   grid-row: 1;
   grid-column: 5;
 }
 
-@media (max-width: 1600px) {
+@media (max-width: 1200px) {
   .time-line-container {
     display: none;
   }
@@ -584,7 +580,6 @@ input {
 
 .profile-cards {
   display: flex;
-  flex-direction: row;
 }
 
 .scroll-touch {
@@ -765,7 +760,7 @@ input {
 }
 
 .about-us-banner-text h1 {
-  font-size: 3.0em;
+  font-size: 2rem;
   border: 2px solid #26a0a0;
   border-radius: 10px;
   padding: 10px;
@@ -868,6 +863,12 @@ input {
 
 /* =============   navigation  ============= */
 
+@media (max-width: 961px) {
+  .nav-menu {
+    display: none;
+  }
+}
+
 @media (max-width: 960px) {
   .nav-menu {
     position: absolute;
@@ -876,7 +877,7 @@ input {
     min-height: 100vh;
     top: 0px;
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 60px;
     padding-left: 0;
     clip-path: circle(10px at 0% -10%);
     -webkit-clip-path: circle(10px at 0% -10%);
@@ -890,10 +891,10 @@ input {
 @media (max-width: 960px) {
 
   .nav-menu-item {
-    font-size: 1.5rem;
-    border-bottom: 1.5px solid white;
-    padding: 20px 0 10px 0px;
-    margin-left: 20px;
+    font-size: 1.2rem;
+    border-bottom: 1.3px solid white;
+    padding: 30px 0 10px 0px;
+    margin-left: 30px;
   }
 }
 
@@ -923,19 +924,19 @@ input {
 }
 
 @media (max-width: 960px) {
-  ul.nav-menu-item.open::before {
-   content: "";
-   border-top: 2px solid white;
-   top: 0;
-   position: relative;
-   z-index: 2;
+  .nav-menu.open::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 55px;
+    background-color: #e20fad;
   }
 }
 
 @media (max-width: 960px) {
   .site-logo {
     grid-column: 2;
-    place-self: center;
     margin: 0;
   }
 }
@@ -948,7 +949,6 @@ input {
     gap: 15px;
   }
 }
-
 
 @media (max-width: 960px) {
   .social-icons-nav {
@@ -963,7 +963,7 @@ input {
 }
 
 @media (max-width: 960px) {
-  .social-icons-nav li {
+  .social-icons-nav li  {
     padding: 20px ;
   }
 }
@@ -987,7 +987,6 @@ input {
     padding: 50px 20px 50px 20px;
   }
 }
-
 
 @media (max-width: 710px) {
   .container-cards {

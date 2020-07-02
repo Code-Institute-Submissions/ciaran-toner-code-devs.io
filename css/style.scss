@@ -88,8 +88,8 @@ nav a {
 }
 
 .site-logo {
-  background: url("../assets/images/code-dev-logo.svg") no-repeat;
-  height: 30px;
+  background: url("../assets/images/code-dev-logo-new1.svg") no-repeat;
+  height: 20px;
   width: auto;
   min-width: 170px;
   position: relative;
@@ -580,10 +580,6 @@ input {
 
 .profile-cards {
   display: flex;
-}
-
-.scroll-touch {
-  -webkit-overflow-scrolling: touch;
 }
 
 //profile card css source --> Chris Coyer https://css-tricks.com/video-screencasts/171-movable-stacked-card-row-in-css/

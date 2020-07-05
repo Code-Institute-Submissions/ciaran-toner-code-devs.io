@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>	
+<head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css" type="text/css">
@@ -11,17 +11,16 @@
 
 <body>
 	<!-- ------------------------- Navigation Main -------------------------  -->
-
 	<header>
 		<nav>
 			<a class="site-logo" href="index.html"></a>
 			<ul class="nav-menu">
 				<li class="nav-menu-item active"><a href="index.html">home</a></li>
 				<li class="nav-menu-item"><a href="learn-code.html">learn code</a></li>
-				<li class="nav-menu-item"><a href=" getting-started.html">getting startded</a></li>
+				<li class="nav-menu-item"><a href=" getting-started.html">getting started</a></li>
 				<li class="nav-menu-item"><a href=" about.html">about us</a></li>
 
-				<div class="social-icons-nav">
+				<!-- <div class="social-icons-nav">
 					<li>
 						<a target="_blank" href="#">
 							<i class="fa fa-github-square nav-menu-item social-icons-nav" aria-hidden="true"></i>
@@ -40,8 +39,9 @@
 							<span class="sr-only">youtube</span>
 						</a>
 					</li>
-				</div>
+				</div> -->
 			</ul>
+			<!-- This mobile menu hamburger is not original work ( see readme for credit) -->
 			<div class="mobile-menu" onclick="mobileMenuOpen(this)">
 				<div class="bar bar--1"></div>
 				<div class="bar bar--2"></div>
@@ -60,52 +60,59 @@
 		<a href="getting-started.html" class="button button1">Learn more!</a>
 	</div>
 
-	<!-- ------------------------- Cards -------------------------  -->
+	<!-- ------------------------- Main content -------------------------  -->
 
+	<!-- ------------------------- Cards -------------------------  -->
 	<div class="container-cards">
 		<div class="card card-1">
 			<h3>Get started with the basics</h3>
 			<ul>
 				<li>
 					<a href="https://www.w3schools.com/html/" target="_blank">
-						<p>HTML 5<i class="fab fa-html5 card-icons" aria-hidden="true"></i></p>
-						<span class="sr-only">This is a link to w3 schools learn html</span>
+						<p>HTML5</p>
+						<img src="../assets/images/SVG/html-five.svg" class="icon-card icon-html" aria-hidden="true"
+							alt="This is a link to w3 schools learn html">
 					</a>
 				</li>
 				<li>
 					<a href="https://www.w3schools.com/css/" target="_blank">
-						<p>CSS 3<i class="fab fa-css3-alt card-icons" aria-hidden="true"></i></p>
-						<span class="sr-only">This is a link to w3 schools learn css</span>
+						<p>CSS 3</p>
+						<img src="../assets/images/SVG/css3.svg" class="icon-card icon-css" aria-hidden="true"
+							alt="This is a link to w3 schools learn css">
 					</a>
 				</li>
 				<li>
 					<a href="https://www.w3schools.com/js/" target="_blank">
-						<p>Javascript<i class="fab fa-js-square card-icons aria-hidden=" true""></i></p>
-						<span class="sr-only">This is a link to w3 schools learn javascript</span>
+						<p>Javascript</p>
+						<img src="../assets/images/SVG/javascript.svg" class="icon-card icon-js" aria-hidden="true"
+							alt="This is a link to w3 schools learn javascript">
 					</a>
 				</li>
 			</ul>
 		</div>
 
 		<div class="card card-2">
-			<h3>Check Out These Resources </h3>
+			<h3>Check Out These Resources</h3>
 			<ul>
 				<li>
 					<a href="https://css-tricks.com/" target="_blank">
-						<p>CSS-Tricks<i class="fas fa-code-branch card-icons" aria-hidden="true"></i></p>
-						<span class="sr-only">This is a link to css tricks homepage</span>
+						<p>CSS-Tricks</p>
+						<img src="../assets/images/SVG/css-tricks.svg" class="icon-card" aria-hidden=" true"
+							alt="this is a link to css tricks homepage">
 					</a>
 				</li>
 				<li>
 					<a href="https://www.w3schools.com/" target="_blank">
-						<p>W3 Schools<i class="fas fa-laptop-code card-icons" aria-hidden="true"></i></p>
-						<span class="sr-only">This is a link to w3 schools homepage</span>
+						<p>W3 Schools</p>
+						<img src="../assets/images/SVG/w3schools.svg" class="icon-card" aria-hidden=" true"
+							alt="this is a link to w3 schools homepage">
 					</a>
 				</li>
 				<li>
 					<a href="https://www.freecodecamp.org/" target="_blank">
-						<p>Free Code Camp <i class=" fab fa-free-code-camp card-icons" aria-hidden="true"> </i></p>
-						<span class="sr-only">This is a link to free code camp editor homepage</span>
+						<p>Free Code Camp</p>
+						<img src="../assets/images/SVG/freecodecamp.svg" class="icon-card" aria-hidden="true"
+							alt="this is a link to free code camp editor homepage">
 					</a>
 				</li>
 			</ul>
@@ -116,19 +123,22 @@
 			<ul>
 				<li>
 					<a href="https://codepen.io/" target="_blank">
-						<p>Codepen<i class="fab fa-codepen card-icons" aria-hidden="true"></i></p>
-						<span class="sr-only">This is a link to atom codepen code editor</span>
+						<p>Codepen</p>
+						<img src="../assets/images/SVG/codepen.svg" class="icon-card" aria-hidden="true"
+							alt="this is a link to atom codepen code editor">
 				</li>
 				<li>
 					<a href="https://jsfiddle.net/" target="_blank">
-						<p>JSfiddle<i class="fab fa-jsfiddle card-icons" aria-hidden="true"></i></p>
-						<span class="sr-only">This is a link to js fiddle code editor</span>
+						<p>JSfiddle</p>
+						<img src="../assets/images/SVG/jsfiddle.svg" class="icon-card" aria-hidden="true"
+							alt="this is a link to js fiddle code editor">
 					</a>
 				</li>
 				<li>
 					<a href="https://atom.io/" target="_blank">
-						<p>Atom Editor<i class="fas fa-atom card-icons" aria-hidden="true"></i></p>
-						<span class="sr-only">This is a link to atom code editor</span>
+						<p>Atom Editor</p>
+						<img src="../assets/images/SVG/atom.svg" class="icon-card" aria-hidden="true"
+							alt="this is a link to atom code editor">
 					</a>
 				</li>
 			</ul>
@@ -139,21 +149,24 @@
 			<ul>
 				<li>
 					<a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" target="_blank">
-						<p>Youtube <i class="fab fa-youtube card-icons" aria-hidden="true"></i></p>
-						<span class="sr-only">Recommended youtube channel for Coding</span>
+						<p>Youtube</p>
+						<img src="assets/images/SVG/youtube.svg" class="icon-card" aria-hidden="true"
+							alt="recommended youtube channels for Coding">
 					</a>
 				</li>
 				<li>
 					<a href="https://www.amazon.co.uk/gp/product/1118907442/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1"
 						target="_blank">
-						<p>Books<i class="fas fa-book card-icons" aria-hidden="true"></i></p>
-						<span class="sr-only">Recommended books for Coding</span>
+						<p>Books</p>
+						<img src="../assets/images/SVG/book.svg" class="icon-card" aria-hidden="true"
+							alt="recommended books for Coding">
 					</a>
 				</li>
 				<li>
 					<a href="https://shoptalkshow.com/" target="_blank">
-						<p>Podcasts<i class="fas fa-podcast card-icons" aria-hidden="true"></i></p>
-						<span class="sr-only">Recommended podcast for coding</span>
+						<p>Podcasts</p>
+						<img src="../assets/images/SVG/podcast.svg" class="icon-card" aria-hidden="true"
+							alt="recommended podcast for coding">
 					</a>
 				</li>
 			</ul>
@@ -161,7 +174,6 @@
 	</div>
 
 	<!-- ------------------------- Footer -------------------------  -->
-
 	<footer>
 		<div class=footer-item-1>
 			<h1 class="footer-h1">Stay in the loop</h1>
@@ -172,40 +184,37 @@
 				<input class="button subscribe-button" type="submit" value="Subscribe">
 		</div>
 		<div class="footer-item-3">
-			<ul class="social-icons ">
+			<ul class="footer-icons-block">
 				<li>
 					<a target="_blank" href="#">
-						<i class="fa fa-github-square social-icons" aria-hidden="true"></i>
-						<span class="sr-only">github</span>
+						<img src="../assets/images/SVG/GitHub.svg" class="footer-icons" aria-hidden="true" alt="link to github">
 					</a>
 				</li>
 				<li>
 					<a target="_blank" href="#">
-						<i class="fa fa-twitter-square social-icons" aria-hidden="true"></i>
-						<span class="sr-only">Twitter</span>
+						<img src="../assets/images/SVG/twitter.svg" class="footer-icons" aria-hidden="true" alt="link to Twitter">
 					</a>
 				</li>
 				<li>
 					<a target="_blank" href="#">
-						<i class="fa fa-linkedin social-icons" aria-hidden="true"></i>
-						<span class="sr-only">LinkedIn</span>
+						<img src="../assets/images/SVG/linkedin2.svg" class="footer-icons" aria-hidden="true"
+							alt="link to Linked-In">
 					</a>
 				</li>
 				<li>
 					<a target="_blank" href="#">
-						<i class="fa fa-youtube social-icons" aria-hidden="true"></i>
-						<span class="sr-only">YouTube</span>
+						<img src="../assets/images/SVG/youtube.svg" class="footer-icons footer-youtube-icon" aria-hidden="true"
+							alt="link to YouTube">
 					</a>
 				</li>
 			</ul>
 		</div>
 		<div class="footer-item-4">
-			<p>Code_devs.io </p>
+			<h2>Code_devs.io </h2>
 		</div>
 	</footer>
 
-	<!-- jQuery first, then font awsome,  -->
-	<script src="https://kit.fontawesome.com/db061348f4.js" crossorigin="anonymous"></script>
+	<!-- -------------------------  Main js -------------------------  -->
 	<script src="main.js" type="text/javascript"></script>
 </body>
 

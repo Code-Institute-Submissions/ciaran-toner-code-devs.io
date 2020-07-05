@@ -1,3 +1,49 @@
+/* ========================== 
+   About us page
+   ========================== */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap");
+.about-us-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  gap: 20px;
+}
+
+.about-us-banner {
+  background-color: #0d324d;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  justify-items: center;
+}
+
+.about-us-banner-text {
+  padding: 30px 10px 20px 10px;
+  color: white;
+  max-width: 600px;
+  text-align: center;
+}
+
+.about-us-banner-text h1 {
+  font-size: 2rem;
+  border: 2px solid #26a0a0;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.about-us-banner-text p {
+  line-height: 1.4em;
+  font-size: 1.7em;
+}
+
 /* table of contents
   1. global styles
   2. typography
@@ -17,9 +63,6 @@
 /* =============
    global styles
    ============= */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;800&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400&display=swap");
 body,
 html {
   font-family: 'Montserrat', sans-serif;
@@ -154,27 +197,18 @@ nav a {
   transition: 0.5s;
 }
 
-.change .bar--1 {
+.transform .bar--1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 8px);
           transform: rotate(-45deg) translate(-9px, 8px);
 }
 
-.change .bar--2 {
+.transform .bar--2 {
   opacity: 0;
 }
 
-.change .bar--3 {
+.transform .bar--3 {
   -webkit-transform: rotate(45deg) translate(-3px, -3px);
           transform: rotate(45deg) translate(-3px, -3px);
-}
-
-div.social-icons-nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 /* ========================
@@ -253,7 +287,7 @@ div.social-icons-nav {
 }
 
 .card h3 {
-  font-size: 1.3em;
+  font-size: 1.4rem;
   font-weight: 500;
   border-bottom: 2px solid white;
   display: inline-block;
@@ -262,19 +296,18 @@ div.social-icons-nav {
 }
 
 .card p {
-  font-size: 1.5em;
+  display: inline-block;
+  font-size: 1.7rem;
   color: white;
+  margin: 0;
 }
 
 .card ul {
   padding: 0;
 }
 
-.card-icons {
-  float: right;
-  margin-right: 20px;
-  font-size: 1em;
-  border-radius: 25px 0;
+.card li {
+  padding: 10px 0 10px 0;
 }
 
 .card p:hover {
@@ -290,6 +323,13 @@ div.social-icons-nav {
 
 .card-4 p {
   padding-left: 40px;
+}
+
+.icon-card {
+  height: 1.7em;
+  width: auto;
+  margin: 3px 18px 0 0;
+  float: right;
 }
 
 /* ====================
@@ -450,22 +490,25 @@ input {
   text-transform: lowercase;
 }
 
-.social-icons {
-  color: white;
+.footer-item-4 h2 {
+  color: #9e286b;
+  margin-top: 0;
+}
+
+.footer-icons-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 0px 15px 0 15px;
-  font-size: 1.5em;
 }
 
-.footer-item-4 p {
-  font-size: 1.2em;
-  background: linear-gradient(40deg, #2e8ac7, #00ff95 80%);
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  margin-top: 0;
+.footer-icons {
+  height: 2rem;
+  width: auto;
+  padding: 0px 15px 0 15px;
+}
+
+.footer-youtube-icon {
+  padding-top: 2px;
 }
 
 /* ========================== 
@@ -507,12 +550,12 @@ input {
   margin: 20px auto;
 }
 
-.html-png {
+.html-img {
   width: 80%;
   height: auto;
 }
 
-.css-png {
+.css-img {
   width: 77%;
   height: auto;
 }
@@ -709,10 +752,10 @@ input {
   margin-top: 5px;
 }
 
-#p-range {
+.p-range {
   text-align: end;
   margin: 0;
-  font-size: 1.0rem;
+  font-size: 1rem !important;
   padding-right: 5px;
 }
 
@@ -776,53 +819,10 @@ input {
   padding: 0;
 }
 
-/* ========================== 
-   About us page
-   ========================== */
-.about-us-container {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  gap: 20px;
-}
-
-.about-us-banner {
-  background-color: #0d324d;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-  -ms-grid-rows: auto;
-      grid-template-rows: auto;
-  justify-items: center;
-}
-
-.about-us-banner-text {
-  padding: 30px 10px 20px 10px;
-  color: white;
-  max-width: 600px;
-  text-align: center;
-}
-
-.about-us-banner-text h1 {
-  font-size: 2rem;
-  border: 2px solid #26a0a0;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.about-us-banner-text p {
-  line-height: 1.4em;
-  font-size: 1.7em;
-}
-
 /* =============
    componants
    ============= */
-/*-------------- button banner home page-------------- */
+/*-------------- button home page banner -------------- */
 .button {
   display: inline-block;
   background-color: transparent;
@@ -866,11 +866,6 @@ input {
 }
 
 /*-------------- getting started -------------- */
-/*-------------------------------- code source for gradient text --------------------------------*/
-/*-------------------------------- cards source gradient text --------------------------------*/
-/* =============
-   Media quiries
-   ============= */
 /* =============   navigation  ============= */
 @media (max-width: 961px) {
   .nav-menu {

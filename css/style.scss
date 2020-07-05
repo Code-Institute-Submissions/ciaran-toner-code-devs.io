@@ -1,3 +1,6 @@
+@import "about.scss";
+
+
 /* table of contents
   1. global styles
   2. typography
@@ -145,21 +148,16 @@ nav a {
   transition: 0.5s;
 }
 
-.change .bar--1 {
+.transform .bar--1 {
   transform: rotate(-45deg) translate(-9px, 8px);
 }
 
-.change .bar--2 {
+.transform .bar--2 {
   opacity: 0;
 }
 
-.change .bar--3 {
+.transform .bar--3 {
   transform: rotate(45deg) translate(-3px, -3px)
-}
-
-div.social-icons-nav {
-  display: flex;
-  justify-content: center;
 }
 
 /* ========================
@@ -237,7 +235,7 @@ div.social-icons-nav {
 }
 
 .card h3 {
-  font-size: 1.3em;
+  font-size: 1.4rem;
   font-weight: 500;
   border-bottom: 2px solid white;
   display: inline-block;
@@ -246,19 +244,18 @@ div.social-icons-nav {
 }
 
 .card p {
-  font-size: 1.5em;
+  display: inline-block;
+  font-size: 1.7rem;
   color: white;
+  margin: 0;
 }
 
 .card ul {
   padding: 0;
 }
 
-.card-icons {
-  float: right;
-  margin-right: 20px;
-  font-size: 1em;
-  border-radius: 25px 0;
+.card li {
+  padding: 10px 0 10px 0;
 }
 
 .card p:hover {
@@ -273,6 +270,18 @@ div.social-icons-nav {
 
 .card-4 p {
   padding-left: 40px;
+}
+
+
+// /* ========================== 
+//    card icons
+//    ========================== */
+
+.icon-card {
+  height: 1.7em;
+  width: auto;
+  margin: 3px 18px 0 0;
+  float: right;
 }
 
 /* ====================
@@ -372,8 +381,6 @@ h2 {
   }
 }
 
-
-
 /* ========================== 
    footer
    ========================== */
@@ -384,12 +391,10 @@ footer {
   grid-template-rows: auto auto auto;
   row-gap: 10px;
   background-image: linear-gradient(315deg, #0d324d 74%, #7f5a83 0%, );
-  // margin-top: 25px;
   padding: 0;
   text-align: center;
   place-items: center; //effects color of text
 }
-
 
 .footer-h1 {
   font-family: 'Satisfy', cursive;
@@ -425,23 +430,24 @@ input {
   text-transform: lowercase;
 }
 
-.social-icons {
-  color: white;
-  display: flex;
-  padding: 0px 15px 0 15px;
-  font-size: 1.5em;
-}
-
-
-.footer-item-4 p {
-  font-size: 1.2em;
-  background: linear-gradient(40deg, #2e8ac7, #00ff95 80%);
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.footer-item-4 h2 {
+  color: #9e286b;
   margin-top: 0;
 }
 
+.footer-icons-block {
+  display: flex;
+}
+
+.footer-icons {
+  height: 2rem;
+  width: auto;
+  padding: 0px 15px 0 15px;
+}
+
+.footer-youtube-icon {
+  padding-top: 2px;
+}
 
 /* ========================== 
    learn code page
@@ -480,12 +486,12 @@ input {
   margin: 20px auto;
 }
 
-.html-png {
+.html-img {
   width: 80%;
   height: auto;
 }
 
-.css-png {
+.css-img {
   width: 77%;
   height: auto;
 }
@@ -506,7 +512,6 @@ input {
   display: grid;
   grid-template-rows: auto;
   grid-template-columns: repeat(5, 1fr);
-  // grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   background-color: #0d324d;
   padding: 25px;
   gap: 10px;
@@ -571,6 +576,10 @@ input {
   }
 }
 
+//profile card css source --> Chris Coyer https://css-tricks.com/video-screencasts/171-movable-stacked-card-row-in-css/
+
+// This card effects are not original work. See readme for credit
+
 .profile-container {
   display: grid;
   background-color: #87848429;
@@ -581,8 +590,6 @@ input {
 .profile-cards {
   display: flex;
 }
-
-//profile card css source --> Chris Coyer https://css-tricks.com/video-screencasts/171-movable-stacked-card-row-in-css/
 
 .profile-card {
   background-color: rgb(17, 77, 112);
@@ -661,10 +668,10 @@ input {
   margin-top: 5px;
 }
 
-#p-range {
+.p-range {
   text-align: end;
   margin: 0;
-  font-size: 1.0rem;
+  font-size: 1rem !important;
   padding-right: 5px;
 }
 
@@ -729,49 +736,50 @@ input {
   padding: 0;
 }
 
-/* ========================== 
-   About us page
-   ========================== */
 
-.about-us-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  gap: 20px;
-}
+// /* ========================== 
+//    About us page
+//    ========================== */
 
-.about-us-banner {
-  background-color: #0d324d;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto;
-  justify-items: center;
-}
+// .about-us-container {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: auto;
+//   gap: 20px;
+// }
 
-.about-us-banner-text {
-  padding: 30px 10px 20px 10px;
-  color: white;
-  max-width: 600px;
-  text-align: center;
-}
+// .about-us-banner {
+//   background-color: #0d324d;
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: auto;
+//   justify-items: center;
+// }
 
-.about-us-banner-text h1 {
-  font-size: 2rem;
-  border: 2px solid #26a0a0;
-  border-radius: 10px;
-  padding: 10px;
-}
+// .about-us-banner-text {
+//   padding: 30px 10px 20px 10px;
+//   color: white;
+//   max-width: 600px;
+//   text-align: center;
+// }
 
-.about-us-banner-text p {
-  line-height: 1.4em;
-  font-size: 1.7em;
-}
+// .about-us-banner-text h1 {
+//   font-size: 2rem;
+//   border: 2px solid #26a0a0;
+//   border-radius: 10px;
+//   padding: 10px;
+// }
+
+// .about-us-banner-text p {
+//   line-height: 1.4em;
+//   font-size: 1.7em;
+// }
 
 /* =============
    componants
    ============= */
 
-/*-------------- button banner home page-------------- */
+/*-------------- button home page banner -------------- */
 
 .button {
   display: inline-block;
@@ -828,33 +836,12 @@ input {
 
 
 
-/*-------------------------------- code source for gradient text --------------------------------*/
-
-//  https://cssgradient.io/blog/css-gradient-text/
-
-/*-------------------------------- cards source gradient text --------------------------------*/
-
-
 
 // ---------------------------
 // Vars & Helper Functions
 // ---------------------------
 
 
-// @media (min-width: 576px) { ... }
-
-// // Medium devices (tablets, 768px and up)
-// @media (min-width: 768px) { ... }
-
-// // Large devices (desktops, 992px and up)
-// @media (min-width: 992px) { ... }
-
-// // Extra large devices (large desktops, 1200px and up)
-// @media (min-width: 1200px) { ... }
-
-/* =============
-   Media quiries
-   ============= */
 
 
 /* =============   navigation  ============= */
@@ -864,6 +851,8 @@ input {
     display: none;
   }
 }
+
+// This clip path effect for mobile menu is not original work see readme for credits
 
 @media (max-width: 960px) {
   .nav-menu {
@@ -959,8 +948,8 @@ input {
 }
 
 @media (max-width: 960px) {
-  .social-icons-nav li  {
-    padding: 20px ;
+  .social-icons-nav li {
+    padding: 20px;
   }
 }
 

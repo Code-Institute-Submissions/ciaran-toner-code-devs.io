@@ -2,64 +2,53 @@
    footer
    ========================== */
 
-   footer {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-    row-gap: 10px;
-    background-image: linear-gradient(315deg, #0d324d 74%, #7f5a83 0%, );
-    padding: 0;
-    text-align: center;
-    place-items: center; //effects color of text
-  }
-  
-  .footer-h1 {
-    font-family: $secondary-font;
-    background: -webkit-linear-gradient(40deg, #2e8ac7, #00ff95 80%);
-    background-clip: border-box;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
-  .footer-form {
-    padding: 0;
-  }
-  
-  label {
-    display: block;
-    color: white;
-    margin: 0 0 4px;
-  }
-  
-  input {
-    border: #000;
-    padding: 5px;
-    font-size: 1.2em;
-  }
-  
-  .subscribe-button {
-    background: linear-gradient(40deg, #2e8ac7, #00ff95 80%);
-    color: rgb(6, 7, 110);
-    margin-left: 10px;
-  }
-  
-  #email {
-    text-transform: lowercase;
-  }
-  
-  .footer-item-4 h2 {
-    color: #9e286b;
-    margin-top: 0;
-  }
-  
-  .footer-icons-block {
-    display: flex;
-    padding-left: 0;
-  }
-  
-  .footer-icons {
-    height: 2rem;
-    width: auto;
-    padding: 0px 15px 0 15px;
-  }
-  
+footer {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto auto;
+  row-gap: 10px;
+  background-image: linear-gradient(315deg, #0d324d 74%, #7f5a83 0%, );
+  padding: 0;
+  text-align: center;
+  place-items: center; //effects color of text
+}
+
+.footer-h1 {
+  font-family: $secondary-font;
+  background: -webkit-linear-gradient(40deg, #2e8ac7, #00ff95 80%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-form {
+  padding: 0;
+}
+
+input {
+  border: #000;
+  padding: 5px;
+  font-size: 1.2em;
+}
+
+.subscribe-button {
+  background: linear-gradient(40deg, #2e8ac7, #00ff95 80%);
+  color: rgb(6, 7, 110);
+  margin-left: 10px;
+}
+
+.footer-icons-block {
+  display: flex;
+  padding-left: 0;
+}
+
+.footer-icons {
+  height: 2rem;
+  width: auto;
+  padding: 0px 15px 0 15px;
+}
+
+.footer-item-4 h2 {
+  color: #9e286b;
+  margin-top: 0;
+}

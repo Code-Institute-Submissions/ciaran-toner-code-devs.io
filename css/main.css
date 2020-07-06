@@ -82,12 +82,6 @@ footer {
   padding: 0;
 }
 
-label {
-  display: block;
-  color: white;
-  margin: 0 0 4px;
-}
-
 input {
   border: #000;
   padding: 5px;
@@ -98,15 +92,6 @@ input {
   background: linear-gradient(40deg, #2e8ac7, #00ff95 80%);
   color: #06076e;
   margin-left: 10px;
-}
-
-#email {
-  text-transform: lowercase;
-}
-
-.footer-item-4 h2 {
-  color: #9e286b;
-  margin-top: 0;
 }
 
 .footer-icons-block {
@@ -120,6 +105,11 @@ input {
   height: 2rem;
   width: auto;
   padding: 0px 15px 0 15px;
+}
+
+.footer-item-4 h2 {
+  color: #9e286b;
+  margin-top: 0;
 }
 
 /* =============
@@ -156,7 +146,7 @@ html {
 
 /* =====================
       navigation desktop
-      ================= */
+======================== */
 nav {
   display: -ms-grid;
   display: grid;
@@ -638,7 +628,7 @@ h2 {
 
 /* ========================
      home page cards
-     ======================== */
+======================== */
 .container-cards {
   display: -ms-grid;
   display: grid;
@@ -717,7 +707,7 @@ h2 {
 
 /* ========================== 
       card icons
-      ========================== */
+ ========================== */
 .icon-card {
   height: 1.7em;
   width: auto;
@@ -793,8 +783,8 @@ h2 {
   .nav-menu {
     position: absolute;
     display: block;
-    min-width: 100%;
-    min-height: 100vh;
+    width: 100%;
+    height: 100%;
     top: 0px;
     margin: 0 auto;
     padding-top: 60px;
@@ -821,6 +811,7 @@ h2 {
     background: -webkit-gradient(linear, left top, right top, from(#2e8ac7), color-stop(70%, #00ff95));
     background: linear-gradient(90deg, #2e8ac7, #00ff95 70%);
     background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     border-bottom: 1.3px solid white;
     padding: 30px 0 10px 0px;

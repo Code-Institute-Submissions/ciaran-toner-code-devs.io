@@ -1,0 +1,143 @@
+/* =============   navigation  ============= */
+
+// This clip path effect for mobile menu is not original work see readme for credits
+
+@media (max-width: 960px) {
+  .nav-menu {
+    position: absolute;
+    display: block;
+    min-width: 100%;
+    min-height: 100vh;
+    top: 0px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-left: 0;
+    clip-path: circle(10px at 0% -10%);
+    -webkit-clip-path: circle(10px at 0% -10%);
+    transition: all 1s ease-in-out;
+    pointer-events: none;
+    background-color: rgb(1, 42, 70);
+    z-index: 2; // Cards on about us page have z-index of 1
+  }
+}
+
+.nav-menu.open {
+  clip-path: circle(1000% at 100%);
+  pointer-events: all;
+}
+
+@media (max-width: 960px) {
+  .nav-menu-item {
+    font-size: 1.2rem;
+    border-bottom: 1.3px solid white;
+    padding: 30px 0 10px 0px;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 960px) {
+  .nav-menu-item {
+    background: linear-gradient(90deg, #2e8ac7, #00ff95 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media (max-width: 960px) {
+  li.nav-menu-item.active {
+    background: rgb(0, 247, 255);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@media (max-width: 960px) {
+  .nav-menu.open::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 55px;
+    background-color: #e20fad;
+  }
+}
+
+
+@media (max-width: 960px) {
+  nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0 0 20px 0;
+  }
+}
+
+@media (max-width: 960px) {
+  .site-logo {
+    grid-row: 1;
+    place-self: center;
+  }
+}
+
+@media (min-width: 961px) {
+  .mobile-menu-icon {
+    display: none;
+  }
+}
+
+/*-------------- footer form -------------- */
+
+@media (max-width: 600px) {
+  .footer-form {
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+@media (max-width: 385px) {
+  .subscribe-button {
+    margin-top: 10px
+  }
+}
+
+// --------------------------------- card media quiries home page //
+
+@media (max-width: 870px) {
+  .container-cards {
+    padding: 50px 20px 50px 20px;
+  }
+}
+
+@media (max-width: 710px) {
+  .container-cards {
+    margin: 0;
+  }
+}
+
+@media (max-width: 689px) {
+  .container-cards {
+    place-items: center;
+    padding: 50px 0 50px 0;
+  }
+}
+
+@media (max-width: 689px) {
+  .card {
+    min-width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  .container-banner {
+    margin: 0 10px 20px 10px;
+  }
+}
+
+// --------------------------------- About page banner //
+
+@media (max-width: 961px) {
+  .about-us-banner {
+    margin: 0 0 20px 0;
+  }
+}

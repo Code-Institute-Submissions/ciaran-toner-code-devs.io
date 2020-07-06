@@ -1,0 +1,98 @@
+/* =====================
+      navigation desktop
+      ================= */
+
+      nav {
+        position: relative;
+        display: grid;
+        grid-template-columns: auto 700px;
+        align-items: center;
+        background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+        max-width: 100%;
+        min-height: 60px;
+        margin: 20px 0 20px 20px;
+      }
+      
+      .nav-menu {
+        display: flex;
+        justify-content: space-around;
+      }
+      
+      nav a {
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 1.0em;
+        letter-spacing: 0.1em;
+      }
+      
+      .site-logo {
+        background: url("../assets/images/site-logo.svg") no-repeat;
+        height: 20px;
+        width: auto;
+        min-width: 170px;
+        position: relative;
+        margin-left: 20px;
+        z-index: 3;
+      }
+      
+      @media (min-width: 992px) {
+      
+        // This is for underline transition effect
+        nav li {
+          position: relative;
+        }
+      
+        nav li::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          top: 20px;
+          left: 0;
+          background-color: #e52e71;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.3s ease-in-out 0s;
+        }
+      
+        nav li:hover::before {
+          visibility: visible;
+          transform: scaleX(1);
+        }
+      
+        .active a {
+          color: rgb(0, 247, 255)
+        }
+      }
+      
+      /* ============================
+             navigation styles mobile
+       ======================== */
+      
+      .mobile-menu-icon {
+        grid-row: 1;
+        justify-self: end;
+        margin-right: 20px;
+        z-index: 3;
+      }
+
+      .bar {
+        width: 30px;
+        height: 3px;
+        margin: 5px 0;
+        background-color: #00f7ff;
+        transition: 0.5s;
+      }
+      
+      .transform .bar--1 {
+        transform: rotate(-45deg) translate(-9px, 8px);
+      }
+      
+      .transform .bar--2 {
+        opacity: 0;
+      }
+      
+      .transform .bar--3 {
+        transform: rotate(45deg) translate(-3px, -3px)
+      }
+      

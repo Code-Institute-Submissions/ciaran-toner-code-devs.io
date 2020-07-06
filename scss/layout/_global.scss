@@ -1,0 +1,23 @@
+/* =============
+   global styles
+   ============= */
+   
+   body,
+   html {
+     margin: 0 auto;
+     padding: 0;
+   }
+   
+   :any-link {
+     text-decoration: none;
+   }
+   
+   *,
+   *:before,
+   *:after {
+     box-sizing: inherit;
+   }
+   
+   * ul li {
+     list-style: none;
+   }

@@ -1,6 +1,6 @@
 // This codes not my original work. Mobile menu clip-path effect src Dev ed https://www.youtube.com/watch?v=H4MkGzoACpQ&t=1181s
 
-const mobileMenu = document.querySelector(".mobile-menu");
+const mobileMenu = document.querySelector(".mobile-menu-icon");
 const navMenu = document.querySelector(".nav-menu");
 const links = document.querySelectorAll(".nav-menu-item li");
 

@@ -1,0 +1,56 @@
+
+/* ========================== 
+   learn code page
+   ========================== */
+
+   .codepen-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 600px;
+    text-align: center;
+    background-color: lightgray;
+    padding: 10px;
+  }
+  
+  .codepen-header {
+    place-self: center;
+    margin: 50px 0 20px 0;
+    min-width: 50%;
+  }
+  
+  .codepen-header h1 {
+    margin: 0 auto;
+    padding: 10px;
+    border: 2px solid #e52e71;
+    border-radius: 10px;
+    background-color: #0d324d;
+    color: white;
+  }
+  
+  .codepen-text p {
+    display: inline-block;
+    border: 5px solid rgb(0, 66, 128);
+    color: indigo;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px auto;
+  }
+  
+  .html-img {
+    width: 80%;
+    height: auto;
+  }
+  
+  .css-img {
+    width: 77%;
+    height: auto;
+  }
+  
+  .codepen-text {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-rows: auto;
+    gap: 15px;
+  }
+  

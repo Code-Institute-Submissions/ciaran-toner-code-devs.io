@@ -1,0 +1,66 @@
+
+@import 
+  'base/typography';
+
+@import
+  'components/buttons';
+
+@import 
+  'layout/footer',
+  'layout/forms',
+  'layout/global',
+  'layout/navigation';
+
+@import 
+  'pages/about',
+  'pages/getting-started',
+  'pages/home-page',
+  'pages/learn-code';
+
+@import 
+  'abstracts/media-quiries';
+
+// /* ========================== 
+//    About us page
+//    ========================== */
+
+// .about-us-container {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: auto;
+//   gap: 20px;
+// }
+
+// .about-us-banner {
+//   background-color: #0d324d;
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   grid-template-rows: auto;
+//   justify-items: center;
+// }
+
+// .about-us-banner-text {
+//   padding: 30px 10px 20px 10px;
+//   color: white;
+//   max-width: 600px;
+//   text-align: center;
+// }
+
+// .about-us-banner-text h1 {
+//   font-size: 2rem;
+//   border: 2px solid #26a0a0;
+//   border-radius: 10px;
+//   padding: 10px;
+// }
+
+// .about-us-banner-text p {
+//   line-height: 1.4em;
+//   font-size: 1.7em;
+// }
+
+
+
+
+
+
+

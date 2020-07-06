@@ -1,8 +1,10 @@
-/* =============   navigation  ============= */
-
-// This clip path effect for mobile menu is not original work see readme for credits
+/* =============   
+   navigation 
+============= */
 
 @media (max-width: 960px) {
+
+  // This clip path effect for mobile menu is not original work see readme document for credits
   .nav-menu {
     position: absolute;
     display: block;
@@ -29,6 +31,9 @@
 @media (max-width: 960px) {
   .nav-menu-item {
     font-size: 1.2rem;
+    background: linear-gradient(90deg, #2e8ac7, #00ff95 70%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
     border-bottom: 1.3px solid white;
     padding: 30px 0 10px 0px;
     margin-left: 30px;
@@ -36,24 +41,8 @@
 }
 
 @media (max-width: 960px) {
-  .nav-menu-item {
-    background: linear-gradient(90deg, #2e8ac7, #00ff95 70%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
 
-@media (max-width: 960px) {
-  li.nav-menu-item.active {
-    background: rgb(0, 247, 255);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-}
-
-@media (max-width: 960px) {
+  // Displays a content bar below the navbar //
   .nav-menu.open::after {
     content: "";
     position: absolute;
@@ -64,10 +53,8 @@
   }
 }
 
-
 @media (max-width: 960px) {
   nav {
-    display: grid;
     grid-template-columns: 1fr;
     margin: 0 0 20px 0;
   }
@@ -77,6 +64,9 @@
   .site-logo {
     grid-row: 1;
     place-self: center;
+    width: 190px;
+    height: 25px;
+    margin: 0;
   }
 }
 
@@ -86,7 +76,7 @@
   }
 }
 
-/*-------------- footer form -------------- */
+// --------------------------------- footer subscribe form //
 
 @media (max-width: 600px) {
   .footer-form {
@@ -101,7 +91,15 @@
   }
 }
 
-// --------------------------------- card media quiries home page //
+// ---------------------------------  home page banner //
+
+@media (max-width: 576px) {
+  .container-banner {
+    margin: 0 10px 20px 10px;
+  }
+}
+
+// ---------------------------------  home page  cards //
 
 @media (max-width: 870px) {
   .container-cards {
@@ -128,9 +126,35 @@
   }
 }
 
-@media (max-width: 576px) {
-  .container-banner {
-    margin: 0 10px 20px 10px;
+// --------------------------------- getting started page //
+
+@media (min-width: 1200px) {
+  .article-container {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+}
+
+@media (min-width: 971px) {
+  .article-text {
+    grid-column: 1 / span 2;
+    text-align: left;
+    place-self: center;
+    width: 60%;
+  }
+}
+
+@media (max-width: 400px) {
+  .article-container {
+    grid-template-columns: 350px;
+    justify-content: center;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .article {
+    margin: 0 auto;
   }
 }
 

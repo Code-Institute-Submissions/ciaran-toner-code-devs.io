@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Montserrat-Regular';
-  src:  url('../../fonts/Montserrat-Regular.woff2') format('woff2'),
-        url('../../fonts/Montserrat-Regular.woff') format('woff');
+  src:  url('../../assets/images/fonts/Montserrat-Regular.woff2') format('woff2'),
+        url('../../assets/images/fonts/Montserrat-Regular.woff') format('woff');
 }
 
 @font-face {
@@ -18,8 +18,8 @@
 
 // Font variables
 
-$main-font: 'Montserrat', sans-serif;
-$secondary-font: 'Satisfy', cursive;
+$main-font: 'Montserrat-Regular', sans-serif;
+$secondary-font: 'Satisfy-Regular', cursive;
 
 
 h1,

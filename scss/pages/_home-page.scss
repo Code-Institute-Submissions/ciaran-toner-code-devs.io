@@ -2,123 +2,123 @@
    home page banner
    ======================== */
 
-   .container-banner {
-    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
-    color: white;
-    padding: 20px 20px;
-    min-height: 35vh;
-    padding-top: 50px;
-    margin-bottom: 25px;
-    margin-left: 20px;
-    border-radius: 25px;
-  }
-  
-  .banner h1 {
-    margin-left: 20px;
-    font-size: 3.0rem;
-  }
-  
-  .banner-text-h1 {
-    text-decoration: underline;
-  }
-  
-  .banner p {
-    margin-left: 20px;
-    font-size: 1.5em;
-    color: white;
-  }
-  
-  .banner-border {
-    border-bottom: 2px solid white;
-    display: inline-block;
-    padding-bottom: 10px;
-    min-width: 40vw;
-  }
-  
-  /* ========================
+.container-banner {
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  color: white;
+  padding: 20px 20px;
+  min-height: 35vh;
+  padding-top: 50px;
+  margin-bottom: 25px;
+  margin-left: 20px;
+  border-radius: 25px;
+}
+
+.banner h1 {
+  margin-left: 20px;
+  font-size: 3.0rem;
+}
+
+.banner-text-h1 {
+  text-decoration: underline;
+}
+
+.banner p {
+  margin-left: 20px;
+  font-size: 1.5em;
+  color: white;
+}
+
+.banner-border {
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding-bottom: 10px;
+  min-width: 40vw;
+}
+
+/* ========================
      home page cards
      ======================== */
-  
-  .container-cards {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 40px 50px;
-    padding: 50px;
-    background-color: #288ee2;
-    border-radius: 25px 0 0 0;
-    margin-left: 20px;
-    margin-bottom: 20px;
+
+.container-cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 40px 50px;
+  padding: 50px;
+  background-color: #288ee2;
+  border-radius: 25px 0 0 0;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.card {
+  max-width: 400px;
+  background-color: #0d324d;
+  box-shadow:
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 25px;
+  color: white;
+  text-align: center;
+}
+
+.card:hover {
+  transform: translate(0px, -10px);
+  transition: 0.3s;
+
+  h3 {
+    color: rgb(9, 207, 241);
+    ;
   }
-  
-  .card {
-    max-width: 400px;
-    background-color: #0d324d;
-    box-shadow:
-      12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-      -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
-    border-radius: 25px;
-    color: white;
-    text-align: center;
-  }
-  
-  .card:hover {
-    transform: translate(0px, -10px);
-    transition: 0.3s;
-  
-    h3 {
-      color: rgb(9, 207, 241);
-      ;
-    }
-  }
-  
-  .card h3 {
-    font-size: 1.4rem;
-    font-weight: 500;
-    border-bottom: 2px solid white;
-    display: inline-block;
-    padding-bottom: 10px;
-    margin-bottom: 10px;
-    min-width: 90%;
-  }
-  
-  .card p {
-    display: inline-block;
-    font-size: 1.4rem;
-    color: white;
-    margin: 0;
-  }
-  
-  .card ul {
-    padding: 0;
-  }
-  
-  .card li {
-    padding: 10px 0 10px 0;
-  }
-  
-  .card p:hover {
-    color: #3ed3e7;
-    transition: all 0.3s ease-in-out;
-    cursor: pointer;
-  }
-  
-  .card-3 p {
-    padding-left: 30px;
-  }
-  
-  .card-4 p {
-    padding-left: 40px;
-  }
-  
-  
-   /* ========================== 
+}
+
+.card h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  border-bottom: 2px solid white;
+  display: inline-block;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  min-width: 90%;
+}
+
+.card p {
+  display: inline-block;
+  font-size: 1.4rem;
+  color: white;
+  margin: 0;
+}
+
+.card ul {
+  padding: 0;
+}
+
+.card li {
+  padding: 10px 0 10px 0;
+}
+
+.card p:hover {
+  color: #3ed3e7;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.card-3 p {
+  padding-left: 30px;
+}
+
+.card-4 p {
+  padding-left: 40px;
+}
+
+
+/* ========================== 
       card icons
       ========================== */
-  
-  .icon-card {
-    height: 1.7em;
-    width: auto;
-    margin: 3px 18px 0 0;
-    float: right;
-  }
+
+.icon-card {
+  height: 1.7em;
+  width: auto;
+  margin: 3px 18px 0 0;
+  float: right;
+}

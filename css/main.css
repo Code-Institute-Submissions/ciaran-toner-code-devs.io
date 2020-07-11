@@ -297,7 +297,7 @@ html {
     background-color: #e20fad;
   }
   .site-logo {
-    background: url("/assets/images/site-logo.svg") no-repeat;
+    background: url("../assets/images/site-logo.svg") no-repeat;
     -ms-grid-row: 1;
     grid-row: 1;
     place-self: center;

@@ -1,3 +1,6 @@
+@import 
+'abstracts/media-queries',
+'abstracts/mixins';
 
 @import 
   'base/typography';
@@ -7,7 +10,6 @@
 
 @import 
   'layout/footer',
-  'layout/forms',
   'layout/global',
   'layout/navigation';
 
@@ -17,5 +19,4 @@
   'pages/home-page',
   'pages/learn-code';
 
-@import 
-  'abstracts/media-quiries';
+

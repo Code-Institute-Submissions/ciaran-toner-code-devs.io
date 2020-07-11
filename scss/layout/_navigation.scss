@@ -1,42 +1,132 @@
+/* ============================
+   navigation mobile
+======================== */
+
+@media screen and (max-width: 899px) {
+  nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    min-height: 50px;
+    margin: 0 0 20px 0;
+  }
+
+  .nav-menu {
+    // This clip path effect for mobile menu is not original work see readme document for credits
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    margin: 0 auto;
+    padding-top: 60px;
+    padding-left: 0;
+    clip-path: circle(10px at 0% -10%);
+    -webkit-clip-path: circle(10px at 0% -10%);
+    transition: all 1s ease-in-out;
+    pointer-events: none;
+    background-color: rgb(1, 42, 70);
+    z-index: 2; // Cards on about us page have z-index of 1
+  }
+
+  .nav-menu-item {
+    font-size: 2rem;
+    background: linear-gradient(90deg, #2e8ac7, #00ff95 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    border-bottom: 1.3px solid white;
+    padding: 30px 0 10px 0px;
+    margin-left: 30px;
+  }
+
+  .nav-menu.open {
+    clip-path: circle(1000% at 100%);
+    pointer-events: all;
+  }
+
+  // Displays a content bar below the navbar //
+  .nav-menu::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 55px;
+    background-color: #e20fad;
+  }
+
+  .site-logo {
+    background: url("../../assets/images/site-logo.svg") no-repeat;
+    grid-row: 1;
+    place-self: center;
+    width: 190px;
+    height: 25px;
+    margin: 0;
+    z-index: 3;
+  }
+
+  .mobile-menu-icon {
+    grid-row: 1;
+    justify-self: end;
+    margin-right: 20px;
+    z-index: 3;
+  }
+
+  .bar {
+    width: 30px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: #00f7ff;
+    transition: 0.5s;
+  }
+
+  .transform .bar--1 {
+    transform: rotate(-45deg) translate(-9px, 8px);
+  }
+
+  .transform .bar--2 {
+    opacity: 0;
+  }
+
+  .transform .bar--3 {
+    transform: rotate(45deg) translate(-3px, -3px)
+  }
+
+}
+
 /* =====================
       navigation desktop
 ======================== */
 
-nav {
-  display: grid;
-  grid-template-columns: auto 700px;
-  align-items: center;
-  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
-  min-height: 60px;
-  margin: 20px 0 20px 20px;
-}
+@media screen and (min-width: 900px) {
+  nav {
+    display: grid;
+    grid-template-columns: auto 700px;
+    align-items: center;
+    background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    min-height: 60px;
+    margin: 20px 0 20px 20px;
+  }
 
-.nav-menu {
-  display: flex;
-  justify-content: space-around;
-}
+  .nav-menu {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+  }
 
-nav a {
-  color: #fff;
-  text-transform: uppercase;
-  font-size: 1.0em;
-  letter-spacing: 0.1em;
-}
+  .active a {
+    color: rgb(0, 247, 255)
+  }
 
-.active a {
-  color: rgb(0, 247, 255)
-}
+  .site-logo {
+    background: url("../../assets/images/site-logo.svg") no-repeat;
+    height: 25px;
+    width: auto;
+    margin-left: 20px;
+  }
 
-.site-logo {
-  background: url("../assets/images/site-logo.svg") no-repeat;
-  height: 20px;
-  width: auto;
-  min-width: 150px;
-  margin-left: 20px;
-  z-index: 3;
-}
-
-@media (min-width: 992px) {  // This is for underline transition effect under the navigation links
+  // This is for underline transition effect under the navigation links
   nav li {
     position: relative;
   }
@@ -58,35 +148,15 @@ nav a {
     visibility: visible;
     transform: scaleX(1);
   }
+
+  .mobile-menu-icon {
+    display: none;
+  }
+
 }
 
-/* ============================
-   navigation styles mobile
-       ======================== */
-
-.mobile-menu-icon {
-  grid-row: 1;
-  justify-self: end;
-  margin-right: 20px;
-  z-index: 3;
-}
-
-.bar {
-  width: 30px;
-  height: 3px;
-  margin: 5px 0;
-  background-color: #00f7ff;
-  transition: 0.5s;
-}
-
-.transform .bar--1 {
-  transform: rotate(-45deg) translate(-9px, 8px);
-}
-
-.transform .bar--2 {
-  opacity: 0;
-}
-
-.transform .bar--3 {
-  transform: rotate(45deg) translate(-3px, -3px)
+nav a {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }

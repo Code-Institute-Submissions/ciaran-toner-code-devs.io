@@ -1,131 +1,36 @@
-/* =============   
-   navigation 
-============= */
-
-@media (max-width: 960px) {
-
-  // This clip path effect for mobile menu is not original work see readme document for credits
-  .nav-menu {
-    position: absolute;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0px;
-    margin: 0 auto;
-    padding-top: 60px;
-    padding-left: 0;
-    clip-path: circle(10px at 0% -10%);
-    -webkit-clip-path: circle(10px at 0% -10%);
-    transition: all 1s ease-in-out;
-    pointer-events: none;
-    background-color: rgb(1, 42, 70);
-    z-index: 2; // Cards on about us page have z-index of 1
-  }
-}
-
-.nav-menu.open {
-  clip-path: circle(1000% at 100%);
-  pointer-events: all;
-}
-
-@media (max-width: 960px) {
-  .nav-menu-item {
-    font-size: 1.2rem;
-    background: linear-gradient(90deg, #2e8ac7, #00ff95 70%);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    border-bottom: 1.3px solid white;
-    padding: 30px 0 10px 0px;
-    margin-left: 30px;
-  }
-}
-
-@media (max-width: 960px) {
-
-  // Displays a content bar below the navbar //
-  .nav-menu.open::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    top: 55px;
-    background-color: #e20fad;
-  }
-}
-
-@media (max-width: 960px) {
-  nav {
-    grid-template-columns: 1fr;
-    margin: 0 0 20px 0;
-  }
-}
-
-@media (max-width: 960px) {
-  .site-logo {
-    grid-row: 1;
-    place-self: center;
-    width: 190px;
-    height: 25px;
-    margin: 0;
-  }
-}
-
-@media (min-width: 961px) {
-  .mobile-menu-icon {
-    display: none;
-  }
-}
-
 // --------------------------------- footer subscribe form //
 
-@media (max-width: 600px) {
-  .footer-form {
-    margin: 0 auto;
-    text-align: center;
-  }
-}
+// @media (max-width: 600px) {
+//   .footer-form {
+//     margin: 0 auto;
+//     text-align: center;
+//   }
+// }
 
-@media (max-width: 385px) {
-  .subscribe-button {
-    margin-top: 10px
-  }
-}
+// @media (max-width: 385px) {
+//   .subscribe-button {
+//     margin-top: 10px
+//   }
+// }
 
 // ---------------------------------  home page banner //
 
-@media (max-width: 576px) {
+@media (min-width: 900px) {
   .container-banner {
     margin: 0 10px 20px 10px;
+    padding-left: 1.5rem;
   }
 }
 
 // ---------------------------------  home page  cards //
 
-@media (max-width: 870px) {
+@media (min-width: 900px) {
   .container-cards {
-    padding: 50px 20px 50px 20px;
+    margin-left: 1rem;
+    border-radius: 2.5rem 0 0;
   }
 }
 
-@media (max-width: 710px) {
-  .container-cards {
-    margin: 0;
-  }
-}
-
-@media (max-width: 689px) {
-  .container-cards {
-    place-items: center;
-    padding: 50px 0 50px 0;
-  }
-}
-
-@media (max-width: 689px) {
-  .card {
-    min-width: 90%;
-  }
-}
 
 // --------------------------------- getting started page //
 
@@ -166,3 +71,24 @@
     margin: 0 0 20px 0;
   }
 }
+
+// .container {
+//  width: 100%;
+// }
+
+// @media (min-width: 1200px)  {
+//   .container-lg {
+//   max-width:  1100px; 
+//   margin: 0 auto;
+//   }
+// }
+
+// // Medium devices (tablets, 768px and up)
+// @media (min-width: 768px) { ... }
+
+// // Large devices (desktops, 992px and up)
+// @media (min-width: 992px) { ... }
+
+// // Extra large devices (large desktops, 1200px and up)
+// @media (min-width: 1200px) { ... }
+// }

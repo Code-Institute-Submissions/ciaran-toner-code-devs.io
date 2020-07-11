@@ -1,23 +1,22 @@
 /* =============
    global styles
-   ============= */
+============= */
 
 body,
 html {
   margin: 0 auto;
   padding: 0;
-}
-
-:any-link {
-  text-decoration: none;
+  color: white;
 }
 
 *,
 *:before,
 *:after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
-
-* ul li {
-  list-style: none;
+* li {
+  list-style: none; 
+}
+* a {
+  text-decoration: none;
 }

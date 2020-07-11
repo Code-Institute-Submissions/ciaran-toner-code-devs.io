@@ -1,0 +1,62 @@
+@mixin codepen-box {
+  justify-self: center;
+  position: relative;
+  height: 15rem;
+  width: 30rem;
+  border-radius: 1rem;
+  background-color: #1f1d1d;
+  box-shadow: 1rem 1.5rem 0 rgba(23, 22, 22, 0.6); //[horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]
+  text-align: center;
+}
+
+@mixin border-gradient {
+  position: relative;
+  background-color: rgb(12, 12, 12);
+  border: 5px solid transparent;
+  border-left-width: 0;
+  border-top-right-radius: 1rem;
+  background-clip: content-box;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px -5px 0 0;
+    border-radius: inherit;
+    background: -webkit-gradient(linear, left top, right top, from(red), to(orange));
+    background: linear-gradient(to right, red, orange);
+  }
+}
+
+@mixin border-gradient--oposite {
+  position: relative;
+  background-color: rgb(12, 12, 12);
+  border: 5px solid transparent;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  background-clip: content-box;
+  left: 4px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -5px 0 -5px -5px;
+    border-radius: inherit;
+    background: -webkit-gradient(linear, left top, right top, from(red), to(orange));
+    background: linear-gradient(to right, red, orange);
+  }
+}
+
+// @mixin mq {
+//   @media (min-width: 900px) {
+// }
+// }

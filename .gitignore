@@ -1,6 +1,6 @@
 # visual studio settings #
 ##########################
-.vscode
+# .vscode
 
 # file structure template #
 ##########################
@@ -8,4 +8,4 @@ file-structure
 
 #OS generated files         #
 ########################
-.Ds_store
+# .Ds_store

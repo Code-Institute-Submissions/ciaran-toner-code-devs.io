@@ -1,56 +1,125 @@
+// /* ========================== 
+//    learn code page
+//    ========================== */
 
-/* ========================== 
-   learn code page
-   ========================== */
+#dark-mode {
+  // Displays navbar & Footer with a black background
+  background: #000;
+}
 
-   .codepen-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto 600px;
-    text-align: center;
-    background-color: lightgray;
-    padding: 10px;
+.dark-code-nav {
+  margin: 0;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 5rem;
+    background-color: #00f7ff;
   }
-  
-  .codepen-header {
-    place-self: center;
-    margin: 50px 0 20px 0;
-    min-width: 50%;
-  }
-  
-  .codepen-header h1 {
-    margin: 0 auto;
-    padding: 10px;
-    border: 2px solid #e52e71;
-    border-radius: 10px;
-    background-color: #0d324d;
-    color: white;
-  }
-  
-  .codepen-text p {
-    display: inline-block;
-    border: 5px solid rgb(0, 66, 128);
-    color: indigo;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 20px auto;
-  }
-  
-  .html-img {
-    width: 80%;
-    height: auto;
-  }
-  
-  .css-img {
-    width: 77%;
-    height: auto;
-  }
-  
-  .codepen-text {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    grid-template-rows: auto;
-    gap: 15px;
-  }
-  
+}
+
+.codepen-grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 250px 600px 300px 300px;
+  grid-template-areas:
+    "codepen__grid-1"
+    "codepen__grid-2"
+    "codepen__grid-3"
+    "codepen__grid-4";
+
+  // & media (min-width: 900px)
+   
+  //   grid-template-areas:
+  //     "codepen__grid-1"
+  //     "codepen__grid-2"
+  //     "codepen__grid-3"
+  //     "codepen__grid-4";
+  // }
+}
+
+
+.codepen__grid-1 {
+  grid-area: codepen__grid-1;
+  background-color: #020202;
+}
+
+.codepen__grid-2 {
+  grid-area: codepen__grid-2;
+  background-color: #020202;
+}
+
+.codepen__grid-3 {
+  grid-area: codepen__grid-3;
+  @include border-gradient;
+}
+
+.codepen__grid-4 {
+  grid-area: codepen__grid-4;
+  @include border-gradient--oposite;
+}
+
+.codepen__heading {
+  margin: 3rem 2rem 0;
+  padding: 1rem;
+  text-align: center;
+  background: linear-gradient(45deg, #2289ce 10%, #fff 99%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.codepen__box {
+  display: grid;
+  height: 90%;
+  width: 90%;
+  background: linear-gradient(190deg, #4c4f57 10%, #020202 90%);
+  border-top-right-radius: 2rem;
+}
+
+.codepen__box-p {
+  @include codepen-box;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.code-snippet-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.code-snippet-grid h2 {
+  grid-row: 1;
+  justify-self: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.code-snippet-grid p {
+  grid-row: 2;
+  grid-column: 1 / span 3;
+  justify-self: center;
+  margin: 0;
+}
+
+.codepen__box-css {
+  @include codepen-box;
+  bottom: 6rem;
+  right: 3rem;
+}
+
+.codepen__box-js {
+  @include codepen-box;
+  bottom: 10rem;
+  left: 1rem;
+}
+
+.code-top {
+  grid-row: 1;
+  width: auto;
+  height: 1rem;
+  margin-left: 1rem;
+}

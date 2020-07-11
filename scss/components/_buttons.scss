@@ -3,21 +3,38 @@
 .button {
   display: inline-block;
   background-color: transparent;
-  padding: 10px 20px;
-  margin-left: 20px;
+  padding: 1rem;
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 5px;
-  font-size: 1.2em;
+  border-radius: 0.5rem;
+  font-size: 2rem;
   text-align: center;
 }
 
-.button1 {
+.button--banner {
   color: #2188ff;
-  border: 1.5px solid #2188ff;
+  border: 1.0px solid #2188ff;
 }
 
-.button1:hover {
-  border: 1.5px solid rgb(201, 18, 88);
+.button--banner:hover {
+  border: 1.0px solid rgb(201, 18, 88);
   color: white;
 }
+
+#email{
+  border: 2px solid #244f8f;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.5rem;
+}
+
+.button--subscribe {
+  background: linear-gradient(40deg, #2e8ac7, #00ff95 80%);
+  color: #06076e;
+  margin-left: 10px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 2rem;
+  border:none;
+}
+

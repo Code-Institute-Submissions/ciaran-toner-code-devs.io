@@ -1,39 +1,66 @@
 @font-face {
-  font-family: 'Montserrat-Regular',;
-  src:  url('../../assets/fonts/Montserrat-Regular.woff2') format('woff2'),
-        url('../../assets/fonts/Montserrat-Regular.woff') format('woff');
+  font-family: 'Montserrat-Regular', ;
+  src: url('../assets/fonts/Montserrat-Regular.woff2') format('woff2'),
+    url('../assets/fonts/Montserrat-Regular.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Montserrat-Bold';
-  src:  url('../../assets/fonts/Montserrat-Bold.woff2') format('woff2'),
-        url('../../assets/fonts/Montserrat-Bold.woff') format('woff');
+  src: url('../assets/fonts/Montserrat-Bold.woff2') format('woff2'),
+    url('../assets/fonts/Montserrat-Bold.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Satisfy-Regular';
-  src:  url('../../assets/fonts/Satisfy-Regular.woff2') format('woff2'),
-        url('../../assets/fonts/Satisfy-Regular.woff') format('woff');
+  src: url('../assets/fonts/Satisfy-Regular.woff2') format('woff2'),
+    url('../assets/fonts/Satisfy-Regular.woff') format('woff');
 }
 
 // Font variables
 
 $main-font: 'Montserrat-Regular';
+$main-font--bold: 'Montserrat-Bold';
 $secondary-font: 'Satisfy-Regular';
 
 
-h1,
-h2,
-h3,
-p {
+body {
   font-family: $main-font;
   font-weight: normal;
 }
 
-p {
-  font-size: 1.2rem;
+html {
+  font-size: 62.5%;
 }
 
-body {
-  font-family: $main-font;
+// @media (max-width: 900px) {
+//   html { font-size: 19px; }
+// }
+// @media (min-width: 900px) {
+//   html { font-size: 125%; }
+// }
+
+/* Modules will scale with document */ 
+nav {
+  font-size: 1.5rem;
+}
+
+main {
+  font-size: 1.0rem;
+}
+
+footer {
+  font-size: 1.3rem;
+}
+
+/* Type will scale with modules */
+h1 {
+  font-size: 3.0rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+p {
+  font-size: 2.0rem;
 }

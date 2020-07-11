@@ -297,7 +297,7 @@ html {
     background-color: #e20fad;
   }
   .site-logo {
-    background: url("../../assets/images/site-logo.svg") no-repeat;
+    background: url("/assets/images/site-logo.svg") no-repeat;
     -ms-grid-row: 1;
     grid-row: 1;
     place-self: center;
@@ -846,6 +846,14 @@ h2 {
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
+}
+
+.card-3 p {
+  padding-left: 3rem;
+}
+
+.card-4 p {
+  padding-left: 3rem;
 }
 
 /* ========================== 

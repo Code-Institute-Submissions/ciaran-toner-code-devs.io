@@ -60,3 +60,13 @@
 //   @media (min-width: 900px) {
 // }
 // }
+
+//border gradient credit css trick https://css-tricks.com/gradient-borders-in-css/
+@mixin box-border-gradient {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 5px;
+}
+@mixin box-border-gradient-purple {
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}

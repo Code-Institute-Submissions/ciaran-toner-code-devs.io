@@ -30,17 +30,17 @@
   </header>
   <!-- ------------------------- Main content -------------------------  -->
   <main>
-    <div class="codepen-grid">
-      <div class="codepen__grid-1">
+    <section class="container-main-gs">
+      <div class="item-1-gs">
         <div class="codepen__heading">
           <h1>Test your code inside your Codepen.</h1>
         </div>
       </div>
-      <div class="codepen__grid-2">
-        <!-- <h1>Test your code inside your code pen 3</h1> -->
-        <ul class="deploy">
+      <!-- ----------------- This grid block is for the code, test, deploy block ----------------- -->
+      <div class="item-2-gs">
+        <ul>
           <li>
-            <p>write</p>
+            <p>code</p>
             <img src="assets/images/icons/visualstudiocode.svg" class="deploy-icon">
           </li>
           <li>
@@ -53,41 +53,88 @@
           </li>
         </ul>
       </div>
-      <div class="codepen__grid-3">
+      <!-- ------------------------- This grid block is for the code snippets -------------------------  -->
+      <div class="item-3-gs">
         <div class="codepen__box">
           <div class="codepen__box-p">
             <div class="code-snippet-grid">
               <img src="assets/images/code-snippet.svg" class="code-top">
               <h2>HTML</h2>
-              <p>< p> I'm a pargraph < /p></p>
+              <p>
+                <code> I'm a pargraph</code>
+              </p>
             </div>
           </div>
           <div class="codepen__box-css">
             <div class="code-snippet-grid">
-            <img src="assets/images/code-snippet.svg" class="code-top">
-            <h2>CSS</h2>
+              <img src="assets/images/code-snippet.svg" class="code-top">
+              <h2>CSS</h2>
               <p>Add some style with css<br>
-              p { color: green; }</p>
-          </div>
+                p { color: green; }</p>
+            </div>
           </div>
           <div class="codepen__box-js">
             <div class="code-snippet-grid">
               <img src="assets/images/code-snippet.svg" class="code-top">
               <h2>Js</h2>
-                <p>Javascpripts makes our webpages pop</p>
+              <p>Javascpripts makes our webpages pop</p>
             </div>
           </div>
         </div>
+      </section>
+      <!-- ------------------------- Navigation Main -------------------------  -->
+      <div class="item-4-gs">
+        <h1 class="grid-4-header-h1">Check out the lastest web technologies Frameworks & more.</h1>
+        <div class="tech-card-container">
+          <div class="tech-card tc-1">
+            <h2>Golang</h2>
+            <img src="assets/images/icons/go.svg" class="tech-icon go-icon" alt="go brand logo">
+            <p class="go-text">A new programing language designed with speed
+              & security in mind
+            </p>
+            <a href="https://golang.org" class="button-tech">Find out more</a>
+          </div>
+          <div class="tech-card tc-2">
+            <h2>Gatsby</h2>
+            <img src="assets/images/icons/gatsby.svg" class="tech-icon" alt="gatsby brand logo">
+            <p>Gatsby is a open source framwork based on react for websites with
+              speed in mind & many more features
+            </p>
+            <a href="https://www.gatsbyjs.org" class="button-tech">Find out more</a>
+          </div>
+          <div class="tech-card tc-3">
+            <h2>React</h2>
+            <img src="assets/images/icons/react.svg" class="tech-icon" alt="react brand logo">
+            <p>A Javascript framework built by the awsome developers over at Facebook</p>
+            <a href="https://reactjs.org" class="button-tech">Find out more</a>
+          </div>
+          <div class="tech-card tc-4">
+            <h2>Sass</h2>
+            <img src="assets/images/icons/sass.svg" class="tech-icon" alt="sass brand logo">
+            <p> Sass is a preprocessor that adds a great amout of features &
+              functionality to CSS
+            </p>
+            <a href="https://sass-guidelin.es" class="button-tech">Find out more</a>
+          </div>
+          <div class="tech-card tc-5">
+            <h2>Tailwind</h2>
+            <img src="assets/images/icons/tailwindcss.svg" class="tech-icon" alt="tailwind brand logo">
+            <p> Tailwind is a css framework for rapidly building sites</p>
+            <a href="https://tailwindcss.com" class="button-tech">Find out more</a>
+          </div>
+        </div>
       </div>
-      <div class="codepen__grid-4">
-        <h1>Check out the lastest web technologies</h1>
-        <img src="assets/images/icons/arrow.svg " class=" arrow-icon">
+
+      <div class="item-5-gs">
+        <div class="codepen-editor">
+          <!-- <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="js,result" data-user="Mamboleoo" data-slug-hash="XWJPxpZ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Walkers - How to">
+            <span>See the Pen <a href="https://codepen.io/Mamboleoo/pen/XWJPxpZ">
+            Walkers - How to</a> by Louis Hoebregts (<a href="https://codepen.io/Mamboleoo">@Mamboleoo</a>)
+            on <a href="https://codepen.io">CodePen</a>.</span> -->
+          </p>
+        </div>
       </div>
-      <div class="codepen__grid-5">
-        <h1>Test your code inside your code pen 4</h1>
-        <!-- <p data-height="200px" data-theme-id="0" data-slug-hash="vGNKNj" data-default-tab="css,result" data-user="blonfu" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/blonfu/pen/vGNKNj/">Modificar color de texto según fondo (stylus)</a> by blonfu (<a href="http://codepen.io/blonfu">@blonfu</a>) on <a href="http://codepen.io">CodePen</a>.</p> -->
-      </div>
-    </div>
+    </section>
   </main>
   <!-- ------------------------- Footer -------------------------  -->
   <footer id="dark-mode">
@@ -125,7 +172,7 @@
   </footer>
 
   <!-- ------------------------- Codepen, them main js -------------------------  -->
-  <!-- <script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
   <script src="js/main.js" type="text/javascript"> </script>
 </body>
 

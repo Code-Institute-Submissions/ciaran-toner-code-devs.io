@@ -1,6 +1,6 @@
-// /* ========================== 
-//    learn code page
-//    ========================== */
+/* ========================== 
+   learn code page
+   ========================== */
 
 #dark-mode {
   // Displays navbar & Footer with a black background
@@ -20,68 +20,61 @@
   }
 }
 
-.container-main-gs {  // container / main area of page / getting started page
+.container-main-gs {
+  // This sets out the grid template are for mobile
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto 40rem auto;
   row-gap: 2rem;
   grid-template-areas:
-    "item-1-gs"
-    "item-2-gs"
-    "item-3-gs"
-    "item-4-gs"
-    "item-5-gs"
+    "page__header-gs"
+    "container__box-lg"
+    "container-code-snippet"
+    "container__cards-gs"
+    "container__codepen"
 
-
-    // & media (min-width: 900px)
-
-    //   grid-template-areas:
-    //     "codepen__grid-1"
-    //     "codepen__grid-2"
-    //     "codepen__grid-3"
-    //     "codepen__grid-4";
-    // }
 }
 
 @media (min-width: 1200px) {
   .container-main-gs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 20rem auto auto auto;
+    grid-template-rows: 20rem auto auto auto auto;
     grid-template-areas:
-      "head head ...."
+      "header header ..."
       " main main aside"
       "footer-top footer-top footer-top"
       "footer-bottom footer-bottom footer-bottom";
 
-    .item-1-gs {
-      grid-area: head;
+    .page__header-gs {
+      grid-area: header;
       align-self: center;
     }
 
-    .item-2-gs {
+    .container__box-lg {
       grid-area: main;
       // margin-top: 4rem;
     }
 
-    .item-3-gs {
+    .container-code-snippet {
       grid-area: aside;
       // margin-top: 4rem;
     }
 
-    .item-4-gs {
+    .container__cards-gs {
       grid-area: footer-top;
     }
 
-    .item-5-gs {
+    .container__codepen {
       grid-area: footer-bottom;
     }
 
   }
 }
 
-.codepen__heading h1 {
+.page__header-gs h1 {
   font-size: 4.5rem;
+  margin: 0;
   padding-left: 2rem;
   background: -webkit-linear-gradient(45deg, #8d31c7 30%, #743ad5 30%, #d53a9d 80%);
   background-clip: border-box;
@@ -89,21 +82,15 @@
   -webkit-text-fill-color: transparent;
 }
 
-.grid-4-header-h1 {
+.container__heading {
   margin: 4rem 0 0 3rem;
 }
 
-// .gs-grid-item-2 {
-//   grid-area: grid-area-top;
-//   background-color: #020202;
-// }
-
-.item-2-gs {
+.container__box-lg {
   height: 100%;
   width: 95%;
   background: linear-gradient(190deg, #4c4f57 10%, #020202 90%);
   border-top-right-radius: 2rem;
-
 
   & ul {
     display: flex;
@@ -116,15 +103,15 @@
   }
 }
 
-.item-2-gs p {
+.container__box-lg p {
   text-transform: uppercase;
-  @include box-border-gradient;
-  @include box-border-gradient-purple;
+  @include box-border-gradient; // This is a mixin that border gradient colors 
+  @include box-border-gradient-purple; // These are mixin that border gradient colors
   padding: 5px 1rem;
   text-align: center;
 }
 
-.deploy-icon {
+.container-lg-icon {
   position: relative;
   top: 3rem;
   left: 50%;
@@ -133,35 +120,54 @@
   width: auto;
 }
 
-.item-4-gs {
-  @include border-gradient;
+.container__cards-gs {
+  @include border-gradient; // This is a mixin that adds border gradients around the cards container 
 }
 
-.item-5-gs {
-  // display: grid;
-  // grid-area: grid-area-footer;
+.container__codepen {
   @include border-gradient--oposite;
 }
 
-// <------------------------------------- CODE SNIPPET BOX GRID ITEM 3
-.codepen__box {
+/* ======================== This is for the container with code snippets  ======================== */
+
+.container-code-snippet {
   display: grid;
+  justify-content: center;
   height: 90%;
   width: 90%;
   background: linear-gradient(190deg, #4c4f57 10%, #020202 90%);
   border-top-right-radius: 2rem;
 }
 
-.codepen__box-p {
-  @include codepen-box;
-  bottom: 1rem;
-  left: 1rem;
-}
-
 .code-snippet-grid {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
   align-items: center;
+}
+
+.code-snippet-html {
+  @include code-snippet-card; // This mixin creates cards & adds relative positioning
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.code-snippet-css {
+  @include code-snippet-card; // This mixin creates cards & adds relative positioning
+  bottom: 6rem;
+  right: 3rem;
+}
+
+.code-snippet-js{
+  @include code-snippet-card; 
+  bottom: 10rem;
+  left: 1rem;
+}
+
+.mac-screen-icon {
+  grid-row: 1;
+  width: auto;
+  height: 1rem;
+  margin-left: 1rem;
 }
 
 .code-snippet-grid h2 {
@@ -178,36 +184,7 @@
   margin: 0;
 }
 
-.codepen__box-css {
-  @include codepen-box;
-  bottom: 6rem;
-  right: 3rem;
-}
-
-.codepen__box-js {
-  @include codepen-box;
-  bottom: 10rem;
-  left: 1rem;
-}
-
-.code-top {
-  grid-row: 1;
-  width: auto;
-  height: 1rem;
-  margin-left: 1rem;
-}
-
-//icon
-.arrow-icon {
-  position: relative;
-  width: 8rem;
-  height: auto;
-  left: 50%;
-  transform: translateX(-50%);
-
-}
-
-// / <------------------------------------- CARDS GRID ITEM 4
+/* ======================== cards container  ======================== */
 
 .tech-card-container {
   display: flex;
@@ -245,6 +222,7 @@
 
 .tech-card h2 {
   text-align: center;
+  color: white;
 }
 
 .tech-card p {
@@ -257,14 +235,14 @@
   width: auto;
 }
 
-// Altered size to match other icons
 .go-icon {
+  // Altered size to match other icons
   height: 6rem;
   width: auto;
 }
 
 .button-tech {
-  margin-top: auto; // places button on bottom of card container
+  margin-top: auto; // places button on bottom of flex card container
   font-size: 1.5rem;
   text-align: center;
   color: white;
@@ -277,6 +255,8 @@
 .button-tech:hover {
   color: #2188ff;
 }
+
+/* ======================== codepen container  ======================== */
 
 .codepen-editor {
   padding: 5rem;

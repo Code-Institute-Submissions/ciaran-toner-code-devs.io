@@ -22,7 +22,7 @@
         <li class="nav-menu-item"><a href=" about.html">about us</a></li>
       </ul>
       <!-- This mobile menu hamburger is not original work ( see readme for credit) -->
-      <div class="mobile-menu-icon" onclick="mobileMenuOpen(this)"> 
+      <div class="mobile-menu-icon" onclick="mobileMenuOpen(this)">
         <div class="bar bar--1"></div>
         <div class="bar bar--2"></div>
         <div class="bar bar--3"></div>
@@ -31,19 +31,24 @@
   </header>
 
   <!-- ------------------------- Main content -------------------------  -->
-  <main class="article">
-    <div class="article-container">
+  <main class="page-wrapper-lg">
+    <div class="container-article">
       <div class="article-heading">
-        <h1>Getting started on your codeing journey has never been easier.</h1>
-        <div class="blog-container">
-          <img src="assets/images/blog-image.jpg" class="blog-img" alt="bloger image">
-          <p>Date: 15-June-2020</p>
-        </div>
+        <h1>Getting started on your coding journey has never been easier.</h1>
       </div>
+      <div class="author-container">
+        <div class="author-img">
+          <img src="assets/images/blog-image.jpg" class="blog-img" alt="bloger image">
+        </div>
+          <div class="author">
+            <p>Written by Ciaran Toner</p>
+          </div>
+        </div>
       <div class="article-image">
         <img src="assets/images/img-laptop.jpg" alt="computer and plants" class="img-laptop">
-        <p>Image credit: <a href="https://unsplash.com/@codestorm" target="_blank">Safar Safarov @codestorm</a>
-        </p>
+        <a href="https://unsplash.com/@codestorm" target="_blank">
+          <p>Image credit: @Safar Safarov</p>
+        </a>
       </div>
       <div class="article-text">
         <h2>Just start</h2>
@@ -57,11 +62,11 @@
         <p>
           What you need to get started.
           First, you would need a text editor to help you sort and save your files. Our two top pics for
-          beginners would be<a href="https//atom.io/" target="_blank"> Atom text editor</a> &<a
-            href="https://sublimetext.com/" target="_blank">Sublime text editor</a>; both are great choices.
+          beginners would be <a href="https//atom.io/" target="_blank">Atom text editor</a> &
+          <a href="https://sublimetext.com/" target="_blank">Sublime text editor</a>; both are great choices.
           All websites
-          contain three main elements that make up a webpage, HTML, CSS & Javascript, But for the time being,
-          we're going to focus just on Html.
+          contain three main elements that make up a webpage, HTML, CSS & Javascript. For the time being,
+          we're going to focus just on HTML.
         </p>
         <h2>Your first webpage!</h2>
         <p>
@@ -69,7 +74,7 @@
           formatted and how to correctly display everything. You can find the basics on how to set up your
           first page right here. All of your web pages should be saved as a .html page e.g home-page.html.
           This tells the browser that your page is an Html document, you can find more on why webpages need
-          Html tags<a href="https://www.w3schools.com/html/default.asp" target="_blank">here.</a>
+          Html tags<a href="https://www.w3schools.com/html/default.asp" target="_blank"> here.</a>
         </p>
         <h2>Whats next?</h2>
         <p>
@@ -95,41 +100,41 @@
 
   <!-- ------------------------- Footer -------------------------  -->
   <footer>
-		<div class=footer-item-1>
-			<h1 class="footer-h1">Stay in the loop</h1>
-		</div>
-		<div class=footer-item-2>
-			<form class="footer-form">
-				<input type="email" id="email" placeholder="your-email@email.com" name="EMAIL" required>
-				<input class="button--subscribe" type="submit" value="Subscribe">
-		</div>
-		<div class="footer-item-3">
-			<ul class="footer-icons-block">
-				<li>
-					<a target="_blank" href="https://github.com/ciaran-toner">
-						<img src="assets/images/icons/GitHub.svg" class="footer-icons" aria-hidden="true" alt="link to github">
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://twitter.com/home">
-						<img src="assets/images/icons/twitter.svg" class="footer-icons" aria-hidden="true" alt="link to Twitter">
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://www.linkedin.com/feed/">
-						<img src="assets/images/icons/linkedin2.svg" class="footer-icons" aria-hidden="true"
-							alt="link to Linked-In">
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="footer-item-4">
-			<h2>Code_devs.io </h2>
-		</div>
-	</footer>
+    <div class=footer-item-1>
+      <h1 class="footer-h1">Stay in the loop</h1>
+    </div>
+    <div class=footer-item-2>
+      <form class="footer-form">
+        <input type="email" id="email" placeholder="your-email@email.com" name="EMAIL" required>
+        <input class="button--subscribe" type="submit" value="Subscribe">
+    </div>
+    <div class="footer-item-3">
+      <ul class="footer-icons-block">
+        <li>
+          <a target="_blank" href="https://github.com/ciaran-toner">
+            <img src="assets/images/icons/GitHub.svg" class="footer-icons" aria-hidden="true" alt="link to github">
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://twitter.com/home">
+            <img src="assets/images/icons/twitter.svg" class="footer-icons" aria-hidden="true" alt="link to Twitter">
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="https://www.linkedin.com/feed/">
+            <img src="assets/images/icons/linkedin2.svg" class="footer-icons" aria-hidden="true"
+              alt="link to Linked-In">
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-item-4">
+      <h2>Code_devs.io </h2>
+    </div>
+  </footer>
 
-	<!-- -------------------------  Main js -------------------------  -->
-	<script src="js/main.js" type="text/javascript"></script>
+  <!-- -------------------------  Main js -------------------------  -->
+  <script src="js/main.js" type="text/javascript"></script>
 </body>
 
 </html>

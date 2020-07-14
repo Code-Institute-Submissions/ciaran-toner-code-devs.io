@@ -1,5 +1,4 @@
-@mixin codepen-box {
-  justify-self: center;
+@mixin code-snippet-card {
   position: relative;
   height: 15rem;
   width: 30rem;
@@ -27,8 +26,8 @@
     z-index: -1;
     margin: -5px -5px 0 0;
     border-radius: inherit;
-    background: -webkit-gradient(linear, left top, right top, from(red), to(orange));
-    background: linear-gradient(to right, red, orange);
+    background: -webkit-gradient(linear, left top, right top, from(#d53a9d), to(#00c4cb));
+    background: linear-gradient(to right, #d53a9d, #00c4cb);
   }
 }
 
@@ -39,7 +38,6 @@
   border-top-left-radius: 1rem;
   border-bottom-left-radius: 1rem;
   background-clip: content-box;
-  left: 4px;
 
   &::before {
     content: '';
@@ -51,15 +49,11 @@
     z-index: -1;
     margin: -5px 0 -5px -5px;
     border-radius: inherit;
-    background: -webkit-gradient(linear, left top, right top, from(red), to(orange));
-    background: linear-gradient(to right, red, orange);
+    background: -webkit-gradient(linear, left top, right top, from(#d53a9d), to(orange));
+    background: linear-gradient(to right, #d53a9d, #00c4cb);
   }
 }
 
-// @mixin mq {
-//   @media (min-width: 900px) {
-// }
-// }
 
 //border gradient credit css trick https://css-tricks.com/gradient-borders-in-css/
 @mixin box-border-gradient {

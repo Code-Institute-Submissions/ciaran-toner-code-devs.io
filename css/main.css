@@ -229,49 +229,6 @@ p {
   width: 20rem;
 }
 
-@media only screen and (max-width: 800px) {
-  .footer-container {
-    justify-items: center;
-    gap: 2rem;
-    -ms-grid-rows: 1fr 1fr auto;
-        grid-template-rows: 1fr 1fr auto;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  .footer-nav-links li {
-    -ms-grid-column-align: center;
-        justify-self: center;
-  }
-  .subscribe-container {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 800px) {
-  .footer-icons {
-    -ms-grid-row: 2;
-    grid-row: 2;
-    -ms-grid-column: 1;
-    grid-column: 1;
-  }
-  .footer-logo-container {
-    -ms-grid-column: 2;
-    grid-column: 2;
-    -ms-grid-row: 2;
-    grid-row: 2;
-  }
-  .subscribe-container {
-    -ms-grid-row: 2;
-    grid-row: 2;
-    -ms-grid-column: 3;
-    grid-column: 3;
-    margin-bottom: 3rem;
-    -ms-flex-item-align: end;
-        -ms-grid-row-align: end;
-        align-self: end;
-  }
-}
-
 /* =============
    global styles
 ============= */
@@ -528,46 +485,6 @@ nav a {
   -ms-grid-row: 4;
   -ms-grid-column: 1;
   grid-area: article-footer;
-}
-
-@media only screen and (min-width: 750px) {
-  .container-article {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-    -ms-grid-rows: auto;
-        grid-template-rows: auto;
-    margin: 5rem 0 8rem 0;
-    padding: 2rem;
-    gap: 1rem;
-        grid-template-areas: "article-header article-image" " article-footer  article-footer";
-  }
-  .container-article .article-heading {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: article-header;
-  }
-  .container-article .author-container {
-    -ms-grid-row: 1;
-    -ms-grid-column: 1;
-    grid-area: article-header;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-  }
-  .container-article .article-image {
-    -ms-grid-row: 1;
-    -ms-grid-column: 2;
-    grid-area: article-image;
-  }
-  .container-article .article-text {
-    -ms-grid-row: 2;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 2;
-    grid-area: article-footer;
-    margin-top: 3rem;
-  }
 }
 
 .container-article {
@@ -1430,6 +1347,89 @@ h2 {
 @media only screen and (max-width: 700px) {
   .outline-text {
     right: 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .footer-container {
+    justify-items: center;
+    gap: 2rem;
+    -ms-grid-rows: 1fr 1fr auto;
+        grid-template-rows: 1fr 1fr auto;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .footer-nav-links li {
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .subscribe-container {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .footer-icons {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 1;
+    grid-column: 1;
+  }
+  .footer-logo-container {
+    -ms-grid-column: 2;
+    grid-column: 2;
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .subscribe-container {
+    -ms-grid-row: 2;
+    grid-row: 2;
+    -ms-grid-column: 3;
+    grid-column: 3;
+    margin-bottom: 3rem;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+}
+
+@media only screen and (min-width: 750px) {
+  .container-article {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    margin: 5rem 0 8rem 0;
+    padding: 2rem;
+    gap: 1rem;
+        grid-template-areas: "article-header article-image" " article-footer  article-footer";
+  }
+  .container-article .article-heading {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: article-header;
+  }
+  .container-article .author-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: article-header;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  .container-article .article-image {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: article-image;
+  }
+  .container-article .article-text {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: article-footer;
+    margin-top: 3rem;
   }
 }
 /*# sourceMappingURL=main.css.map */

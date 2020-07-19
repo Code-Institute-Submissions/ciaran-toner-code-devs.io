@@ -31,39 +31,6 @@
   }
 }
 
-@media only screen and (min-width: 750px) {
-  .container-article {
-    // container / main area of page / getting started page
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    margin: 5rem 0 8rem 0;
-    padding: 2rem;
-    gap: 1rem;
-    grid-template-areas:
-      "article-header article-image"
-      " article-footer  article-footer";
-
-    .article-heading {
-      grid-area: article-header;
-    }
-
-    .author-container {
-      grid-area: article-header;
-      align-self: center;
-    }
-
-    .article-image {
-      grid-area: article-image;
-    }
-
-    .article-text {
-      grid-area: article-footer;
-      margin-top: 3rem
-    }
-  }
-}
-
 .container-article {
   background: #ebe6e6;
   border-radius: 1rem;

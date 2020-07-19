@@ -9,11 +9,6 @@
   src: url("../assets/fonts/Montserrat-Bold.woff2") format("woff2"), url("../assets/fonts/Montserrat-Bold.woff") format("woff");
 }
 
-@font-face {
-  font-family: 'Satisfy-Regular';
-  src: url("../assets/fonts/Satisfy-Regular.woff2") format("woff2"), url("../assets/fonts/Satisfy-Regular.woff") format("woff");
-}
-
 body {
   font-family: "Montserrat-Regular";
   font-weight: normal;
@@ -29,24 +24,11 @@ nav {
 }
 
 main {
-  font-size: 1.0rem;
+  font-size: 1.7rem;
 }
 
 footer {
   font-size: 1.3rem;
-}
-
-/* Type will scale with modules */
-h1 {
-  font-size: 3.0rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-p {
-  font-size: 2.0rem;
 }
 
 /*-------------- button home page banner -------------- */

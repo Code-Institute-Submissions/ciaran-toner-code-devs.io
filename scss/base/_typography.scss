@@ -10,18 +10,12 @@
     url('../assets/fonts/Montserrat-Bold.woff') format('woff');
 }
 
-@font-face {
-  font-family: 'Satisfy-Regular';
-  src: url('../assets/fonts/Satisfy-Regular.woff2') format('woff2'),
-    url('../assets/fonts/Satisfy-Regular.woff') format('woff');
-}
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap');
 
 // Font variables
 
 $main-font: 'Montserrat-Regular';
 $main-font--bold: 'Montserrat-Bold';
-$secondary-font: 'Satisfy-Regular';
 
 $alterntive-font : 'IBM Plex Sans', sans-serif;
 
@@ -34,15 +28,8 @@ body {
 }
 
 html {
-  font-size: 62.5%;
+  font-size: 62.5%; // defines 1 rem equal to 10px
 }
-
-// @media (max-width: 900px) {
-//   html { font-size: 19px; }
-// }
-// @media (min-width: 900px) {
-//   html { font-size: 125%; }
-// }
 
 /* Modules will scale with document */ 
 nav {
@@ -50,22 +37,9 @@ nav {
 }
 
 main {
-  font-size: 1.0rem;
+  font-size: 1.7rem;
 }
 
 footer {
   font-size: 1.3rem;
-}
-
-/* Type will scale with modules */
-h1 {
-  font-size: 3.0rem;
-}
-
-h2 {
-  font-size: 2.5rem;
-}
-
-p {
-  font-size: 2.0rem;
 }

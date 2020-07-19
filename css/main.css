@@ -62,12 +62,12 @@ p {
 }
 
 .button--banner {
-  color: #2188ff;
-  border: 1.0px solid #2188ff;
+  color: #b5d5e3;
+  border: 3.0px solid #5481b5;
 }
 
 .button--banner:hover {
-  border: 1px solid #c91258;
+  border: 3px solid #c91258;
   color: white;
 }
 

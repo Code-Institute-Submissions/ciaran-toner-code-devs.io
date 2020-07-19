@@ -200,7 +200,7 @@
 
 /* ======================== cards container  ======================== */
 
-.tech-card-container {
+.tech-card-container { // this card effects code was obtained from css tricks see readme
   display: flex;
   padding: 50px 30px;
   overflow: auto;
@@ -273,5 +273,5 @@
 /* ======================== codepen container  ======================== */
 
 .codepen-editor {
-  padding: 5rem;
+  padding: 2rem;
 }

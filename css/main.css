@@ -1261,7 +1261,7 @@ h2 {
 
 /* ======================== codepen container  ======================== */
 .codepen-editor {
-  padding: 5rem;
+  padding: 2rem;
 }
 
 @media (min-width: 900px) {

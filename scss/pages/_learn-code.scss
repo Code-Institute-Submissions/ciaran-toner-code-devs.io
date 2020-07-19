@@ -1,23 +1,19 @@
 /* ========================== 
    learn code page
-   ========================== */
+========================== */
 
 #dark-mode {
-  // Displays navbar & Footer with a black background
+  // changes the navbar, body & footer color on page learn code
   background: #000;
 }
 
-.dark-code-nav {
-  margin: 0;
-
-  &::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    top: 5rem;
-    background-color: #00f7ff;
-  }
+.dark-text h1 {
+  // This only effects the header h1 & the footer h1 elements
+  background: -webkit-linear-gradient(45deg, #8d31c7 30%, #743ad5 30%, #d53a9d 80%);
+  background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .container-main-gs {
@@ -25,17 +21,36 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto 40rem auto;
-  row-gap: 2rem;
+  row-gap: 3rem;
   grid-template-areas:
-    "page__header-gs"
-    "container__box-lg"
-    "container-code-snippet"
-    "container__cards-gs"
-    "container__codepen"
+    "header"
+    "aside"
+    "main"
+    "footer-top"
+    "footer-bottom";
 
+  .page__header-gs {
+    grid-area: header;
+  }
+
+  .container__box-lg {
+    grid-area: aside;
+  }
+
+  .container-code-snippet {
+    grid-area: main;
+  }
+
+  .container__cards-gs {
+    grid-area: footer-top;
+  }
+
+  .container__codepen {
+    grid-area: footer-bottom;
+  }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1000px) {
   .container-main-gs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -74,7 +89,6 @@
 
 .page__header-gs h1 {
   font-size: 4.5rem;
-  margin: 0;
   padding-left: 2rem;
   background: -webkit-linear-gradient(45deg, #8d31c7 30%, #743ad5 30%, #d53a9d 80%);
   background-clip: border-box;
@@ -157,8 +171,8 @@
   right: 3rem;
 }
 
-.code-snippet-js{
-  @include code-snippet-card; 
+.code-snippet-js {
+  @include code-snippet-card;
   bottom: 10rem;
   left: 1rem;
 }

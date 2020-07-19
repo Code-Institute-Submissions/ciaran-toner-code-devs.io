@@ -11,17 +11,16 @@
 
 <body>
 	<!-- ------------------------- Navigation Main -------------------------  -->
-	<header>
-		<nav>
-			<a class="site-logo" href="index.html"></a>
-			<ul class="nav-menu">
-				<li class="nav-menu-item active"><a href="index.html">home</a></li>
-				<li class="nav-menu-item"><a href="learn-code.html">learn code</a></li>
-				<li class="nav-menu-item"><a href=" getting-started.html">getting started</a></li>
-				<li class="nav-menu-item"><a href=" about.html">about us</a></li>
+	<header id="header-standard">
+		<nav class="nav-wrapper">
+			<a class="site-logo" href="index.html" aria-label="this is a logo with a link to the homepage"></a>
+			<ul class="nav-links">
+				<li class="active"><a href="index.html">home</a></li>
+				<li><a href="learn-code.html">learn code</a></li>
+				<li><a href="getting-started.html">getting started</a></li>
 			</ul>
 			<!-- This mobile menu hamburger is not original work ( see readme for credit) -->
-			<div class="mobile-menu-icon" onclick="mobileMenuOpen(this)">
+			<div class="mobile-menu" onclick="mobileMenuOpen(this)">
 				<div class="bar bar--1"></div>
 				<div class="bar bar--2"></div>
 				<div class="bar bar--3"></div>
@@ -30,163 +29,217 @@
 	</header>
 
 	<!-- ------------------------- Banner -------------------------  -->
-	<div class="container-banner">
-		<div class="container__banner">
-			<h1>Learn to code <span class="container__banner-h1">today!</span></h1>
-			<p class="container__banner-p">There has never been a better time to learn how to code.</p>
-			<br>
-			<a href="getting-started.html" class="button button--banner">Learn more!</a>
+	<main class="page-wrap">
+		<div class="container-hero-banner">
+			<div class="container-hero-content">
+				<h1>Learn to code <span class="container__banner-h1">today!</span></h1>
+				<p class="container__banner-p">There has never been a better time to learn how to code.</p>
+				<br>
+				<a><button class="button button--banner">Learn more! </button></a>
+			</div>
 		</div>
-	</div>
-
-	<!-- ------------------------- Main content -------------------------  -->
-
-	<!-- ------------------------- Cards -------------------------  -->
-	<div class="container-cards">
-		<div class="card card-1">
-			<h2>Get started with the basics</h2>
-			<ul>
-				<li>
-					<a href="https://www.w3schools.com/html/" target="_blank">
-						<p>HTML 5</p>
-						<img src="assets/images/icons/html-five.svg" class="icon-card icon-html" aria-hidden="true"
-							alt="This is a link to w3 schools learn html">
-					</a>
-				</li>
-				<li>
-					<a href="https://www.w3schools.com/css/" target="_blank">
-						<p>CSS 3</p>
-						<img src="assets/images/icons/css3.svg" class="icon-card icon-css" aria-hidden="true"
-							alt="This is a link to w3 schools learn css">
-					</a>
-				</li>
-				<li>
-					<a href="https://www.w3schools.com/js/" target="_blank">
-						<p>Javascript</p>
-						<img src="assets/images/icons/javascript.svg" class="icon-card icon-js" aria-hidden="true"
-							alt="This is a link to w3 schools learn javascript">
-					</a>
+		</div>
+		<!-- ------------------------- Main content -------------------------  -->
+		<div class=" content-grid">
+			<ul class="grid-gallery">
+				<li class="grid-item-1"></li>
+				<li class="grid-item-2"></li>
+				<li class="grid-item-3">
+					<h1 class="grid-text"><span class="outline-text">Code</span>outside the Box</h1>
 				</li>
 			</ul>
 		</div>
-
-		<div class="card card-2">
-			<h2>Check Out These Resources</h2>
-			<ul>
-				<li>
-					<a href="https://css-tricks.com/" target="_blank">
-						<p>CSS-Tricks</p>
-						<img src="assets/images/icons/css-tricks.svg" class="icon-card" aria-hidden=" true"
-							alt="this is a link to css tricks homepage">
-					</a>
-				</li>
-				<li>
-					<a href="https://www.w3schools.com/" target="_blank">
-						<p>W3 Schools</p>
-						<img src="assets/images/icons/w3schools.svg" class="icon-card" aria-hidden=" true"
-							alt="this is a link to w3 schools homepage">
-					</a>
-				</li>
-				<li>
-					<a href="https://www.freecodecamp.org/" target="_blank">
-						<p>Free Code Camp</p>
-						<img src="assets/images/icons/freecodecamp.svg" class="icon-card" aria-hidden="true"
-							alt="this is a link to free code camp editor homepage">
-					</a>
-				</li>
-			</ul>
 		</div>
-
-		<div class="card card-3">
-			<h2>Start coding</h2>
-			<ul>
-				<li>
-					<a href="https://codepen.io/" target="_blank">
-						<p>Codepen</p>
-						<img src="assets/images/icons/codepen.svg" class="icon-card" aria-hidden="true"
-							alt="this is a link to atom codepen code editor">
-				</li>
-				<li>
-					<a href="https://jsfiddle.net/" target="_blank">
-						<p>JSfiddle</p>
-						<img src="assets/images/icons/jsfiddle.svg" class="icon-card" aria-hidden="true"
-							alt="this is a link to js fiddle code editor">
-					</a>
-				</li>
-				<li>
-					<a href="https://atom.io/" target="_blank">
-						<p>Atom Editor</p>
-						<img src="assets/images/icons/atom.svg" class="icon-card" aria-hidden="true"
-							alt="this is a link to atom code editor">
-					</a>
-				</li>
-			</ul>
+		<!-- ------------------------- Cards -------------------------  -->
+		<div class="container-cards">
+			<!-- ------------------------- Html card -------------------------  -->
+			<div class="card ">
+				<div class="card-left-side">
+					<div class="card-heading">
+						<h1>html</h1>
+					</div>
+					<div card-left-text>
+						<p>HTML is the standard markup language for Web pages.
+							With HTML you can create your own Website.
+						</p>
+					</div>
+				</div>
+				<div class="card-right-side">
+					<!-- ------------------------- HTML svg -------------------------  -->
+					<div class=card-icon-html>
+						<svg class="icon-html icon-large-cards">
+							<use xlink:href="../assets/images/icons/html-five.svg#icon-html-five" role="img"
+							aria-labelledby="this ia s html icon" tabindex="0"></use>
+						</svg>
+					</div>
+					<!-- ------------------------- Twitter icon svg -------------------------  -->
+					<div class="card-icon-twitter">
+						<svg class="icon-twitter icon-small-cards">
+							<use xlink:href="../assets/images/icons/twitter.svg#icon-twitter" role="img"
+							aria-labelledby="this ia s twiiter icon" tabindex="0"></use>
+						</svg>
+					</div>
+					<!-- ------------------------- Github icon svg -------------------------  -->
+					<div class=" card-icon-github">
+						<svg class="icon-github icon-small-cards ">
+							<use xlink:href="../assets/images/icons/github.svg#icon-github" role="img"
+							aria-labelledby="this ia s github icon" tabindex="0"></use>
+						</svg>
+					</div>
+					<div class="card-text-xs-text">design</div>
+				</div>
+			</div>
+			<!-- ------------------------- css card -------------------------  -->
+			<div class="card ">
+				<div class="card-left-side">
+					<div class="card-heading">
+						<h1>html</h1>
+					</div>
+					<div card-left-text>
+						<p>CSS stands for cascading style sheets they help posistion & design of the webpage layout,
+						</p>
+					</div>
+				</div>
+				<div class="card-right-side">
+					<!-- ------------------------- Css svg -------------------------  -->
+					<div class=card-icon-html>
+						<svg class="icon-css icon-large-cards">
+							<use xlink:href="assets/images/icons/css3.svg#icon-css3" role="img"
+							aria-labelledby="this ia s logo css programming" tabindex="0"></use>
+						</svg>
+					</div>
+					<!-- ------------------------- Twitter icon svg -------------------------  -->
+					<div class="card-icon-twitter">
+						<svg class=" icon-twitter icon-small-cards">
+							<use xlink:href="../assets/images/icons/twitter.svg#icon-twitter" role="img"
+							aria-labelledby="this ia s twitter icon" tabindex="0"></use>
+						</svg>
+					</div>
+					<!-- ------------------------- Github icon svg -------------------------  -->
+					<div class=" card-icon-github">
+						<svg class=" icon-github icon-small-cards ">
+							<use xlink:href="assets/images/icons/github.svg#icon-github"role="img"
+							aria-labelledby="this ia s github icon" tabindex="0"></use>
+						</svg>
+					</div>
+					<div class="card-text-xs-text">build</div>
+				</div>
+			</div>
+			<!-- ------------------------- Js Card -------------------------  -->
+			<div class="card ">
+				<div class="card-left-side">
+					<div class="card-heading">
+						<h1>Js</h1>
+					</div>
+					<div card-left-text>
+						<p>JavaScript, often abbreviated as JS, is a programming language that adds functionality to webpages.
+						</p>
+					</div>
+				</div>
+				<div class="card-right-side">
+					<!-- ------------------------- js svg -------------------------  -->
+					<div class=card-icon-html>
+						<svg class="icon-js icon-large-cards">
+							<use xlink:href="../assets/images/icons/javascript.svg#icon-javascript" role=" img"
+								aria-labelledby="this is a logo for java script" tabindex="0""></use>
+						</svg>
+					</div>
+					<!-- ------------------------- Twitter icon svg -------------------------  -->
+					<div class=" card-icon-twitter">
+								<svg class="icon-twitter icon-small-cards">
+									<use xlink:href="../assets/images/icons/twitter.svg#icon-twitter" role="img"
+										aria-labelledby="this is a twitter icon" tabindex="0"></use>
+								</svg>
+					</div>
+					<!-- ------------------------- Github icon svg -------------------------  -->
+					<div class="card-icon-github">
+						<svg class="icon-github icon-small-cards ">
+							<use xlink:href="../assets/images/icons/github.svg#icon-github" role="img"
+								aria-labelledby="this ia s github icon" tabindex="0"></use>
+						</svg>
+					</div>
+					<div class="card-text-xs-text">create</div>
+				</div>
+			</div>
 		</div>
-
-		<div class="card card-4">
-			<h2>Useful links</h2>
-			<ul>
-				<li>
-					<a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" target="_blank">
-						<p>Youtube</p>
-						<img src="assets/images/icons/youtube.svg" class="icon-card" aria-hidden="true"
-							alt="recommended youtube channels for Coding">
-					</a>
-				</li>
-				<li>
-					<a href="https://www.amazon.co.uk/gp/product/1118907442/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1"
-						target="_blank">
-						<p>Books</p>
-						<img src="assets/images/icons/book.svg" class="icon-card" aria-hidden="true"
-							alt="recommended books for Coding">
-					</a>
-				</li>
-				<li>
-					<a href="https://shoptalkshow.com/" target="_blank">
-						<p>Podcasts</p>
-						<img src="assets/images/icons/podcast.svg" class="icon-card" aria-hidden="true"
-							alt="recommended podcast for coding">
-					</a>
-				</li>
-			</ul>
-		</div>
-	</div>
-
+	</main>
 	<!-- ------------------------- Footer -------------------------  -->
 	<footer>
-		<div class=footer-item-1>
-			<h1 class="footer-h1">Stay in the loop</h1>
-		</div>
-		<div class=footer-item-2>
-			<form class="footer-form">
-				<input type="email" id="email" placeholder="your-email@email.com" name="EMAIL" required>
-				<input class="button--subscribe" type="submit" value="Subscribe">
-		</div>
-		<div class="footer-item-3">
-			<ul class="footer-icons-block">
-				<li>
-					<a target="_blank" href="https://github.com/ciaran-toner">
-						<img src="assets/images/icons/GitHub.svg" class="footer-icons footer-icons--animation" aria-hidden="true" alt="link to github">
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://twitter.com/home">
-						<img src="assets/images/icons/twitter.svg" class="footer-icons" aria-hidden="true" alt="link to Twitter">
-					</a>
-				</li>
-				<li>
-					<a target="_blank" href="https://www.linkedin.com/feed/">
-						<img src="assets/images/icons/linkedin2.svg" class="footer-icons" aria-hidden="true"
-							alt="link to Linked-In">
-					</a>
-				</li>
-			</ul>
-		</div>
-		<div class="footer-item-4">
-			<h2>Code_devs.io </h2>
+		<div class="footer-wrapper">
+			<div class="footer-container">
+				<div class="footer-nav-links">
+					<h1>Useful Links</h1>
+					<ul>
+						<a href="https://www.amazon.co.uk/gp/product/1118907442/ref=ppx_yo_dt_b_asin_title_o06_s00?ie=UTF8&psc=1"
+							target="_blank" alt="this is a link for book on coding through amazon">
+							<li>Great books</li>
+						</a>
+						<a href="https://css-tricks.com/" target="_blank" alt="this is a link to css tricks website">
+							<li>Css-Tricks</li>
+						</a>
+						<a href="https://www.freecodecamp.org/" target="_blank" alt="this is a link to frre code camp website">
+							<li>Free Code Camp</li>
+						</a>
+						<a href="https://www.youtube.com/channel/UC8butISFwT-Wl7EV0hUK0BQ" target="_blank"
+							alt="this is a link to youtube">
+							<li>YouTube Channels</li>
+						</a>
+						<a href="https://www.w3schools.com/" target="_blank" alt="this is a link to w3 schools website">
+							<li>W3 Schools</li>
+						</a>
+					</ul>
+				</div>
+				<div class="footer-nav-links">
+					<h1>Test your code</h1>
+					<ul>
+						<a href="https://codepen.io/" target="_blank" alt="this is a website to codepen website">
+							<li>CodePen</li>
+						</a>
+						<a href="https://jsfiddle.net/" target="_blank" alt="this is a link to js fiddle coding website ">
+							<li>Js Fiddle</li>
+						</a>
+						<a href="https://playcode.io/" target="_blank" alt="this is a link to play code website">
+							<li>PlayCode</li>
+						</a>
+					</ul>
+				</div>
+				<div class="subscribe-container">
+					<h2>stay in the know</h2>
+					<input type="email" name="email" class="subscribe-input" placeholder="Your e-mail">
+					<div class="submit-btn">SUBMIT</div>
+				</div>
+				<div class="footer-logo-container">
+					<span class="footer-logo">
+				</div>
+				<div class="footer-icons">
+					<ul>
+						<li> <a href="https://github.com/ciaran-toner" target="_blank">
+								<svg class="icon-footer">
+									<use xlink:href="../assets/images/icons/github.svg#icon-github" role="img"
+										aria-labelledby="github icon with a link to github website" tabindex="0"></use>
+								</svg>
+							</a>
+						</li>
+						<li><a href="https://twitter.com/NaturalLiving18" target="_blank">
+								<svg class="icon-footer">
+									<use xlink:href="../assets/images/icons/twitter.svg#icon-twitter" role="img"
+										aria-labelledby="twitter icon with link to twitter website" tabindex="0"></use>
+								</svg>
+							</a>
+						</li>
+						<li>
+							<a href="https://www.linkedin.com/in/ciaran-toner/" target="_blank">
+								<svg class="icon-footer">
+									<use xlink:href="../assets/images/icons/linkedin2.svg#icon-linkedin-square" role="img"
+										aria-labelledby="linked in icon with link to linked in website" tabindex="0"></use>
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</footer>
-
 	<!-- -------------------------  main js -------------------------  -->
 	<script src="js/main.js" type="text/javascript"></script>
 </body>

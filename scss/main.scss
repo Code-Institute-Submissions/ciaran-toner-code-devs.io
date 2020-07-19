@@ -1,5 +1,4 @@
 @import 
-'abstracts/media-queries',
 'abstracts/mixins';
 
 @import 
@@ -14,9 +13,9 @@
   'layout/navigation';
 
 @import 
-  'pages/about',
   'pages/getting-started',
   'pages/home-page',
   'pages/learn-code';
 
-
+@import
+'abstracts/media-queries'; // imported last

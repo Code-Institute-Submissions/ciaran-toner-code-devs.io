@@ -1,25 +1,22 @@
 /* ========================
    home page banner
    ======================== */
-
-.container-banner {
+.container-hero-banner {
   display: grid;
-  align-items: center;
-  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
-  color: white;
-  min-height: 30vh;
-  margin-bottom: 2.5rem;
-  margin: 1.0rem;
-  border-radius: 2.5rem;
+  place-content: center;
+  background-image: linear-gradient(315deg, #edeeff 0%, #0d324d 74%);
+  min-height: 40vh;
+  margin: 3rem 0 5rem 0;
+  padding: 1.5rem;
 }
 
-.container__banner {
-  padding: 2rem 2rem 3rem;
+.container-hero-content {
+  grid-column: 2;
 }
 
-.container__banner h1 {
-  font-size: 5rem;
-  margin: 2rem 0 1rem ;
+.container-hero-content h1 {
+  font-size: 6.5rem;
+  margin: 2rem 0 1rem;
 }
 
 .container__banner-h1 {
@@ -33,35 +30,191 @@
   min-width: 40vw;
 }
 
-/* ========================
-     home page cards
-======================== */
+/* ========================== list item grid items ========================== */
+.content-grid {
+  padding-top: 5rem;
+}
+
+.grid-gallery {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+  grid-template-areas:
+    "area-1 area-2 .. .." // a preiod is a empty fraction
+    "area-4 area-5 .. ..";
+}
+
+.grid-gallery li {
+  width: 100%;
+  height: 40rem;
+  background-position: center;
+  background-image: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 1rem;
+}
+
+.grid-gallery li::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.37);
+  opacity: 0;
+  transition: .5s;
+}
+
+.grid-gallery li:hover::before {
+  opacity: 1;
+}
+
+.grid-item-1 {
+  grid-area: area-1;
+  background-image: url("../assets/images/luke-chesser-3rWagdKBF7U-unsplash.jpg");
+}
+
+.grid-item-2 {
+  grid-area: area-2;
+  background-image: url("../assets/images/simon-migaj-Yui5vfKHuzs-unsplash.jpg");
+  margin-top: 20rem;
+  right: 50px;
+  grid-column: span 2;
+}
+
+.grid-item-3 {
+  grid-area: area-4;
+  background-image: url("../assets/images/luke-chesser-3rWagdKBF7U-unsplash.jpg");
+  bottom: 7rem;
+  min-width: 35rem;
+}
+
+.outline-text {
+  // this moves the text out of grid item 3
+  font-family: $alterntive-font;
+  position: relative;
+  right: 7rem;
+  text-transform: uppercase;
+  font-size: 4rem;
+  color: #b4ebf1;
+}
+
+/* ========================  cards  ======================== */
+
+.cards-header {
+  font-family: $alterntive-font;
+  color: gray;
+}
 
 .container-cards {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
-  place-items: center;
-  gap: 3.5rem;
-  padding: 2rem;
-  margin-bottom: 2.5rem ;
-  background-color: #288ee2;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin: 3rem 0 15rem 0;
 }
 
 .card {
-  min-width: 350px;
-  background-color: #0d324d;
-  box-shadow:
-    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
-    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
-  border-radius: 25px;
-  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 20rem;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.125) 0px 0px 5px;
+  transition: ease-in-out 0.3s;
+}
 
+.card-right-side {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.card-left-side {
+  padding: 1rem;
+}
+
+.icon-html {
+  fill: #37206d;
+}
+
+.icon-css {
+  fill: rgb(255, 60, 0);
+}
+
+.icon-js {
+  fill: #dcdc4d;
+}
+
+.icon-twitter {
+  fill: #0202a2;
+}
+
+.icon-github {
+  fill: #37206d;
+}
+
+.icon-footer {
+  width: 4rem;
+  height: 4rem;
+  fill: #52a0c1;
+}
+.icon-footer:hover {
+  fill: rgb(43, 198, 226);
+  border: 2px solid transparent;
+}
+
+.icon-large-cards {
+  width: 8rem;
+  height: 8rem;
+}
+
+.icon-small-cards {
+  width: 3rem;
+  height: 3rem;
+}
+
+.card-icon-html {
+  // positioning for html icon on card
+  grid-column: 1 / span 2;
+  place-self: center;
+  grid-row: 2;
+}
+
+.card-icon-twitter {
+  // positioning for html icon on card
+  grid-row: 1;
+  grid-column: 3 / span 1;
+  padding-right: 4rem;
+}
+
+.card-icon-github {
+  // positioning for html icon on card
+  grid-column: 3 / span 1;
+  grid-row: 1;
+  justify-self: end;
+  align-self: start;
+  margin-right: 5px;
+}
+
+.card-text-xs {
+  // card text bottom right
+  grid-row: third-line / 3;
+  grid-column: 3;
+  text-transform: uppercase;
+  background-color: #7f5a83;
+  clip-path: polygon(20px 0%, 100% 0%, 100% 100%, 0% 100%);
+  padding: 5px;
+  border-radius: 0 0 1rem;
+  text-align: center;
 }
 
 .card:hover {
-  transform: translate(0px, -10px);
-  transition: 0.3s;
+  transform: translate(0, -1rem);
+  box-shadow: rgba(0, 0, 0, 0.125) -1rem 1rem 4rem;
 
   h2 {
     color: rgb(9, 207, 241);
@@ -69,20 +222,22 @@
   }
 }
 
-.card h2 {
+.card-heading h1 {
   display: inline-block;
-  border-bottom: 2px solid white;
+  border-bottom: 5px solid #37206d;
   padding-bottom: 1rem;
-  margin: 2rem 1rem;
-  min-width: 90%;
-  font-size: 2.2rem;
-  color: white;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: bolder;
+  color: #333333;
 }
 
 .card p {
-  display: inline-block;
+  font-family: $alterntive-font;
+  font-size: 1.5rem;
   margin: 0;
-  color: white;
+  color: rgb(0, 0, 0);
 }
 
 .card ul {
@@ -107,14 +262,47 @@
   padding-left: 3rem;
 }
 
+// media queries for gird list items must remain here, will not function when placed in media-queries.scss
 
-/* ========================== 
-      card icons
- ========================== */
+@media only screen and (max-width: 1630px) {
+  .grid-item-1 {
+    min-width: 30rem;
+  }
 
-.icon-card {
-  height: 2.5rem;
-  width: auto;
-  margin-right: 1.8rem;
-  float: right;
+  .grid-item-3 {
+    grid-area: area-5;
+    align-self: start;
+
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  // this repositions the grid list items
+  .grid-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: 2;
+    grid-template-areas:
+      "area-1"
+      "area-2";
+  }
+
+  .grid-item-2 {
+    grid-area: area-2;
+    right: 0;
+    margin-top: 0;
+    // max-width: 35rem;
+  }
+
+  .grid-item-3 {
+    grid-area: area-1;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  // this moves the text back inside the grid item box
+  .outline-text {
+    right: 0;
+  }
 }

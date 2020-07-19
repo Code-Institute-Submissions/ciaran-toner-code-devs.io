@@ -1,12 +1,12 @@
 /* =============
    global styles
 ============= */
-
 body,
 html {
   margin: 0 auto;
   padding: 0;
   color: white;
+  height: 100%;
 }
 
 *,
@@ -14,14 +14,32 @@ html {
 *:after {
   box-sizing: border-box;
 }
+
 * li {
-  list-style: none; 
+  list-style: none;
 }
+
 * a {
   text-decoration: none;
 }
 
-.page-wrapper-lg {
-  max-width: 1200px;
+* ul {
+  padding: 0;
+}
+
+.page-wrap {
+  max-width: 150rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.page-wrap-blog {
+  max-width: 130rem;
+  margin: auto;
+  padding: 1rem;
+}
+
+.nav-wrapper {
+  max-width: 160rem;
   margin: 0 auto;
 }

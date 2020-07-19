@@ -15,12 +15,17 @@
   src: url('../assets/fonts/Satisfy-Regular.woff2') format('woff2'),
     url('../assets/fonts/Satisfy-Regular.woff') format('woff');
 }
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&display=swap');
 
 // Font variables
 
 $main-font: 'Montserrat-Regular';
 $main-font--bold: 'Montserrat-Bold';
 $secondary-font: 'Satisfy-Regular';
+
+$alterntive-font : 'IBM Plex Sans', sans-serif;
+
+
 
 
 body {

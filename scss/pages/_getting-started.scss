@@ -37,12 +37,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto;
-    margin-top: 5rem;
+    margin: 5rem 0 8rem 0;
     padding: 2rem;
     gap: 1rem;
     grid-template-areas:
-      "article-header article-main"
-      "article-aside  article-aside  "
+      "article-header article-image"
       " article-footer  article-footer";
 
     .article-heading {
@@ -55,7 +54,7 @@
     }
 
     .article-image {
-      grid-area: article-main;
+      grid-area: article-image;
     }
 
     .article-text {
@@ -65,15 +64,14 @@
   }
 }
 
-
 .container-article {
   background: #ebe6e6;
   border-radius: 1rem;
   padding: 2rem;
 
   & a:hover {
-      border-bottom: 2px solid;
-    }
+    border-bottom: 2px solid;
+  }
 }
 
 .container-article h1,

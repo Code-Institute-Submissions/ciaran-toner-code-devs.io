@@ -102,6 +102,6 @@ I used Github intergrated with visual studio code for source control & deploymen
 
 # Site & media
 
-The main page link is https://ciaran-toner.github.io/first-milestone-project/
+The main page link is https://ciaran-toner.github.io/code-devs.io/
 
 To access images of the site you can find them in the media folder.

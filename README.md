@@ -50,7 +50,8 @@ The features are very basic now with top & bottom navigation with links. There i
   
   * Beautify ( To maintain code indentation )
   * Live server ( This reloads the page when changes are made to the code )
-  * Sass live reloader ( This reloaded the page when changes where made to sass & compiles sass files into one main CSS file
+  * Sass live reloader ( This reloaded the page when changes where made to sass & compiles sass files into one main CSS file & provied fall backs for older     
+  browsers. The vs code folder contains the json file needed for the compile the sass.
   * Code snape ( I used this to take a picture of my folder structure )
 
   The main issue I came across the was positioning of elements using CSS grid and later flexbox. I tried to implement both throughout the site to provide me with a  

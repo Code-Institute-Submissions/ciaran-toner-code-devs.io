@@ -94,3 +94,9 @@ The features are very basic now with top & bottom navigation with links. There i
   To help me get a better understanding of CSS I used 3 resources. CSS tricks https://css-tricks.com/snippets/css/complete-guide-grid/
   Jen Simmons https://jensimmons.com  CSS grid & design
   W3 Schools, for basic syntax & infornation
+
+# Site & media
+
+The main page link is https://ciaran-toner.github.io/first-milestone-project/
+
+To access images of the site you can find them in the media folder.

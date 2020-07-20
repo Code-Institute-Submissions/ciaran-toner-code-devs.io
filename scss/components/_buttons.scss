@@ -1,33 +1,37 @@
 /*-------------- button home page banner -------------- */
 
 .button {
+  display: inline-block;
   padding: 1rem;
-  background: transparent;
   transition-duration: 0.4s;
   cursor: pointer;
   border-radius: 0.5rem;
   font-size: 2rem;
   text-align: center;
 }
+
 .button--banner {
   color: #b5d5e3;
   border: 3.0px solid #5481b5;
 }
+
 .button--banner:hover {
   border: 3.0px solid rgb(201, 18, 88);
   color: white;
 }
+
 .subscribe-container {
-  padding-top: 2rem ;
+  padding-top: 2rem;
   position: relative;
   height: 20rem;
   width: 38rem;
   padding: 3rem;
   border-radius: 0.5rem;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.125) ;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.125);
   background-color: #FFF;
   color: #333;
 }
+
 .subscribe-container h2 {
   text-align: center;
   font-size: 2rem;
@@ -36,6 +40,7 @@
   letter-spacing: 3px;
   line-height: 3rem;
 }
+
 // This positions to the submit button on the card
 .submit-btn {
   position: absolute;
@@ -53,18 +58,21 @@
   transition: all .25s ease; // this effects the change of color on hover
   box-shadow: -5px 6px 20px 0px rgba(51, 51, 51, 0.4);
 }
+
 // gives the effect of submit button wrapping around the cards
 .submit-btn:after {
   position: relative;
   content: "";
-  right: -2.5rem; 
+  right: -2.5rem;
   bottom: 3.85rem; // relational to the height of the submit button
   border-right: 1rem solid transparent; // this is relational to the right distance of the submit button
   border-bottom: 1rem solid #336d97;
 }
+
 .submit-btn:hover {
   background-color: #52a0c1;
 }
+
 .subscribe-container input {
   position: absolute;
   bottom: 3rem; //positioning to match  submit button
@@ -76,18 +84,22 @@
   background: transparent;
   font-size: 1.5rem;
 }
+
 .subscribe-container input:focus {
   outline: none; // removes the browser default outline
   border-bottom: 1px solid #52a0c1;
 }
 
-#subscribe-container-dark { // this overides styles on the getting started page
+#subscribe-container-dark {
+  // this overides styles on the getting started page
   background-color: #1f1d1d;
+
   & h2 {
     color: white;
   }
 }
 
-#subcribe-input-dark { // this overides styles on the getting started page
+#subcribe-input-dark {
+  // this overides styles on the getting started page
   color: white;
 }

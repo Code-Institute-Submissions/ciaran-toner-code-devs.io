@@ -1312,8 +1312,9 @@ h2 {
   .grid-gallery {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
-    -ms-grid-rows: 2;
-        grid-template-rows: 2;
+    -ms-grid-rows: (1fr)[2];
+        grid-template-rows: repeat(2, 1fr);
+    margin-bottom: 3rem;
         grid-template-areas: "area-1"  "area-2";
   }
   .grid-item-2 {

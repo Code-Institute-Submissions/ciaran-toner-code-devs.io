@@ -1,4 +1,4 @@
-// This codes not my original work. Mobile menu clip-path effect src Dev ed https://www.youtube.com/watch?v=H4MkGzoACpQ&t=1181s
+// This code is not my original work. Mobile menu clip-path effect src youtuber Dev ed https://www.youtube.com/watch?v=H4MkGzoACpQ&t=1181s
 
 const mobileMenu = document.querySelector(".mobile-menu");
 const navMenu = document.querySelector(".nav-links");

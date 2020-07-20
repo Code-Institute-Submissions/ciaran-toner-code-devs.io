@@ -1,46 +1,89 @@
 # First-milestone-project
 
-I created this website to help beginner coders like myself find great resources to help get started on their coding journey. The site contains
-links to books, youtube channels & online reading material. It can be overwhelming with all the information that can be found on
-how to start coding and learning the basics.
+This web app was made to provide content & links to resources for beginner web developers like my self to find reliable & great resources for beginner web developers. The links provided over technical information on HTML, CSS, Js & many more topics. There are also links provided to external resources which include books, learning platforms, & youtube tutorials.
 
-The goal of the website is to help provide beginner web developers with a good head start & resources that I believe they will help with web-development basics.
+The goal of the website is to help provide beginner web developers to find great resources & to learn how to code.
 
 # UX
 
-I wanted to incorporate a different design into the website & achieve a  unique & modern look using high contrast colors with gradients that are used throughout the design. I did not create any wireframes or mockups, in hindsight, this has wasted a lot of time & was bad practice.
-Going forward I would recommend tools like Figma or Adobe xd but there are many more to choose from.
-
+I wanted to incorporate a unique design into the website & achieve & modern look that would associate with current design trends such as using high contrast colours with gradients, dark tones on certain pages while trying to keep a clean UI. I did not create any wireframes or mockups. With no experience in doing a mockup design, I took inspiration from other websites and developers to create a website unique to me. This in hindsight this approach has cost much more time than if I originally made a design, however, this gave me more opportunities to experiment with different designs & approaches to UI & UX.
 
 # Features
 
- ## Furture features I would like to add.
+The features are very basic now with top & bottom navigation with links. There is a Mobile dropdown menu which will provide users access throughout the site.
 
-  * Implement a back end technology to enable subscribers.
-  * Implement a server-side rendering to retrieve the most popular articles; possibly CSS tricks or other great resources.
+
+ ## Future features I would like to add.
+
+  * Implement a back end technology to enable email sign up & the ability to comment on blogs & share to social media.
+  * Implement a server-side rendering to retrieve the popular articles; possibly CSS tricks or other great resources.
 
 
 # Technologies used
+
+* HTML 5
 
 * Javascript
 
  There was only a very small amount of javascript for the navigation menu function on smaller devices. There where no Libraries frameworks used.
 
-* CSS
+*  Vanilla CSS
 
-  I did not use any CSS frameworks in this project as I wanted to learn CSS from scratch. 
-  This gave me a great opportunity to use CSS grid and flexbox to learn & understand the basics of CSS.
+  I did not use any CSS frameworks in this project as I felt it would be a great learning opportunity. 
+  This provided me with a better understanding off CSS and all it has to offer.
+  
+  * SCSS
+  
+  I wanted to use a file structuring method rather than one main CSS file & to try to introduce modular components to the site. Although I mainly just wrote CSS it        
+ was great to learn about sass and its benefits.
+  
+ * Google Fonts
+ 
+  I used one font imported from google fonts and one other to use locally that I downloaded from google fonts & converted into a smaller file size. I think that may have been unnecessary as it may have loaded faster from Google CDN.
+ <hr>
 
 # Testing
 
-  I used visual studio code live server plugin for testing the site across the major browsers Firefox, Chrome & Safari. 
-  I used firefox developer edition browser to   help with testing the layout across different screen sizes & performance mainly related to 
-  (Font awesome icons js file).
+  My main testing was done using Firefox developer edition browser using visual studio code as I think Firefox offers great features for CSS & specifically when using CSS grid. I also tested across different browsers such as chrome & safari to see if there were any issues, the only ones I came across was when I was using safari on my mobile.
+  
+  I used visual studio code with 4 plugins to help with development. 
+  
+  * Beautify ( To maintain code indentation )
+  * Live server ( This reloads the page when changes are made to the code )
+  * Sass live reloader ( This reloaded the page when changes where made to sass & compiles sass files into one main CSS file
+  * Code snape ( I used this to take a picture of my folder structure )
 
-The main issue I came across the mobile menu for the site & positioning of elements within the menu. Other issues that cropped up.
+  The main issue I came across the was positioning of elements using CSS grid and later flexbox. I tried to implement both throughout the site to provide me with a  
+  a better understanding of when to use either or both.
 
   * Font sizes
-  * Colors & accessibility in general for screen readers
+  * Colors & accessibility in general for screen readers using SVG icons & links
   * Loading assets locally such as fonts & icons for the project, rather than using google fonts & Font awsome
-  * On the about page I have cards displayed that should move position and highlight a progress bar, this feature would not work in the Safari browser
+  * 
   
+# Credits
+
+  Images
+  
+  I used 3 images from the Unsplash website credited below. The rest of the icons used throughout the site were from Iconmoon
+  
+  https://unsplash.com/@lukechesser         // used on the main page, the blue background images.
+  https://unsplash.com/photos/Yui5vfKHuzs   // Used on the main page, the person looking out to sea.
+  https://unsplash.com/photos/xrVDYZRGdw4.  // Used on the getting started page as a blog post image.
+ 
+ Icons src: https://icomoon.io
+  
+  External code used.
+  
+  * For the mobile menu opening and closing effect, Javascript & CSS used. Youtuber & developer Dev Ed.  //https://www.youtube.com/channel/UClb90NQQcskPUGDIXsQEz5Q
+  * For the card effect on the learn code page. Chris Coyer, developer https://www.youtube.com/watch?v=NXtz59SJYfM
+  * For the Codepen integration the code is available from the Codepen webpage https://blog.codepen.io/documentation/embedded-pens/
+  * The code in code pen belongs to Louis Hoebregts 
+  * For the mobile menu bar opening effect  W3 Schools https://www.w3schools.com/howto/howto_css_menu_icon.asp 
+  
+  
+  Recources / information
+  
+  To help me get a better understanding of CSS I used 3 resources. CSS tricks https://css-tricks.com/snippets/css/complete-guide-grid/
+  Jen Simmons https://jensimmons.com  CSS grid & design
+  W3 Schools, for basic syntax & infornation

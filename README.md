@@ -68,6 +68,11 @@ The features are very basic now with top & bottom navigation with links. There i
   To check for HTML errors I used validator.org. There were warnings on the hyphens in the comments of the body but no errors.
   To check the CSS I used Jigsaw.org. Warnings were found for css falback rules relating to webkit rules applied but no errors.
   
+# Source control & deployment
+
+I used Github intergrated with visual studio code for source control & deployment. I mainly would write & test the CSS changes in Firefox developer tools before comiting to Github.
+
+
 # Credits
 
   Images

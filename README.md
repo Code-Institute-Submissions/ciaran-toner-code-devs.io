@@ -62,6 +62,9 @@ The features are very basic now with top & bottom navigation with links. There i
   * Loading assets locally such as fonts & icons for the project, rather than using google fonts & Font awsome
   * 
   
+  To check for HTML errors I used validator.org. There were warnings on the hyphens in the comments of the body but no errors.
+  To check the CSS I used Jigsaw.org. Warnings were found for css falback rules relating to webkit rules applied but no errors.
+  
 # Credits
 
   Images

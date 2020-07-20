@@ -42,9 +42,10 @@
 // --------------------------------- home page grid in top main section ---------------------------------  //
 
 @media only screen and (max-width: 1630px) {
-  .grid-item-1{
-    min-width:30rem ;
+  .grid-item-1 {
+    min-width: 30rem;
   }
+
   .grid-item-3 {
     grid-area: area-5;
     align-self: start;
@@ -52,14 +53,16 @@
   }
 }
 
-@media only screen and (max-width: 700px) { // this repositions the grid list items
-  .grid-gallery{
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(2, 1fr);
-  margin-bottom: 3rem;
-  grid-template-areas: 
-  "area-1" 
-  "area-2"  ;
+@media only screen and (max-width: 700px) {
+
+  // this repositions the grid list items
+  .grid-gallery {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    margin-bottom: 3rem;
+    grid-template-areas:
+      "area-1"
+      "area-2";
   }
 
   .grid-item-2 {
@@ -73,11 +76,14 @@
   }
 }
 
-@media only screen and (max-width: 700px) { // this moves the text back inside the grid item box
+@media only screen and (max-width: 700px) {
+
+  // this moves the text back inside the grid item box
   .outline-text {
     right: 0;
   }
 }
+
 // --------------------------------- footer ---------------------------------  //
 
 @media only screen and (max-width: 800px) {
@@ -152,5 +158,3 @@
     }
   }
 }
-
-

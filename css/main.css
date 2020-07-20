@@ -1250,6 +1250,9 @@ h2 {
   padding: 2rem;
 }
 
+/* ========================== 
+   media-quiries
+========================== */
 @media (min-width: 900px) {
   .container-banner {
     margin: 0 10px 20px 10px;

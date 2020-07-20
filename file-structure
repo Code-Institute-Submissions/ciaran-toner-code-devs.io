@@ -1,0 +1,50 @@
+
+|
+| - Assets/Root/
+|    |- Fonts
+|    |- Images/
+|        | Icons
+|
+| - Css/
+|    |- Main.css
+|    |- Main.css.map
+|
+| - Js/
+|    |- Main-js
+|
+| -  Media/
+|     |- Images    
+|     |-Desktop-webview-screenshot
+|     |-Mobile-webview-screenshot
+|
+| - Scss/
+|   |- Abstracts/
+|        |- Media-queries  
+|        |- mixins
+|  
+ |- base/
+|       |- typography
+|
+|   |- components/
+|       |- buttons
+|
+|   |- layout/
+|       |- footer
+|       |- global
+|       |- navigation
+|
+|   |- pages/
+|       |- about
+|       |- getting started
+|       |- home
+|       |- learn code
+|    
+|  |-main // imports all scss files
+|
+| - Pages/
+|    |- about
+|    |- getting started
+|    |- index / home page
+|    |- learn code
+|
+| Readme

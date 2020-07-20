@@ -57,8 +57,7 @@
   }
 }
 
-@media only screen and (max-width: 700px) {
-  // this repositions the grid list items
+@media only screen and (max-width: 700px) { // this repositions the grid list items
   .grid-gallery {
     grid-template-rows: repeat(2, 1fr);
     grid-template-columns: 1fr;
